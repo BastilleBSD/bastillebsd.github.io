@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.6.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Christer Edwards">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Bastille Templates are equivalent to Dockerfiles which automate the creation and configuration of a container.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/templates/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#800000">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-493849-18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-493849-18', { 'anonymize_ip': true });
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://bastillebsd.org/templates/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@BastilleBSD">
+  <meta property="twitter:creator" content="@BastilleBSD">
+  
+  <meta property="og:site_name" content="BastilleBSD">
+  <meta property="og:url" content="https://bastillebsd.org/templates/">
+  <meta property="og:title" content="Bastille Automation Templates | BastilleBSD">
+  <meta property="og:description" content="Bastille Templates are equivalent to Dockerfiles which automate the creation and configuration of a container."><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
+  <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2021-01-01T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2021-01-10T10:46:21-07:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#800000",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#800000"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "https://cookies.insites.com"
+      }
+    })});
+</script>
+
+
+
+  
+
+
+
+
+
+  <title>Bastille Automation Templates | BastilleBSD</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    
+    
+      <a class="navbar-brand" href="/">BastilleBSD</a>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/" data-target="[]"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/templates/" data-target="[]"><span>Templates</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/getting-started/"><span>Getting Started</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/history/"><span>History</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact/"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  
+<span class="js-widget-page d-none"></span>
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="templates" class="home-section wg-featurette   "  >
+    <div class="container">
+      
+
+
+<div class="row featurette">
+  
+  <div class="col-md-12 section-heading">
+    <h1>Templates</h1>
+    
+  </div>
+  
+
+  
+  <div class="col-md-12">
+    <hr>
+<p>Bastille leverages concepts from common automation tools such as Ansible, Chef,
+Puppet and SaltStack. We&rsquo;ve distilled these concepts into Bastille&rsquo;s template
+system which can automatically deploy a wide range of software and services.</p>
+<hr>
+
+  </div>
+  
+
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-freebsd"></i></div>
+    <h3>Custom</h3>
+    <p>Create Your Own Template</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-java"></i></div>
+    <h3>OpenJDK</h3>
+    <p>Develop and deploy Java applications</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-node"></i></div>
+    <h3>node</h3>
+    <p>Build scalable network applications</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-python"></i></div>
+    <h3>Python</h3>
+    <p>Python lets you work quickly and integrate systems more effectively</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-php"></i></div>
+    <h3>PHP</h3>
+    <p>PHP powers the most powerful websites in the world</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fas fa-code"></i></div>
+    <h3>Golang</h3>
+    <p>Build simple, reliable and efficient software</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fas fa-terminal"></i></div>
+    <h3>Secure Shell</h3>
+    <p>SSH Containers for users, customers and developers</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-npm"></i></div>
+    <h3>NPM</h3>
+    <p>Build Amazing Things</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-firefox"></i></div>
+    <h3>Firefox</h3>
+    <p>The browser is just the beginning</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-chrome"></i></div>
+    <h3>Chromium</h3>
+    <p>A safer, faster, and more stable way for all users to experience the web</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-jenkins"></i></div>
+    <h3>Jenkins</h3>
+    <p>Build great things at any scale</p>
+  </div>
+  
+  
+  
+  
+    
+  
+  <div class="col-12 col-sm-4">
+    <div class="featurette-icon"><i class="fab fa-yarn"></i></div>
+    <h3>Yarn</h3>
+    <p>Fast, reliable and secure dependency management</p>
+  </div>
+  
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+
+  <section id="slider" class="home-section wg-slider    carousel slide"  data-ride="carousel" data-interval="3000">
+    
+      
+
+
+
+
+<ol class="carousel-indicators">
+  
+  <li data-target="#slider" data-slide-to="0" class="active"></li>
+  
+  <li data-target="#slider" data-slide-to="1" ></li>
+  
+  <li data-target="#slider" data-slide-to="2" ></li>
+  
+  <li data-target="#slider" data-slide-to="3" ></li>
+  
+  <li data-target="#slider" data-slide-to="4" ></li>
+  
+  <li data-target="#slider" data-slide-to="5" ></li>
+  
+  <li data-target="#slider" data-slide-to="6" ></li>
+  
+  <li data-target="#slider" data-slide-to="7" ></li>
+  
+  <li data-target="#slider" data-slide-to="8" ></li>
+  
+  <li data-target="#slider" data-slide-to="9" ></li>
+  
+  <li data-target="#slider" data-slide-to="10" ></li>
+  
+  <li data-target="#slider" data-slide-to="11" ></li>
+  
+  <li data-target="#slider" data-slide-to="12" ></li>
+  
+  <li data-target="#slider" data-slide-to="13" ></li>
+  
+  <li data-target="#slider" data-slide-to="14" ></li>
+  
+  <li data-target="#slider" data-slide-to="15" ></li>
+  
+  <li data-target="#slider" data-slide-to="16" ></li>
+  
+  <li data-target="#slider" data-slide-to="17" ></li>
+  
+  <li data-target="#slider" data-slide-to="18" ></li>
+  
+  <li data-target="#slider" data-slide-to="19" ></li>
+  
+  <li data-target="#slider" data-slide-to="20" ></li>
+  
+  <li data-target="#slider" data-slide-to="21" ></li>
+  
+  <li data-target="#slider" data-slide-to="22" ></li>
+  
+  <li data-target="#slider" data-slide-to="23" ></li>
+  
+  <li data-target="#slider" data-slide-to="24" ></li>
+  
+  <li data-target="#slider" data-slide-to="25" ></li>
+  
+  <li data-target="#slider" data-slide-to="26" ></li>
+  
+  <li data-target="#slider" data-slide-to="27" ></li>
+  
+  <li data-target="#slider" data-slide-to="28" ></li>
+  
+  <li data-target="#slider" data-slide-to="29" ></li>
+  
+  <li data-target="#slider" data-slide-to="30" ></li>
+  
+  <li data-target="#slider" data-slide-to="31" ></li>
+  
+  <li data-target="#slider" data-slide-to="32" ></li>
+  
+  <li data-target="#slider" data-slide-to="33" ></li>
+  
+  <li data-target="#slider" data-slide-to="34" ></li>
+  
+  <li data-target="#slider" data-slide-to="35" ></li>
+  
+</ol>
+
+
+<div class="carousel-inner">
+  
+  <div class="wg-hero dark carousel-item active" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Template Collection
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          See the entire list of Bastille automation templates
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>CI/CD Tested!</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Apache
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The most popular web server on the Internet since April 1996
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/apache" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Apache Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Consul
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Secure Service Networking
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/consul" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Consul Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Elasticsearch
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Elasticsearch is a distributed, JSON-based search and analytics engine.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/elasticsearch" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Elasticsearch Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Firefox
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The browser is just the beginning
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/firefox" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Firefox Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          GitLab-CE
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The entire DevOps lifecycle in one application.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/gitlab-ce" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>GitLab CE Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Golang
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Build simple, reliable and effient software
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/golang" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Golang Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          HAProxy
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The Reliable, High Performance TCP/HTTP Load Balancer
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/haproxy" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>HAProxy Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Hello-World
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          echo &lsquo;Hello World&rsquo;
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/hello-world" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Hello-World Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Jenkins
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Build great things at any scale
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/jenkins" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Jenkins Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Kibana
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Kibana gives shape to your data and is the extensible user interface.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/kibana" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Kibana Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          MariaDB Server
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Made by the original developers of MySQL.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/mariadb-server" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>MariaDB Server Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Memcached
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          A distributed memory object caching system.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/memcached" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Memcached Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          MySQL Server
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The world&rsquo;s most popular open source database.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/mysql-server" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>MySQL Server Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          NGINX
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Improve the performance, reliability, and security of your applications
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/nginx" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>NGINX Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Node
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Build scalable network applications
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/node" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Node Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          NPM
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Build amazing things
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/npm" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>NPM Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          OpenJDK
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Develop and deploy Java applications.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/openjdk" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>OpenJDK Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          OpenSSH Server
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Keep your communiques secret.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/openssh-server" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>OpenSSH Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Perl
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Perl is a highly capable, feature-rich programming language with over 30 years of development.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/perl" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Perl Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          PHP
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          PHP powers the most popular websites in the world.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/php" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>PHP Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Plex Media Server
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Plex allows you to stream video smarter.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/plexmediaserver" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Plex Media Server Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Plex Media Server (PlexPass)
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Plex allows you to stream video smarter.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/plexmediaserver-plexpass" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Plex Media Server (PlexPass) Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Postfix
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Open-Source Mail Transfer Agent
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/postfix" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Postfix Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Prometheus
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          From metrics to insight
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/prometheus" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Prometheus Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Python
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Python is a programming language that lets you work quickly and integrate systems more effectively.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/python" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Python Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Redis
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Redis is an open source in-memory data structure store, used as a database, cache and message broker.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/redis" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Redis Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Ruby
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Open source programming language with a focus on simplicity and productivity.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/ruby" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Ruby Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Salt Master
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          It is time to unify security operations
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/salt-master" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Salt Master Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Salt Minion
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          It is time to unify security operations
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/salt-minion" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Salt Minion Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Traefik
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          The Cloud Native Edge Router
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/traefik" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Traefik Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Varnish
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          High performance HTTP reverse caching proxy.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/varnish" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Varnish Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Wordpress
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          WordPress is open source software you can use to create a beautiful website, blog, or app.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/wordpress" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Wordpress Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Yarn
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Fast, reliable and secure dependency management
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/yarn" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Yarn Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #000000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          ZSH + Antigen
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          A plugin manager for zsh, inspired by oh-my-zsh and vundle.
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates/zsh-antigen" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Yarn Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+  <div class="wg-hero dark carousel-item" style="
+    
+    background-color: #800000;
+    
+    
+    ;">
+    <div class="container" style="text-align: center;">
+        <h1 class="hero-title">
+          Custom
+        </h1>
+
+        
+        <p class="hero-lead" style="margin: 0 auto 0 auto;">
+          Easily Create Your Own
+        </p>
+        
+
+        
+        
+        
+        
+          
+        
+        <p>
+          <a href="https://gitlab.com/BastilleBSD-Templates" class="btn btn-light btn-lg"><i class="fas fa-clone" style="padding-right: 10px;"></i>Custom Template</a>
+        </p>
+        
+      </div>
+  </div>
+  
+</div>
+
+
+<a class="carousel-control-prev" href="#slider" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#slider" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+  <span class="sr-only">Next</span>
+</a>
+
+    
+  </section>
+
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/shell.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2018-2021 &middot; 
+
+    BastilleBSD 
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
