@@ -387,6 +387,28 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/compare/"><span>Compare</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -515,7 +537,7 @@
 
 <h2 id="bastille-on-freebsd">Bastille on FreeBSD</h2>
 <p>This document is designed to help you be successful in your use and adoption of
-Bastille and FreeBSD. This document begins with a brand-new FreeBSD 12.2 system
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.0 system
 deployed locally or in the cloud. Manual installation is not covered in this
 document.</p>
 <h2 id="firstboot">Firstboot</h2>
@@ -542,10 +564,10 @@ the first time:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@freebsd:~ <span style="color:#75715e"># pkg bootstrap</span>
 The package management tool is not yet installed on your system.
 Do you want to fetch and install it now? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
-Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:12:amd64/quarterly, please wait...
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:13:amd64/quarterly, please wait...
 Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span style="color:#66d9ef">done</span>
-<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.16.1...
-<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.16.1: 100%
+<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.17.5...
+<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.17.5: 100%
 root@freebsd:~ <span style="color:#75715e">#</span>
 </code></pre></div><p>Note: this bootstrapping step can be automated using the following command:
 <code>env ASSUME_ALWAYS_YES=YES pkg bootstrap</code></p>
@@ -553,7 +575,7 @@ root@freebsd:~ <span style="color:#75715e">#</span>
 <p>If you take a closer look at the line of output after the bootstrap
 confirmation you&rsquo;ll notice that the last part of the URL says <code>quarterly</code>:</p>
 <blockquote>
-<p>Bootstrapping pkg &hellip; pkg.FreeBSD.org/FreeBSD:12:amd64/<code>quarterly</code>, please wait&hellip;</p>
+<p>Bootstrapping pkg &hellip; pkg.FreeBSD.org/FreeBSD:13:amd64/<code>quarterly</code>, please wait&hellip;</p>
 </blockquote>
 <p>This subscribes the host to a quarterly release cycle for binary packages. For
 most systems this is adequate.  No changes are needed to subscribe to the
@@ -621,12 +643,12 @@ network interface for containers.</p>
 <p>If you&rsquo;d prefer to use a local timezone for your containers you may change it
 here. The default is etc/UTC. Requires format America/Denver or Europe/Paris.
 (see <code>/usr/share/zoneinfo</code>)</p>
-<pre><code>bastille_tzdata=&quot;Etc/UTC&quot;  ## default: &quot;Etc/UTC&quot;
+<pre tabindex="0"><code>bastille_tzdata=&quot;Etc/UTC&quot;  ## default: &quot;Etc/UTC&quot;
 </code></pre><h2 id="zfs-optional">ZFS (optional)</h2>
 <p>If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to <code>YES</code> and define the <code>zpool</code>. If either is undefined ZFS will
 not be used.</p>
-<pre><code>## ZFS options
+<pre tabindex="0"><code>## ZFS options
 bastille_zfs_enable=&quot;&quot;  ## default: &quot;&quot;
 bastille_zfs_zpool=&quot;&quot;   ## default: &quot;&quot;
 </code></pre><h2 id="networking">Networking</h2>
@@ -644,7 +666,7 @@ service netif cloneup
 to the host system and containers, and also provide a NAT rule for the new
 <code>bastille0</code> loopback interface to access the broader network.</p>
 <p>Create <code>/etc/pf.conf</code> and use the following rules:</p>
-<pre><code>ext_if=&quot;vtnet0&quot;
+<pre tabindex="0"><code>ext_if=&quot;vtnet0&quot;
 
 set block-policy return
 scrub in on $ext_if all fragment reassemble
@@ -682,7 +704,7 @@ sub-command.</p>
 <blockquote>
 <p>You can optionally append the keyword <code>update</code> to automagically apply <code>freebsd-update</code> to the downloaded release.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille bootstrap 12.2-RELEASE update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille bootstrap 13.0-RELEASE update
 </code></pre></div><p>You can now create a container using the newly bootstrapped release.</p>
 <h2 id="create">create</h2>
 <p>In order to create a container you will need to provide a unique container
@@ -695,7 +717,7 @@ IP, it&rsquo;s safe to use any address within that range.</p>
 <p>Tip: container names cannot include the dot (&quot;.&quot;) character.</p>
 </blockquote>
 <p>Container creation should be very quick.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 12.2-RELEASE 10.17.89.50
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 13.0-RELEASE 10.17.89.50
 </code></pre></div><h2 id="start">start</h2>
 <p>You&rsquo;ll need to start the container before you can interact with it.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille start alcatraz
@@ -719,7 +741,7 @@ that container.</p>
 <p>Lastly, destroy your lightweight container.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille destroy alcatraz
 </code></pre></div><h2 id="usage">usage</h2>
-<pre><code>Bastille is an open-source system for automating deployment and management of
+<pre tabindex="0"><code>Bastille is an open-source system for automating deployment and management of
 containerized applications on FreeBSD.
 
 Usage:

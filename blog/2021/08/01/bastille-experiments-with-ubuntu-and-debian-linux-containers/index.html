@@ -387,6 +387,28 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/compare/"><span>Compare</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -530,6 +552,7 @@ containerized applications on FreeBSD.</p>
 <li>Join the discussion <a href="https://discord.gg/FawhD6DUdm">BastilleBSD on Discord</a></li>
 <li>Join the discussion <a href="https://t.me/BastilleBSD">BastilleBSD on Telegram</a></li>
 <li>Subscribe to <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA">BastilleBSD on YouTube</a></li>
+<li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
 <h2 id="experimental-linux">Experimental Linux</h2>
@@ -553,9 +576,9 @@ the release. This follows the same standard format to bootstrap a FreeBSD
 release.</p>
 <p><strong>Ubuntu 18.04 &ldquo;Bionic Beaver&rdquo;</strong></p>
 <p>Usage:</p>
-<pre><code>bastille bootstrap bionic
+<pre tabindex="0"><code>bastille bootstrap bionic
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille bootstrap bionic
+<pre tabindex="0"><code>ishmael ~ # bastille bootstrap bionic
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -567,9 +590,9 @@ I: Checking component main on http://archive.ubuntu.com/ubuntu...
 </code></pre><p>This will download and extract ~102M worth of packages using <code>debootstrap</code>.</p>
 <p><strong>Ubuntu 20.04 &ldquo;Focal Fossa&rdquo;</strong></p>
 <p>Usage:</p>
-<pre><code>bastille bootstrap focal
+<pre tabindex="0"><code>bastille bootstrap focal
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille bootstrap focal
+<pre tabindex="0"><code>ishmael ~ # bastille bootstrap focal
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -580,9 +603,9 @@ I: Checking component main on http://archive.ubuntu.com/ubuntu...
 </code></pre><p>This will download and extract ~109M worth of packages using <code>debootstrap</code>.</p>
 <p><strong>Debian 10 &ldquo;Buster&rdquo;</strong></p>
 <p>Usage:</p>
-<pre><code>bastille bootstrap buster
+<pre tabindex="0"><code>bastille bootstrap buster
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille bootstrap buster
+<pre tabindex="0"><code>ishmael ~ # bastille bootstrap buster
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -593,9 +616,9 @@ I: Checking component main on http://deb.debian.org/debian...
 </code></pre><p>This will download and extract ~144M worth of packages using <code>debootstrap</code>.</p>
 <p><strong>Debian 9 &ldquo;Stretch&rdquo;</strong></p>
 <p>Usage:</p>
-<pre><code>bastille bootstrap stretch
+<pre tabindex="0"><code>bastille bootstrap stretch
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille bootstrap stretch
+<pre tabindex="0"><code>ishmael ~ # bastille bootstrap stretch
 I: Retrieving InRelease
 I: Retrieving Release
 I: Retrieving Packages
@@ -610,9 +633,9 @@ I: Checking component main on http://deb.debian.org/debian...
 the <code>-L</code> option, ie; <code>bastille create -L name release ip</code>.</p>
 <p><strong>Ubuntu 18.04</strong></p>
 <p>Usage:</p>
-<pre><code>bastille create -L name bionic ip
+<pre tabindex="0"><code>bastille create -L name bionic ip
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille create -L ubuntu-bionic bionic 10.17.89.18
+<pre tabindex="0"><code>ishmael ~ # bastille create -L ubuntu-bionic bionic 10.17.89.18
 Valid: (10.17.89.18).
 Valid: (bastille0).
 [ubuntu-bionic]:
@@ -625,9 +648,9 @@ All packages are up to date.
 <p>This will require ~218M of extracted packages.</p>
 <p><strong>Ubuntu 20.04</strong></p>
 <p>Usage:</p>
-<pre><code>bastille create -L name focal ip
+<pre tabindex="0"><code>bastille create -L name focal ip
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille create -L ubuntu-focal focal 10.17.89.20
+<pre tabindex="0"><code>ishmael ~ # bastille create -L ubuntu-focal focal 10.17.89.20
 Valid: (10.17.89.20).
 Valid: (bastille0).
 [ubuntu-focal]:
@@ -641,9 +664,9 @@ All packages are up to date.
 <h3 id="create-debian-container">Create Debian Container</h3>
 <p><strong>Debian 9</strong></p>
 <p>Usage:</p>
-<pre><code>bastille create -L name stretch ip
+<pre tabindex="0"><code>bastille create -L name stretch ip
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille create -L debian-stretch stretch 10.17.89.09
+<pre tabindex="0"><code>ishmael ~ # bastille create -L debian-stretch stretch 10.17.89.09
 Valid: (10.17.89.09).
 Valid: (bastille0).
 [debian-stretch]:
@@ -656,9 +679,9 @@ All packages are up to date.
 <p>This will require ~229M of extracted packages.</p>
 <p><strong>Debian 10</strong></p>
 <p>Usage:</p>
-<pre><code>bastille create -L name buster ip
+<pre tabindex="0"><code>bastille create -L name buster ip
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille create -L debian-buster buster 10.17.89.10
+<pre tabindex="0"><code>ishmael ~ # bastille create -L debian-buster buster 10.17.89.10
 Valid: (10.17.89.10).
 Valid: (bastille0).
 [debian-stretch]:
@@ -674,7 +697,7 @@ All packages are up to date.
 <p>The <code>bastille console</code> command works as expected with these Linux containers.
 You will be logged in as root and shown the motd.</p>
 <p>Example: Bionic</p>
-<pre><code>brick ~ # bastille console ubuntu-bionic
+<pre tabindex="0"><code>brick ~ # bastille console ubuntu-bionic
 [ubuntu-bionic]:
 Welcome to Ubuntu 18.04 LTS (GNU/Linux 3.17.0 x86_64)
 
@@ -689,7 +712,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 </code></pre><p>Example: Focal</p>
-<pre><code>brick ~ # bastille console ubuntu-focal
+<pre tabindex="0"><code>brick ~ # bastille console ubuntu-focal
 [ubuntu-focal]:
 Welcome to Ubuntu 20.04 LTS (GNU/Linux 3.17.0 x86_64)
 
@@ -704,7 +727,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 </code></pre><p>Example: Stretch</p>
-<pre><code>ishmael ~ # bastille console debian-stretch
+<pre tabindex="0"><code>ishmael ~ # bastille console debian-stretch
 [debian-stretch]:
 Linux debian-stretch 3.17.0 FreeBSD 13.0-RELEASE-p3 #0: Tue Jun 29 19:46:20 UTC 2021 x86_64
 
@@ -715,7 +738,7 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 </code></pre><p>Example: Buster</p>
-<pre><code>ishmael ~ # bastille console debian-buster
+<pre tabindex="0"><code>ishmael ~ # bastille console debian-buster
 [debian-buster]:
 Linux debian-buster 3.17.0 FreeBSD 13.0-RELEASE-p3 #0: Tue Jun 29 19:46:20 UTC 2021 x86_64
 
@@ -730,9 +753,9 @@ permitted by applicable law.
 <code>PKG</code> sub-commands. This means you can automate package installation and
 execute arbitrary commands on Linux containers.</p>
 <p>Usage:</p>
-<pre><code>bastille pkg debian-buster install htop
+<pre tabindex="0"><code>bastille pkg debian-buster install htop
 </code></pre><p>Example:</p>
-<pre><code>[debian-buster]:
+<pre tabindex="0"><code>[debian-buster]:
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -754,9 +777,9 @@ Setting up htop (2.2.0-1+b1) ...
 </code></pre><p>Support for the <code>CMD</code> sub-command works in the same way. Again, your mileage
 may vary at this stage.</p>
 <p>Usage:</p>
-<pre><code>bastille cmd debian-buster cat /etc/debian_version
+<pre tabindex="0"><code>bastille cmd debian-buster cat /etc/debian_version
 </code></pre><p>Example:</p>
-<pre><code>ishmael ~ # bastille cmd debian-buster cat /etc/debian_version
+<pre tabindex="0"><code>ishmael ~ # bastille cmd debian-buster cat /etc/debian_version
 [debian-buster]:
 10.10
 [debian-buster]: 0
@@ -955,23 +978,6 @@ templates to automate Linux containers. This means by default the
       
     
     <li>
-      <a href="https://t.me/BastilleBSD" target="_blank" rel="noopener">
-        <i class="fab fa-telegram"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
       <a href="https://discord.gg/FawhD6DUdm" target="_blank" rel="noopener">
         <i class="fab fa-discord"></i>
       </a>
@@ -991,6 +997,23 @@ templates to automate Linux containers. This means by default the
     <li>
       <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA" target="_blank" rel="noopener">
         <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://patreon.com/BastilleBSD" target="_blank" rel="noopener">
+        <i class="fab fa-patreon"></i>
       </a>
     </li>
   

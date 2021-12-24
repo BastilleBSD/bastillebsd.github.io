@@ -387,6 +387,28 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/compare/"><span>Compare</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -504,6 +526,7 @@ containerized applications on FreeBSD.</p>
 <li>Join the discussion <a href="https://discord.gg/FawhD6DUdm">BastilleBSD on Discord</a></li>
 <li>Join the discussion <a href="https://t.me/BastilleBSD">BastilleBSD on Telegram</a></li>
 <li>Subscribe to <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA">BastilleBSD on YouTube</a></li>
+<li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
 <h2 id="0620200202-groundhog-day">0.6.20200202 &ldquo;Groundhog Day&rdquo;</h2>
@@ -560,7 +583,7 @@ Media Server and the like.</p>
 minor exception that the mount path (<code>mnt/storage</code> in this case) is a relative
 path <em>within</em> the container. An example:</p>
 <p><strong>template/FSTAB</strong></p>
-<pre><code>/usr/local/storage mnt/storage nullfs ro 0 0
+<pre tabindex="0"><code>/usr/local/storage mnt/storage nullfs ro 0 0
 </code></pre><h3 id="template-validation">Template Validation</h3>
 <p>The <code>verify</code> sub-command can now be targeted at templates. This validation will
 parse the template files and display a read-only overview of actions to be
@@ -590,7 +613,7 @@ Bastille appropriately less verbose going forward.</p>
 could become &ldquo;stuck&rdquo; trying to use <code>console</code> to login as a user that does not
 exist. User and shell validation is now performed before attempting to login to
 a container as a non-root user.</p>
-<pre><code>bastille console TARGET username
+<pre tabindex="0"><code>bastille console TARGET username
 </code></pre><h3 id="bastille-bootstrap">bastille bootstrap</h3>
 <p>Improvements to the <code>bootstrap</code> sub-command perform additional checks on
 storage and network configurations to ensure a working state.</p>
@@ -790,23 +813,6 @@ checkout. Use at your own risk; don&rsquo;t use in production.</p>
       
     
     <li>
-      <a href="https://t.me/BastilleBSD" target="_blank" rel="noopener">
-        <i class="fab fa-telegram"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
       <a href="https://discord.gg/FawhD6DUdm" target="_blank" rel="noopener">
         <i class="fab fa-discord"></i>
       </a>
@@ -826,6 +832,23 @@ checkout. Use at your own risk; don&rsquo;t use in production.</p>
     <li>
       <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA" target="_blank" rel="noopener">
         <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://patreon.com/BastilleBSD" target="_blank" rel="noopener">
+        <i class="fab fa-patreon"></i>
       </a>
     </li>
   

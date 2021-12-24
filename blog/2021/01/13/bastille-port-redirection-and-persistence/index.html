@@ -387,6 +387,28 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/compare/"><span>Compare</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -533,6 +555,7 @@ containerized applications on FreeBSD.</p>
 <li>Join the discussion <a href="https://discord.gg/FawhD6DUdm">BastilleBSD on Discord</a></li>
 <li>Join the discussion <a href="https://t.me/BastilleBSD">BastilleBSD on Telegram</a></li>
 <li>Subscribe to <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA">BastilleBSD on YouTube</a></li>
+<li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
 <h2 id="bastille-port-redirection">Bastille Port Redirection</h2>
@@ -566,25 +589,25 @@ Bastille template.</p>
 <li>redirect port 443 (host) to port 443 (container) to access https</li>
 </ol>
 <p><strong>Command Line Usage</strong></p>
-<pre><code>bastille rdr TARGET tcp 2200 22 
+<pre tabindex="0"><code>bastille rdr TARGET tcp 2200 22 
 bastille rdr TARGET udp 53 53
 bastille rdr TARGET tcp 443 443 
 </code></pre><p><strong>Bastille Template Usage</strong></p>
-<pre><code>RDR tcp 2200 22
+<pre tabindex="0"><code>RDR tcp 2200 22
 RDR udp 53 53
 RDR tcp 443 443
 </code></pre><h3 id="listing-redirects">Listing Redirects</h3>
 <p>Additionally it is possible to <code>list</code> existing rules for a container:</p>
-<pre><code>bastille rdr TARGET list
+<pre tabindex="0"><code>bastille rdr TARGET list
 </code></pre><h3 id="clearing-redirects">Clearing Redirects</h3>
 <p>You may also need to clear redirect rules to remove access:</p>
-<pre><code>bastille rdr TARGET clear
+<pre tabindex="0"><code>bastille rdr TARGET clear
 </code></pre><h3 id="persistence">Persistence</h3>
 <p>Redirection rules are persistent by default. This means that any redirect rules
 applied to a target will be written to an <code>rdr.conf</code> for that target
 automatically.</p>
 <p><strong>Example: /usr/local/bastille/jails/folsom/rdr.conf</strong></p>
-<pre><code>tcp 2200 22
+<pre tabindex="0"><code>tcp 2200 22
 udp 53 53
 tcp 443 443
 </code></pre><p>The rules found in this file (one per line) will be loaded for the container
@@ -791,23 +814,6 @@ access services from outside.</p>
       
     
     <li>
-      <a href="https://t.me/BastilleBSD" target="_blank" rel="noopener">
-        <i class="fab fa-telegram"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
       <a href="https://discord.gg/FawhD6DUdm" target="_blank" rel="noopener">
         <i class="fab fa-discord"></i>
       </a>
@@ -827,6 +833,23 @@ access services from outside.</p>
     <li>
       <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA" target="_blank" rel="noopener">
         <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://patreon.com/BastilleBSD" target="_blank" rel="noopener">
+        <i class="fab fa-patreon"></i>
       </a>
     </li>
   

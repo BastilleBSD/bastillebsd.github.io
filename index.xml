@@ -5,7 +5,7 @@
     <link>https://bastillebsd.org/</link>
       <atom:link href="https://bastillebsd.org/index.xml" rel="self" type="application/rss+xml" />
     <description>BastilleBSD</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021</copyright><lastBuildDate>Fri, 30 Jul 2021 16:15:41 -0600</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021</copyright><lastBuildDate>Thu, 23 Dec 2021 15:52:01 -0700</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>BastilleBSD</title>
@@ -18,6 +18,402 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bastillebsd.org/blog/posts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Closing Out 2021 With New Bastille Release</title>
+      <link>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</link>
+      <pubDate>Thu, 23 Dec 2021 15:52:01 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</guid>
+      <description>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/debian-ubuntu.jpg&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Experimenting with Debian and Ubuntu Containers
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;bastille-0920211225-happy-holidays&#34;&gt;Bastille 0.9.20211225 &amp;ldquo;Happy Holidays&amp;rdquo;&lt;/h1&gt;
+&lt;p&gt;Happy Holidays! Bastille development continues with five months of new features
+and fixes! These release notes outline the changes you can expect to find in
+our latest version.&lt;/p&gt;
+&lt;h2 id=&#34;more-linux-improvements&#34;&gt;More Linux Improvements&lt;/h2&gt;
+&lt;p&gt;This release adds additional experimental support for Debian 11 &amp;ldquo;Bullseye&amp;rdquo;,
+Debian 10 &amp;ldquo;Buster&amp;rdquo;, Debian 9 &amp;ldquo;Stretch&amp;rdquo;, Ubuntu 18.04 &amp;ldquo;Bionic&amp;rdquo; and Ubuntu 20.04
+&amp;ldquo;Focal&amp;rdquo;. Linux support is maturing thanks to feedback and contributions from
+the community!&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s more, the &lt;code&gt;CMD&lt;/code&gt; and &lt;code&gt;PKG&lt;/code&gt; sub-commands support these Linux releases!&lt;/p&gt;
+&lt;p&gt;These changes open up initial support for using templates with Linux
+containers. Currently limited to &lt;code&gt;CMD&lt;/code&gt; and &lt;code&gt;PKG&lt;/code&gt; only.&lt;/p&gt;
+&lt;p&gt;Note: this release updates the &lt;code&gt;bastille.conf&lt;/code&gt;. If you are upgrading please
+merge config changes.&lt;/p&gt;
+&lt;h3 id=&#34;debian-releases&#34;&gt;Debian releases&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bullseye&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap bullseye
+bastille create -L debian11 bullseye 10.17.89.11
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Buster&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap buster
+bastille create -L debian10 buster 10.17.89.10
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Stretch&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap stretch
+bastille create -L debian9 stretch 10.17.89.9
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;ubuntu-releases&#34;&gt;Ubuntu releases&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Bionic&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap bionic
+bastille create -L ubuntu18 bionic 10.17.89.18
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Focal&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap focal
+bastille create -L ubuntu20 focal 10.17.89.20
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Improvements have also been made to simplify future Linux additions to the codebase.&lt;/p&gt;
+&lt;h3 id=&#34;linux-support-for-pkg&#34;&gt;Linux support for PKG&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;pkg&lt;/code&gt; sub-command now supports Ubuntu &amp;amp; Debian containers by using &lt;code&gt;apt&lt;/code&gt;
+transparently inside the container.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille pkg debian11 upgrade
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;linux-support-for-cmd&#34;&gt;Linux support for CMD&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;cmd&lt;/code&gt; sub-command now supports Ubuntu &amp;amp; Debian containers.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille cmd debian11 ps -ef
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;new-pkg-option&#34;&gt;New PKG option&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;pkg&lt;/code&gt; sub-command now optionally supports using the hosts package manager
+instead of the container pkg binary.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille pkg -H alcatraz upgrade
+bastille pkg --host alcatraz install htop
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;exit-codes&#34;&gt;Exit Codes&lt;/h2&gt;
+&lt;p&gt;CMD now returns exit code for individual jails and ALL jails.&lt;/p&gt;
+&lt;p&gt;If CMD is executed against ALL jails and any return an error the command will
+return exit code 1. All jails need to return 0 for the command to return 0.&lt;/p&gt;
+&lt;h2 id=&#34;timezone-settings&#34;&gt;Timezone settings&lt;/h2&gt;
+&lt;p&gt;Bastille will now use the timezone configured on the host unless otherwise
+defined in the bastille.conf.&lt;/p&gt;
+&lt;h2 id=&#34;vnet-improvements&#34;&gt;VNET Improvements&lt;/h2&gt;
+&lt;p&gt;This release adds more options to VNET containers including descriptions and
+usage of existing bridge interfaces.&lt;/p&gt;
+&lt;h3 id=&#34;vnet-bridge&#34;&gt;VNET Bridge&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;create&lt;/code&gt; command now supports a &lt;code&gt;-B&lt;/code&gt; option to attach a VNET container to
+an existing bridge.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create -B alcatraz 13.0-RELEASE 192.168.1.5/24 bridge0
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;vnet-descriptions&#34;&gt;VNET descriptions&lt;/h3&gt;
+&lt;p&gt;VNET interfaces will now be given an interface description including the
+container name. This will help map containers with interfaces in VNET
+configurations.&lt;/p&gt;
+&lt;h2 id=&#34;template-improvements&#34;&gt;Template Improvements&lt;/h2&gt;
+&lt;h3 id=&#34;recursive-verify&#34;&gt;recursive verify&lt;/h3&gt;
+&lt;p&gt;When using &lt;code&gt;bastille verify&lt;/code&gt; against a template that contains an &lt;code&gt;INCLUDE&lt;/code&gt;
+statement Bastille will now recursively verify every template in the chain.&lt;/p&gt;
+&lt;h3 id=&#34;bastille-update-supports-templates&#34;&gt;bastille update supports templates&lt;/h3&gt;
+&lt;p&gt;You can now easily update templates using &lt;code&gt;bastille update ...&lt;/code&gt;. The syntax
+supports multiple options as described here:&lt;/p&gt;
+&lt;p&gt;Update all templates (using git)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille update TEMPLATES
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update the bastillebsd-templates/nginx template only&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille update bastillebsd-templates/nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;whats-changed&#34;&gt;What&amp;rsquo;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fix creation of Linux jails by @cynix in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/422&#34;&gt;https://github.com/BastilleBSD/bastille/pull/422&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix minor typo in README by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/425&#34;&gt;https://github.com/BastilleBSD/bastille/pull/425&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refactor: Creates Linux jails bootstrap functions by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/426&#34;&gt;https://github.com/BastilleBSD/bastille/pull/426&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adds: Debian 9 (Stretch) as a release for linux jails by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/427&#34;&gt;https://github.com/BastilleBSD/bastille/pull/427&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added logic for setting ipv6_defaultrouter for vnet template by @FloGatt in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/429&#34;&gt;https://github.com/BastilleBSD/bastille/pull/429&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adds: Debian 10 (Buster) as a release for linux jails by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/430&#34;&gt;https://github.com/BastilleBSD/bastille/pull/430&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bastille cmd exit code not respected #272 by @yerrysherry in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/303&#34;&gt;https://github.com/BastilleBSD/bastille/pull/303&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;improve NO_COLOR detection by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/431&#34;&gt;https://github.com/BastilleBSD/bastille/pull/431&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;fix overloaded variable in mount command by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/432&#34;&gt;https://github.com/BastilleBSD/bastille/pull/432&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;basic PKG support for ubuntu/debian containers by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/433&#34;&gt;https://github.com/BastilleBSD/bastille/pull/433&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sets require NETWORKING in the rc script by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/436&#34;&gt;https://github.com/BastilleBSD/bastille/pull/436&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Zfs support to docs by @Bennykillua in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/453&#34;&gt;https://github.com/BastilleBSD/bastille/pull/453&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;fix image path for zfs support screenshot by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/454&#34;&gt;https://github.com/BastilleBSD/bastille/pull/454&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add zfs-support doc to toctree by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/455&#34;&gt;https://github.com/BastilleBSD/bastille/pull/455&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;minor fix for docs path by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/456&#34;&gt;https://github.com/BastilleBSD/bastille/pull/456&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;fixing issue with docs (conflict with docutils v0.18) by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/457&#34;&gt;https://github.com/BastilleBSD/bastille/pull/457&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Added code and -B option to &amp;ldquo;create&amp;rdquo; to allow creating/managing jails attached to external bridge by @draga79 in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/465&#34;&gt;https://github.com/BastilleBSD/bastille/pull/465&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the devfs_ruleset number from imported iocage jails by @robarnold in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/461&#34;&gt;https://github.com/BastilleBSD/bastille/pull/461&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add recursive verify for includes in Bastillefile by @w4andy in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/452&#34;&gt;https://github.com/BastilleBSD/bastille/pull/452&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fix for issue #403 by @zilti in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/442&#34;&gt;https://github.com/BastilleBSD/bastille/pull/442&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fixed to update_fstab() in clone.sh  by @frikilax in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/446&#34;&gt;https://github.com/BastilleBSD/bastille/pull/446&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;update vagrant to FreeBSD-13.0 and install git by @w4andy in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/451&#34;&gt;https://github.com/BastilleBSD/bastille/pull/451&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[REF] bootsrap: Removes code duplication to prevent future errors by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/466&#34;&gt;https://github.com/BastilleBSD/bastille/pull/466&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add a description to the host vnet interface by @robarnold in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/459&#34;&gt;https://github.com/BastilleBSD/bastille/pull/459&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;TEMPLATE.SH::ADDED:: ability to apply templates using a custom directory path by @frikilax in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/445&#34;&gt;https://github.com/BastilleBSD/bastille/pull/445&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use host&amp;rsquo;s time zone by default for jails by @yaazkal in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/467&#34;&gt;https://github.com/BastilleBSD/bastille/pull/467&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;use full path when calling jls binary by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/469&#34;&gt;https://github.com/BastilleBSD/bastille/pull/469&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;hotfix for the VNET interface description patch by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/471&#34;&gt;https://github.com/BastilleBSD/bastille/pull/471&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;easy way to update templates by @w4andy in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/450&#34;&gt;https://github.com/BastilleBSD/bastille/pull/450&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extra validation for Linux jails, small changes by @JRGTH in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/420&#34;&gt;https://github.com/BastilleBSD/bastille/pull/420&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add Debian 11 &amp;lsquo;bullseye&amp;rsquo; to Linux supported list by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/473&#34;&gt;https://github.com/BastilleBSD/bastille/pull/473&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;jls path fix + support using host package manager by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/474&#34;&gt;https://github.com/BastilleBSD/bastille/pull/474&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;change new PKG option from -P to -H by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/475&#34;&gt;https://github.com/BastilleBSD/bastille/pull/475&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;accidentally the jail name in run test by @cedwards in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/476&#34;&gt;https://github.com/BastilleBSD/bastille/pull/476&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;new-contributors&#34;&gt;New Contributors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;@FloGatt made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/429&#34;&gt;https://github.com/BastilleBSD/bastille/pull/429&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@yerrysherry made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/303&#34;&gt;https://github.com/BastilleBSD/bastille/pull/303&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@Bennykillua made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/453&#34;&gt;https://github.com/BastilleBSD/bastille/pull/453&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@draga79 made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/465&#34;&gt;https://github.com/BastilleBSD/bastille/pull/465&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@robarnold made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/461&#34;&gt;https://github.com/BastilleBSD/bastille/pull/461&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@w4andy made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/452&#34;&gt;https://github.com/BastilleBSD/bastille/pull/452&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;@frikilax made their first contribution in &lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/446&#34;&gt;https://github.com/BastilleBSD/bastille/pull/446&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a href=&#34;https://github.com/BastilleBSD/bastille/compare/0.9.20210714...0.9.20211225&#34;&gt;https://github.com/BastilleBSD/bastille/compare/0.9.20210714...0.9.20211225&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bastille Template: AdGuard Home</title>
+      <link>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</link>
+      <pubDate>Tue, 14 Dec 2021 12:00:10 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</guid>
+      <description>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/adguardhome-template.png&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    AdGuard Home is network-wide software for blocking ads &amp;amp; tracking.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;template-adguard-home&#34;&gt;Template: AdGuard Home&lt;/h1&gt;
+&lt;p&gt;Bastille is more than just lightweight containers for FreeBSD. The template
+command allows you to automatically deploy a wide range of software! This post
+begins a series highlighting examples of deploying popular applications using
+Bastille on FreeBSD.&lt;/p&gt;
+&lt;p&gt;We begin the series with something I run in my homelab. I run three instances
+if I&amp;rsquo;m being honest. A network-wide service for blocking ads &amp;amp; online tracking,
+AdGuard Home.&lt;/p&gt;
+&lt;p&gt;AdGuard Home provides a privacy focused DNS server inside your home network
+giving you network-wide blocking of ads and tracking. This means ad blocking
+for your phones, laptops, desktops, TVs and any other Internet connected
+devices in your home all in one place. No apps to install or browser plugins to
+update. Simply point everything to the AdGuard Home server(s) and you&amp;rsquo;re done.&lt;/p&gt;
+&lt;p&gt;As I mentioned, I run three of these instances in my homelab supporting fifty
+devices. The dashboard results have been enlightening in understanding DNS
+behavior on my network. Who knew the streaming device connected to my TV would
+be a top offender!&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to run AdGuard Home with Bastille follow these steps:&lt;/p&gt;
+&lt;h2 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
+Cloning into &#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome&#39;...
+warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome.git/
+remote: Enumerating objects: 30, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 30 (delta 4), reused 2 (delta 0), pack-reused 15
+Receiving objects: 100% (30/30), 7.62 KiB | 7.63 MiB/s, done.
+Resolving deltas: 100% (8/8), done.
+Detected Bastillefile hook.
+[Bastillefile]:
+PKG ca_root_nss adguardhome
+CP usr /
+SYSRC adguardhome_enable=YES
+SERVICE adguardhome start
+RDR tcp 80 80
+RDR udp 53 53
+
+Template ready to use.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create&#34;&gt;Create&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
+Valid: (10.17.89.53).
+Valid: (bastille0).
+
+[adguardhome]:
+adguard: created
+
+[adguardhome]:
+Applying template: default/thin...
+[adguardhome]:
+Applying template: default/base...
+[adguardhome]:
+
+[adguardhome]:
+syslogd_flags: -s -&amp;gt; -ss
+
+[adguardhome]:
+sendmail_enable: NO -&amp;gt; NO
+
+[adguardhome]:
+sendmail_submit_enable: YES -&amp;gt; NO
+
+[adguardhome]:
+sendmail_outbound_enable: YES -&amp;gt; NO
+
+[adguardhome]:
+sendmail_msp_queue_enable: YES -&amp;gt; NO
+
+[adguardhome]:
+cron_flags:  -&amp;gt; -J 60
+
+[adguardhome]:
+/etc/resolv.conf -&amp;gt; /usr/local/bastille/jails/adguardhome/root/etc/resolv.conf
+
+Template applied: default/base
+
+Template applied: default/thin
+
+[adguardhome]:
+adguard: removed
+
+[adguardhome]:
+adguard: created
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;template&#34;&gt;Template&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template adguardhome bastillebsd-templates/adguardhome
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille template adguardhome bastillebsd-templates/adguardhome
+[adguardhome]:
+Applying template: bastillebsd-templates/adguardhome...
+[adguardhome]:
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:13:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
+[adguardhome] Installing pkg-1.17.5...
+[adguardhome] Extracting pkg-1.17.5: 100%
+Updating FreeBSD repository catalogue...
+[adguardhome] Fetching meta.conf: 100%    163 B   0.2kB/s    00:01
+[adguardhome] Fetching packagesite.pkg: 100%    6 MiB   6.7MB/s    00:01
+Processing entries: 100%
+FreeBSD repository update completed. 31159 packages processed.
+All repositories are up to date.
+Updating database digests format: 100%
+The following 2 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	adguardhome: 0.107.0.b.7
+	ca_root_nss: 3.69_1
+
+Number of packages to be installed: 2
+
+The process will require 33 MiB more space.
+6 MiB to be downloaded.
+[adguardhome] [1/2] Fetching ca_root_nss-3.69_1.pkg: 100%  249 KiB 255.0kB/s    00:01
+[adguardhome] [2/2] Fetching adguardhome-0.107.0.b.7.pkg: 100%    6 MiB   6.5MB/s    00:01
+Checking integrity... done (0 conflicting)
+[adguardhome] [1/2] Installing ca_root_nss-3.69_1...
+[adguardhome] [1/2] Extracting ca_root_nss-3.69_1: 100%
+[adguardhome] [2/2] Installing adguardhome-0.107.0.b.7...
+[adguardhome] [2/2] Extracting adguardhome-0.107.0.b.7: 100%
+=====
+Message from ca_root_nss-3.69_1:
+
+--
+FreeBSD does not, and can not warrant that the certification authorities
+whose certificates are included in this package have in any way been
+audited for trustworthiness or RFC 3647 compliance.
+
+Assessment and verification of trust is the complete responsibility of the
+system administrator.
+
+
+This package installs symlinks to support root certificates discovery by
+default for software that uses OpenSSL.
+
+This enables SSL Certificate Verification by client software without manual
+intervention.
+
+If you prefer to do this manually, replace the following symlinks with
+either an empty file or your site-local certificate bundle.
+
+  * /etc/ssl/cert.pem
+  * /usr/local/etc/ssl/cert.pem
+  * /usr/local/openssl/cert.pem
+=====
+Message from adguardhome-0.107.0.b.7:
+
+--
+You installed AdGuardHome: Network-wide ads &amp;amp; trackers blocking DNS server.
+
+In order to use it please start the service &#39;adguardhome&#39; and
+then access the URL http://0.0.0.0:3010/ in your favorite browser.
+
+[adguardhome]:
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr -&amp;gt; /usr/local/bastille/jails/adguardhome/root/usr
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local -&amp;gt; /usr/local/bastille/jails/adguardhome/root/usr/local
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local/bin -&amp;gt; /usr/local/bastille/jails/adguardhome/root/usr/local/bin
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local/bin/AdGuardHome.yaml -&amp;gt; /usr/local/bastille/jails/adguardhome/root/usr/local/bin/AdGuardHome.yaml
+
+[adguardhome]:
+adguardhome_enable:  -&amp;gt; YES
+
+[adguardhome]:
+Starting adguardhome.
+
+tcp 80 80
+udp 53 53
+Template applied: bastillebsd-templates/adguardhome
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Now that the container is running you can access the service through the host
+machine. Using the redirected ports on tcp/80 and udp/53 we can now point to
+the host system IP address and access the container service.&lt;/p&gt;
+&lt;p&gt;In this example the IP of the host machine is &lt;code&gt;192.168.86.2&lt;/code&gt;. Entering that IP
+in my browser will show the AdGuard Home login page. The template sets the
+default username to &lt;code&gt;adguard&lt;/code&gt; and password to &lt;code&gt;BastilleBSD!&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Changing the password is done by editing the &lt;code&gt;AdGuardHome.yaml&lt;/code&gt; located
+alongside the main AdGuard binary. Note: stop the AdGuard Home service before
+making changes to the configuration.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -61,6 +457,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;experimental-linux&#34;&gt;Experimental Linux&lt;/h2&gt;
@@ -84,9 +481,9 @@ the release. This follows the same standard format to bootstrap a FreeBSD
 release.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ubuntu 18.04 &amp;ldquo;Bionic Beaver&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille bootstrap bionic
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap bionic
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille bootstrap bionic
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap bionic
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -98,9 +495,9 @@ I: Checking component main on http://archive.ubuntu.com/ubuntu...
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will download and extract ~102M worth of packages using &lt;code&gt;debootstrap&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ubuntu 20.04 &amp;ldquo;Focal Fossa&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille bootstrap focal
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap focal
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille bootstrap focal
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap focal
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -111,9 +508,9 @@ I: Checking component main on http://archive.ubuntu.com/ubuntu...
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will download and extract ~109M worth of packages using &lt;code&gt;debootstrap&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Debian 10 &amp;ldquo;Buster&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille bootstrap buster
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap buster
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille bootstrap buster
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap buster
 I: Retrieving InRelease
 I: Retrieving Packages
 I: Validating Packages
@@ -124,9 +521,9 @@ I: Checking component main on http://deb.debian.org/debian...
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will download and extract ~144M worth of packages using &lt;code&gt;debootstrap&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Debian 9 &amp;ldquo;Stretch&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille bootstrap stretch
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap stretch
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille bootstrap stretch
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap stretch
 I: Retrieving InRelease
 I: Retrieving Release
 I: Retrieving Packages
@@ -141,9 +538,9 @@ I: Checking component main on http://deb.debian.org/debian...
 the &lt;code&gt;-L&lt;/code&gt; option, ie; &lt;code&gt;bastille create -L name release ip&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ubuntu 18.04&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille create -L name bionic ip
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create -L name bionic ip
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille create -L ubuntu-bionic bionic 10.17.89.18
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create -L ubuntu-bionic bionic 10.17.89.18
 Valid: (10.17.89.18).
 Valid: (bastille0).
 [ubuntu-bionic]:
@@ -156,9 +553,9 @@ All packages are up to date.
 &lt;p&gt;This will require ~218M of extracted packages.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ubuntu 20.04&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille create -L name focal ip
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create -L name focal ip
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille create -L ubuntu-focal focal 10.17.89.20
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create -L ubuntu-focal focal 10.17.89.20
 Valid: (10.17.89.20).
 Valid: (bastille0).
 [ubuntu-focal]:
@@ -172,9 +569,9 @@ All packages are up to date.
 &lt;h3 id=&#34;create-debian-container&#34;&gt;Create Debian Container&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Debian 9&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille create -L name stretch ip
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create -L name stretch ip
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille create -L debian-stretch stretch 10.17.89.09
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create -L debian-stretch stretch 10.17.89.09
 Valid: (10.17.89.09).
 Valid: (bastille0).
 [debian-stretch]:
@@ -187,9 +584,9 @@ All packages are up to date.
 &lt;p&gt;This will require ~229M of extracted packages.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Debian 10&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille create -L name buster ip
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create -L name buster ip
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille create -L debian-buster buster 10.17.89.10
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create -L debian-buster buster 10.17.89.10
 Valid: (10.17.89.10).
 Valid: (bastille0).
 [debian-stretch]:
@@ -205,7 +602,7 @@ All packages are up to date.
 &lt;p&gt;The &lt;code&gt;bastille console&lt;/code&gt; command works as expected with these Linux containers.
 You will be logged in as root and shown the motd.&lt;/p&gt;
 &lt;p&gt;Example: Bionic&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;brick ~ # bastille console ubuntu-bionic
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brick ~ # bastille console ubuntu-bionic
 [ubuntu-bionic]:
 Welcome to Ubuntu 18.04 LTS (GNU/Linux 3.17.0 x86_64)
 
@@ -220,7 +617,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example: Focal&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;brick ~ # bastille console ubuntu-focal
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brick ~ # bastille console ubuntu-focal
 [ubuntu-focal]:
 Welcome to Ubuntu 20.04 LTS (GNU/Linux 3.17.0 x86_64)
 
@@ -235,7 +632,7 @@ individual files in /usr/share/doc/*/copyright.
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example: Stretch&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille console debian-stretch
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille console debian-stretch
 [debian-stretch]:
 Linux debian-stretch 3.17.0 FreeBSD 13.0-RELEASE-p3 #0: Tue Jun 29 19:46:20 UTC 2021 x86_64
 
@@ -246,7 +643,7 @@ individual files in /usr/share/doc/*/copyright.
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example: Buster&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille console debian-buster
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille console debian-buster
 [debian-buster]:
 Linux debian-buster 3.17.0 FreeBSD 13.0-RELEASE-p3 #0: Tue Jun 29 19:46:20 UTC 2021 x86_64
 
@@ -261,9 +658,9 @@ permitted by applicable law.
 &lt;code&gt;PKG&lt;/code&gt; sub-commands. This means you can automate package installation and
 execute arbitrary commands on Linux containers.&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille pkg debian-buster install htop
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille pkg debian-buster install htop
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[debian-buster]:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[debian-buster]:
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -285,9 +682,9 @@ Setting up htop (2.2.0-1+b1) ...
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Support for the &lt;code&gt;CMD&lt;/code&gt; sub-command works in the same way. Again, your mileage
 may vary at this stage.&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille cmd debian-buster cat /etc/debian_version
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille cmd debian-buster cat /etc/debian_version
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ishmael ~ # bastille cmd debian-buster cat /etc/debian_version
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille cmd debian-buster cat /etc/debian_version
 [debian-buster]:
 10.10
 [debian-buster]: 0
@@ -319,6 +716,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-0820210101&#34;&gt;Bastille 0.8.20210101&lt;/h2&gt;
@@ -330,7 +728,7 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 &lt;li&gt;don&amp;rsquo;t start empty jails by default (&lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/311&#34;&gt;#311&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This also includes a minor change to the &lt;code&gt;bastille.conf&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
 +bastille_template_empty=&amp;quot;&amp;quot;                 ## default: &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
@@ -371,7 +769,7 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 
 &lt;h2 id=&#34;bastille-on-freebsd&#34;&gt;Bastille on FreeBSD&lt;/h2&gt;
 &lt;p&gt;This document is designed to help you be successful in your use and adoption of
-Bastille and FreeBSD. This document begins with a brand-new FreeBSD 12.2 system
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.0 system
 deployed locally or in the cloud. Manual installation is not covered in this
 document.&lt;/p&gt;
 &lt;h2 id=&#34;firstboot&#34;&gt;Firstboot&lt;/h2&gt;
@@ -398,10 +796,10 @@ the first time:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;# pkg bootstrap&lt;/span&gt;
 The package management tool is not yet installed on your system.
 Do you want to fetch and install it now? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y/N&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: y
-Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:12:amd64/quarterly, please wait...
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:13:amd64/quarterly, please wait...
 Verifying signature with trusted certificate pkg.freebsd.org.2013102301... &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-1.16.1...
-&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-1.16.1: 100%
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-1.17.5...
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-1.17.5: 100%
 root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: this bootstrapping step can be automated using the following command:
 &lt;code&gt;env ASSUME_ALWAYS_YES=YES pkg bootstrap&lt;/code&gt;&lt;/p&gt;
@@ -409,7 +807,7 @@ root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
 &lt;p&gt;If you take a closer look at the line of output after the bootstrap
 confirmation you&amp;rsquo;ll notice that the last part of the URL says &lt;code&gt;quarterly&lt;/code&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Bootstrapping pkg &amp;hellip; pkg.FreeBSD.org/FreeBSD:12:amd64/&lt;code&gt;quarterly&lt;/code&gt;, please wait&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Bootstrapping pkg &amp;hellip; pkg.FreeBSD.org/FreeBSD:13:amd64/&lt;code&gt;quarterly&lt;/code&gt;, please wait&amp;hellip;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This subscribes the host to a quarterly release cycle for binary packages. For
 most systems this is adequate.  No changes are needed to subscribe to the
@@ -477,12 +875,12 @@ network interface for containers.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;d prefer to use a local timezone for your containers you may change it
 here. The default is etc/UTC. Requires format America/Denver or Europe/Paris.
 (see &lt;code&gt;/usr/share/zoneinfo&lt;/code&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille_tzdata=&amp;quot;Etc/UTC&amp;quot;  ## default: &amp;quot;Etc/UTC&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_tzdata=&amp;quot;Etc/UTC&amp;quot;  ## default: &amp;quot;Etc/UTC&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;zfs-optional&#34;&gt;ZFS (optional)&lt;/h2&gt;
 &lt;p&gt;If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to &lt;code&gt;YES&lt;/code&gt; and define the &lt;code&gt;zpool&lt;/code&gt;. If either is undefined ZFS will
 not be used.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## ZFS options
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## ZFS options
 bastille_zfs_enable=&amp;quot;&amp;quot;  ## default: &amp;quot;&amp;quot;
 bastille_zfs_zpool=&amp;quot;&amp;quot;   ## default: &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
@@ -500,7 +898,7 @@ service netif cloneup
 to the host system and containers, and also provide a NAT rule for the new
 &lt;code&gt;bastille0&lt;/code&gt; loopback interface to access the broader network.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;/etc/pf.conf&lt;/code&gt; and use the following rules:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ext_if=&amp;quot;vtnet0&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ext_if=&amp;quot;vtnet0&amp;quot;
 
 set block-policy return
 scrub in on $ext_if all fragment reassemble
@@ -538,7 +936,7 @@ sub-command.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can optionally append the keyword &lt;code&gt;update&lt;/code&gt; to automagically apply &lt;code&gt;freebsd-update&lt;/code&gt; to the downloaded release.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille bootstrap 12.2-RELEASE update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille bootstrap 13.0-RELEASE update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now create a container using the newly bootstrapped release.&lt;/p&gt;
 &lt;h2 id=&#34;create&#34;&gt;create&lt;/h2&gt;
 &lt;p&gt;In order to create a container you will need to provide a unique container
@@ -551,7 +949,7 @@ IP, it&amp;rsquo;s safe to use any address within that range.&lt;/p&gt;
 &lt;p&gt;Tip: container names cannot include the dot (&amp;quot;.&amp;quot;) character.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Container creation should be very quick.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create alcatraz 12.2-RELEASE 10.17.89.50
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create alcatraz 13.0-RELEASE 10.17.89.50
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;start&#34;&gt;start&lt;/h2&gt;
 &lt;p&gt;You&amp;rsquo;ll need to start the container before you can interact with it.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille start alcatraz
@@ -575,7 +973,7 @@ that container.&lt;/p&gt;
 &lt;p&gt;Lastly, destroy your lightweight container.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille destroy alcatraz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;usage&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;Bastille is an open-source system for automating deployment and management of
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Bastille is an open-source system for automating deployment and management of
 containerized applications on FreeBSD.
 
 Usage:
@@ -667,6 +1065,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-port-redirection&#34;&gt;Bastille Port Redirection&lt;/h2&gt;
@@ -700,25 +1099,25 @@ Bastille template.&lt;/p&gt;
 &lt;li&gt;redirect port 443 (host) to port 443 (container) to access https&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Command Line Usage&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille rdr TARGET tcp 2200 22 
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille rdr TARGET tcp 2200 22 
 bastille rdr TARGET udp 53 53
 bastille rdr TARGET tcp 443 443 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Bastille Template Usage&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;RDR tcp 2200 22
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;RDR tcp 2200 22
 RDR udp 53 53
 RDR tcp 443 443
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;listing-redirects&#34;&gt;Listing Redirects&lt;/h3&gt;
 &lt;p&gt;Additionally it is possible to &lt;code&gt;list&lt;/code&gt; existing rules for a container:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille rdr TARGET list
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille rdr TARGET list
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;clearing-redirects&#34;&gt;Clearing Redirects&lt;/h3&gt;
 &lt;p&gt;You may also need to clear redirect rules to remove access:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille rdr TARGET clear
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille rdr TARGET clear
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;persistence&#34;&gt;Persistence&lt;/h3&gt;
 &lt;p&gt;Redirection rules are persistent by default. This means that any redirect rules
 applied to a target will be written to an &lt;code&gt;rdr.conf&lt;/code&gt; for that target
 automatically.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example: /usr/local/bastille/jails/folsom/rdr.conf&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;tcp 2200 22
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tcp 2200 22
 udp 53 53
 tcp 443 443
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The rules found in this file (one per line) will be loaded for the container
@@ -787,6 +1186,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-default-templates&#34;&gt;Bastille Default Templates&lt;/h2&gt;
@@ -814,7 +1214,7 @@ to specify a TARGET. The target is defined when applying the template.&lt;/p&gt;
 &lt;p&gt;Given these simple requirements you can execute any Bastille sub-command in any
 order by defining them &lt;em&gt;one per line&lt;/em&gt; in the &lt;code&gt;Bastillefile&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Simple Bastillefile Example: nginx&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PKG nginx
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PKG nginx
 CP usr /
 SYSRC nginx_enable=YES
 SERVICE nginx start
@@ -847,7 +1247,7 @@ containers. These &amp;ldquo;default&amp;rdquo; templates are:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;These default templates are defined in the &lt;code&gt;bastille.conf&lt;/code&gt; like so:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bastille.conf&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+## Default Templates
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+## Default Templates
 +bastille_template_base=&amp;quot;default/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
 +bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
 +bastille_template_thick=&amp;quot;default/thick&amp;quot;    ## default: &amp;quot;default/thick&amp;quot;
@@ -863,7 +1263,7 @@ templates.&lt;/p&gt;
 &lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
 &lt;p&gt;Below is a copy of these five default templates for reference.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;default/base&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 CMD touch /etc/rc.conf
 SYSRC syslogd_flags=&amp;quot;-ss&amp;quot;
@@ -875,17 +1275,17 @@ SYSRC cron_flags=&amp;quot;-J 60&amp;quot;
 
 CP &amp;quot;${HOST_RESOLV_CONF}&amp;quot; /etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/thin&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/thick&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/vnet&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
@@ -899,27 +1299,27 @@ SYSRC ifconfig_vnet0=&amp;quot;${IFCONFIG}&amp;quot;
 # GATEWAY will be empty for a DHCP config. -- cwells
 CMD if [ -n &amp;quot;${GATEWAY}&amp;quot; ]; then /usr/sbin/sysrc defaultrouter=&amp;quot;${GATEWAY}&amp;quot;; fi
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/empty&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As the name implies this is an empty container. No custom configuration
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As the name implies this is an empty container. No custom configuration
 is defined.&lt;/p&gt;
 &lt;h3 id=&#34;template-arg&#34;&gt;Template ARG&lt;/h3&gt;
 &lt;p&gt;The keen observer will notice many of the default templates use the keyword
 &lt;code&gt;ARG&lt;/code&gt; to define variables. In this case:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;These variables can be referenced later in the template:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above example variables would translate into:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Additionally you can define and later &lt;code&gt;RENDER&lt;/code&gt; these custom variables inside
 configuration files.&lt;/p&gt;
 &lt;p&gt;Tip: The variables &lt;code&gt;${JAIL_NAME}&lt;/code&gt; and &lt;code&gt;${JAIL_IP}&lt;/code&gt; are automatically included
 and can be used within container configuration files.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example: RENDER file&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PKG nginx
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PKG nginx
 CP usr /
 RENDER /usr/local/etc/nginx/nginx.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example: RENDER directory (recursive)&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PKG nginx
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PKG nginx
 CP usr /
 RENDER /usr/local/www
 ...
@@ -936,17 +1336,17 @@ update it is not recommended to edit the default template(s) themselves.&lt;/str
 new template namespace is often a username or team/project name. Within this
 namespace you can create new templates and extend the defaults.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example for admin: cedwards&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir /usr/local/bastille/templates/cedwards/base 
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir /usr/local/bastille/templates/cedwards/base 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From here we can extend the &lt;code&gt;default/base&lt;/code&gt; template with our own template.&lt;/p&gt;
 &lt;p&gt;Included below is an example &lt;code&gt;Bastillefile&lt;/code&gt; that enables outbound sendmail.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;cedwards/base/Bastillefile&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
 INCLUDE default/base --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 
 SYSRC sendmail_outbound_enable=&amp;quot;YES&amp;quot;
 SYSRC sendmail_msp_queue_enable=&amp;quot;YES&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update the &lt;code&gt;bastille.conf&lt;/code&gt; to use &lt;code&gt;cedwards/base&lt;/code&gt; as the new default:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille_template_base=&amp;quot;cedwards/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_template_base=&amp;quot;cedwards/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With this configuration every new container would have &lt;code&gt;default/base&lt;/code&gt; applied
 (due to the &lt;code&gt;INCLUDE&lt;/code&gt; from &lt;code&gt;cedwards/base&lt;/code&gt;) followed by the additional
 configuration in the &lt;code&gt;cedwards/base&lt;/code&gt; template.&lt;/p&gt;
@@ -973,6 +1373,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-0820210101&#34;&gt;Bastille 0.8.20210101&lt;/h2&gt;
@@ -988,7 +1389,7 @@ features. Details are included below.&lt;/p&gt;
 will automatically have one of the default templates applied when created.
 Default templates include: &lt;code&gt;base&lt;/code&gt;, &lt;code&gt;empty&lt;/code&gt;, &lt;code&gt;thick&lt;/code&gt;, &lt;code&gt;thin&lt;/code&gt;, and &lt;code&gt;vnet&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bastille.conf changes&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Default Templates
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Default Templates
 bastille_template_base=&amp;quot;default/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
 bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
 bastille_template_thick=&amp;quot;default/thick&amp;quot;    ## default: &amp;quot;default/thick&amp;quot;
@@ -1007,7 +1408,7 @@ the release.&lt;/p&gt;
 &lt;p&gt;Bastille templates now support dynamic definition of variables. By default
 &lt;code&gt;$JAIL_NAME&lt;/code&gt; and &lt;code&gt;$JAIL_IP&lt;/code&gt; are defined.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bastillefile&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# With a default:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# With a default:
 ARG user=root
 # Without a default:
 ARG domain
@@ -1015,24 +1416,24 @@ ARG domain
 CMD echo &amp;quot;${username}@${domain}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Values can also be applied dynamically at the time of applying the
 template:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille template webjail bastillebsd-templates/nginx --arg username=admin --arg domain=example.com
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template webjail bastillebsd-templates/nginx --arg username=admin --arg domain=example.com
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bastille-config&#34;&gt;bastille config&lt;/h3&gt;
 &lt;p&gt;Bastille now supports the &lt;code&gt;config&lt;/code&gt; sub-command that allows you to get or
 set values in the &lt;code&gt;jail.conf&lt;/code&gt;. This is a welcome addition for Postgres
 users that need &lt;code&gt;sysvmsg=new&lt;/code&gt;. This can now be done dynamically.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille config TARGET set sysvmsg new
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille config TARGET set sysvmsg new
 bastille config ALL get securelevel
 bastille config TARGET set interface lagg0
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note: this can be used inside a Bastillefile to dynamically configure your containers.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bastillefile&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;CONFIG set sysvmsg new
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;CONFIG set sysvmsg new
 RESTART
 PKG postgres...
 SYSRC ...
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bastille-template---convert&#34;&gt;bastille template &amp;ndash;convert&lt;/h3&gt;
 &lt;p&gt;With this release we are deprecating the previous hook syntax in favor of the Bastillefile format. For this reason we have included a simple conversion tool that will generate a &lt;code&gt;Bastillefile&lt;/code&gt; within an existing template directory based on the legacy hook files.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille template --convert template/foo
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template --convert template/foo
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bug-fixes&#34;&gt;Bug-fixes&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;bugfix for rctl limits (#289)&lt;/li&gt;
@@ -1082,6 +1483,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-networking-options&#34;&gt;Bastille Networking Options&lt;/h2&gt;
@@ -1182,6 +1584,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;0620200202-groundhog-day&#34;&gt;0.6.20200202 &amp;ldquo;Groundhog Day&amp;rdquo;&lt;/h2&gt;
@@ -1238,7 +1641,7 @@ Media Server and the like.&lt;/p&gt;
 minor exception that the mount path (&lt;code&gt;mnt/storage&lt;/code&gt; in this case) is a relative
 path &lt;em&gt;within&lt;/em&gt; the container. An example:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;template/FSTAB&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/usr/local/storage mnt/storage nullfs ro 0 0
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/storage mnt/storage nullfs ro 0 0
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;template-validation&#34;&gt;Template Validation&lt;/h3&gt;
 &lt;p&gt;The &lt;code&gt;verify&lt;/code&gt; sub-command can now be targeted at templates. This validation will
 parse the template files and display a read-only overview of actions to be
@@ -1268,7 +1671,7 @@ Bastille appropriately less verbose going forward.&lt;/p&gt;
 could become &amp;ldquo;stuck&amp;rdquo; trying to use &lt;code&gt;console&lt;/code&gt; to login as a user that does not
 exist. User and shell validation is now performed before attempting to login to
 a container as a non-root user.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bastille console TARGET username
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille console TARGET username
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;bastille-bootstrap&#34;&gt;bastille bootstrap&lt;/h3&gt;
 &lt;p&gt;Improvements to the &lt;code&gt;bootstrap&lt;/code&gt; sub-command perform additional checks on
 storage and network configurations to ensure a working state.&lt;/p&gt;
@@ -1293,6 +1696,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 
@@ -1316,6 +1720,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 
@@ -1339,6 +1744,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 
@@ -1370,6 +1776,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 
@@ -1393,6 +1800,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;We created a ~20 minute video to help you get started with secure containers using Bastille.&lt;/p&gt;
@@ -1417,6 +1825,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;changelog&#34;&gt;Changelog&lt;/h2&gt;
@@ -1456,6 +1865,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;0520191125&#34;&gt;0.5.20191125&lt;/h2&gt;
@@ -1537,6 +1947,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;bastille-upgrade-tips-04x&#34;&gt;Bastille Upgrade Tips (&amp;lt;0.4.x)&lt;/h2&gt;

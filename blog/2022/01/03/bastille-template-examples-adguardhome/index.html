@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="This release includes a number of exciting new features and fixes to reported issues. Thank you to everyone that submitted feedback, GitHub issues and Pull Requests">
+  <meta name="description" content="Full examples of Bastille automation.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/blog/2019/11/25/captain-jack/">
+  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/">
 
   
 
@@ -132,7 +132,7 @@
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://bastillebsd.org/blog/2019/11/25/captain-jack/">
+  <link rel="canonical" href="https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/">
 
   
   
@@ -148,15 +148,15 @@
   <meta property="twitter:creator" content="@BastilleBSD">
   
   <meta property="og:site_name" content="BastilleBSD">
-  <meta property="og:url" content="https://bastillebsd.org/blog/2019/11/25/captain-jack/">
-  <meta property="og:title" content="Release Notes - Captain Jack | BastilleBSD">
-  <meta property="og:description" content="This release includes a number of exciting new features and fixes to reported issues. Thank you to everyone that submitted feedback, GitHub issues and Pull Requests"><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
+  <meta property="og:url" content="https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/">
+  <meta property="og:title" content="Bastille Template: AdGuard Home | BastilleBSD">
+  <meta property="og:description" content="Full examples of Bastille automation."><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
   <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-11-25T04:36:59&#43;00:00">
+      <meta property="article:published_time" content="2021-12-14T12:00:10-07:00">
     
-    <meta property="article:modified_time" content="2021-01-10T10:46:21-07:00">
+    <meta property="article:modified_time" content="2021-12-14T13:56:10-07:00">
   
 
   
@@ -201,7 +201,7 @@
 
 
 
-  <title>Release Notes - Captain Jack | BastilleBSD</title>
+  <title>Bastille Template: AdGuard Home | BastilleBSD</title>
 
 </head>
 
@@ -455,10 +455,10 @@
   
   
 <div class="article-container pt-3">
-  <h1>Release Notes - Captain Jack</h1>
+  <h1>Bastille Template: AdGuard Home</h1>
 
   
-  <p class="page-subtitle">This release is dedicated to my son, Jack, who has a birthday today. Happy birthday, buddy.</p>
+  <p class="page-subtitle">AdGuard Home is network-wide software for blocking ads &amp; tracking.</p>
   
 
   
@@ -478,7 +478,7 @@
           Last updated on
       
     
-    2021-01-10
+    2021-12-14
   </span>
   
 
@@ -518,7 +518,36 @@
   <div class="article-container">
 
     <div class="article-style">
-      <hr>
+      
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+<img src="/img/adguardhome-template.png" alt="" >
+
+
+  
+  
+  <figcaption>
+    AdGuard Home is network-wide software for blocking ads &amp; tracking.
+  </figcaption>
+
+
+</figure>
+
+<hr>
 <p>Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.</p>
 <ul>
@@ -529,69 +558,185 @@ containerized applications on FreeBSD.</p>
 <li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
-<h2 id="0520191125">0.5.20191125</h2>
-<h3 id="overview">Overview</h3>
-<p>This release includes a number of exciting new features and fixes to reported
-issues. Thank you to everyone that submitted feedback, GitHub issues and Pull
-Requests.</p>
-<h3 id="container-types">Container Types</h3>
-<p>This release introduces support for a different container design. By default,
-containers use a read-only mount of a release, which is put in place when the
-container is started. This method limits any changes to binaries in base path.</p>
-<p>Now supported are read-write containers. This method fully replicates the
-contents of base into the container, allowing the container to manage FreeBSD
-version independent of any other container.</p>
-<p>To use or test this method of container storage use the new <code>-T|--thick</code>
-option to the <code>create</code> sub-command.</p>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create -T alcatraz 12.1-RELEASE 10.17.89.10
-</code></pre></div><h3 id="syntax-improvements">Syntax Improvements</h3>
-<p>In previous versions it was required to put quotes (&quot;&quot;) around long arguments
-in Bastille commands. This is no longer the case, but backward compatibility is
-retained.</p>
-<p>These two statements are equivalent.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz install zsh vim-console git-lite htop
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz <span style="color:#e6db74">&#39;install zsh vim-console git-lite htop&#39;</span>
-</code></pre></div><p>While the <code>pkg</code> sub-command is used for the example above, all Bastille
-sub-commands should now be compabitle with either syntax. Including <code>service</code>,
-<code>sysrc</code>, <code>cmd</code>, etc.</p>
-<h2 id="template-testing">Template Testing</h2>
-<p>Automation templates have been moved to GitLab and now take advantage of
-automated CI/CD testing. These templates (and usage instructions) can be found
-at <a href="https://gitlab.com/BastilleBSD-Templates">BastilleBSD Templates</a>.</p>
-<p>The CI/CD pipeline status shown in the README of each template. You&rsquo;ll know the
-quality of your template before you try to apply it.</p>
-<h3 id="templatesh">template.sh</h3>
-<p>The Bastille template system has been improved with more verbose output and
-stricter testing. If any part of the template exits with a non-zero (OK)
-status, the template stops.</p>
-<p>Exit code now displayed after each template hook application.</p>
-<h3 id="bootstrapsh">bootstrap.sh</h3>
-<p>This release adds the ability to update (via <code>freebsd-update</code>) a release at the
-time of bootstrapping. This means you can bootstrap 12.0-RELEASE and bring it
-up to -p11 in the same step.</p>
-<p>The <code>update</code> argument is a new option to <code>bootstrap</code>.</p>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille bootstrap 12.0-RELEASE update
-</code></pre></div><h3 id="createsh">create.sh</h3>
-<p>Container network defaults can be overridden during the <code>create</code> step. Append
-the network interface name to the end of a standard <code>create</code> and the container
-will bind the ip to that interface on start.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
-</code></pre></div><h2 id="bastillebsd">BastilleBSD</h2>
-<p><a href="https://bastillebsd.org">BastilleBSD</a> has been updated to reflect this release.</p>
-<p>Follow <a href="https://twitter.com/BastilleBSD">@BastilleBSD</a> on Twitter for regular updates.</p>
-<h2 id="bug-fixes">bug fixes</h2>
-<ul>
-<li>fixed an issue with creating 12.1-RELEASE containers in 0.4.20191025</li>
-<li>fixed an issue with <code>usr/obj</code> and <code>usr/test</code> being mistakenly copied to the wrong path</li>
-<li>improved the jail.conf generation template</li>
-<li>cleaned up the release filtering and validation code</li>
-<li>template output now silent when no template found</li>
-<li>updated documentation to avoid pf.conf inconsistency</li>
-<li>updated <a href="https://docs.bastillebsd.org">BastilleBSD Documentation</a></li>
-<li>targeting regression fixed</li>
-</ul>
+<h1 id="template-adguard-home">Template: AdGuard Home</h1>
+<p>Bastille is more than just lightweight containers for FreeBSD. The template
+command allows you to automatically deploy a wide range of software! This post
+begins a series highlighting examples of deploying popular applications using
+Bastille on FreeBSD.</p>
+<p>We begin the series with something I run in my homelab. I run three instances
+if I&rsquo;m being honest. A network-wide service for blocking ads &amp; online tracking,
+AdGuard Home.</p>
+<p>AdGuard Home provides a privacy focused DNS server inside your home network
+giving you network-wide blocking of ads and tracking. This means ad blocking
+for your phones, laptops, desktops, TVs and any other Internet connected
+devices in your home all in one place. No apps to install or browser plugins to
+update. Simply point everything to the AdGuard Home server(s) and you&rsquo;re done.</p>
+<p>As I mentioned, I run three of these instances in my homelab supporting fifty
+devices. The dashboard results have been enlightening in understanding DNS
+behavior on my network. Who knew the streaming device connected to my TV would
+be a top offender!</p>
+<p>If you&rsquo;d like to run AdGuard Home with Bastille follow these steps:</p>
+<h2 id="bootstrap">Bootstrap</h2>
+<pre tabindex="0"><code>bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
+</code></pre><p><strong>Output Example</strong></p>
+<pre tabindex="0"><code>ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
+Cloning into '/usr/local/bastille/templates/bastillebsd-templates/adguardhome'...
+warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome.git/
+remote: Enumerating objects: 30, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 30 (delta 4), reused 2 (delta 0), pack-reused 15
+Receiving objects: 100% (30/30), 7.62 KiB | 7.63 MiB/s, done.
+Resolving deltas: 100% (8/8), done.
+Detected Bastillefile hook.
+[Bastillefile]:
+PKG ca_root_nss adguardhome
+CP usr /
+SYSRC adguardhome_enable=YES
+SERVICE adguardhome start
+RDR tcp 80 80
+RDR udp 53 53
+
+Template ready to use.
+</code></pre><h2 id="create">Create</h2>
+<pre tabindex="0"><code>bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
+</code></pre><p><strong>Output Example</strong></p>
+<pre tabindex="0"><code>ishmael ~ # bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
+Valid: (10.17.89.53).
+Valid: (bastille0).
+
+[adguardhome]:
+adguard: created
+
+[adguardhome]:
+Applying template: default/thin...
+[adguardhome]:
+Applying template: default/base...
+[adguardhome]:
+
+[adguardhome]:
+syslogd_flags: -s -&gt; -ss
+
+[adguardhome]:
+sendmail_enable: NO -&gt; NO
+
+[adguardhome]:
+sendmail_submit_enable: YES -&gt; NO
+
+[adguardhome]:
+sendmail_outbound_enable: YES -&gt; NO
+
+[adguardhome]:
+sendmail_msp_queue_enable: YES -&gt; NO
+
+[adguardhome]:
+cron_flags:  -&gt; -J 60
+
+[adguardhome]:
+/etc/resolv.conf -&gt; /usr/local/bastille/jails/adguardhome/root/etc/resolv.conf
+
+Template applied: default/base
+
+Template applied: default/thin
+
+[adguardhome]:
+adguard: removed
+
+[adguardhome]:
+adguard: created
+</code></pre><h2 id="template">Template</h2>
+<pre tabindex="0"><code>bastille template adguardhome bastillebsd-templates/adguardhome
+</code></pre><p><strong>Output Example</strong></p>
+<pre tabindex="0"><code>ishmael ~ # bastille template adguardhome bastillebsd-templates/adguardhome
+[adguardhome]:
+Applying template: bastillebsd-templates/adguardhome...
+[adguardhome]:
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:13:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
+[adguardhome] Installing pkg-1.17.5...
+[adguardhome] Extracting pkg-1.17.5: 100%
+Updating FreeBSD repository catalogue...
+[adguardhome] Fetching meta.conf: 100%    163 B   0.2kB/s    00:01
+[adguardhome] Fetching packagesite.pkg: 100%    6 MiB   6.7MB/s    00:01
+Processing entries: 100%
+FreeBSD repository update completed. 31159 packages processed.
+All repositories are up to date.
+Updating database digests format: 100%
+The following 2 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	adguardhome: 0.107.0.b.7
+	ca_root_nss: 3.69_1
+
+Number of packages to be installed: 2
+
+The process will require 33 MiB more space.
+6 MiB to be downloaded.
+[adguardhome] [1/2] Fetching ca_root_nss-3.69_1.pkg: 100%  249 KiB 255.0kB/s    00:01
+[adguardhome] [2/2] Fetching adguardhome-0.107.0.b.7.pkg: 100%    6 MiB   6.5MB/s    00:01
+Checking integrity... done (0 conflicting)
+[adguardhome] [1/2] Installing ca_root_nss-3.69_1...
+[adguardhome] [1/2] Extracting ca_root_nss-3.69_1: 100%
+[adguardhome] [2/2] Installing adguardhome-0.107.0.b.7...
+[adguardhome] [2/2] Extracting adguardhome-0.107.0.b.7: 100%
+=====
+Message from ca_root_nss-3.69_1:
+
+--
+FreeBSD does not, and can not warrant that the certification authorities
+whose certificates are included in this package have in any way been
+audited for trustworthiness or RFC 3647 compliance.
+
+Assessment and verification of trust is the complete responsibility of the
+system administrator.
+
+
+This package installs symlinks to support root certificates discovery by
+default for software that uses OpenSSL.
+
+This enables SSL Certificate Verification by client software without manual
+intervention.
+
+If you prefer to do this manually, replace the following symlinks with
+either an empty file or your site-local certificate bundle.
+
+  * /etc/ssl/cert.pem
+  * /usr/local/etc/ssl/cert.pem
+  * /usr/local/openssl/cert.pem
+=====
+Message from adguardhome-0.107.0.b.7:
+
+--
+You installed AdGuardHome: Network-wide ads &amp; trackers blocking DNS server.
+
+In order to use it please start the service 'adguardhome' and
+then access the URL http://0.0.0.0:3010/ in your favorite browser.
+
+[adguardhome]:
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr -&gt; /usr/local/bastille/jails/adguardhome/root/usr
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local -&gt; /usr/local/bastille/jails/adguardhome/root/usr/local
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local/bin -&gt; /usr/local/bastille/jails/adguardhome/root/usr/local/bin
+/usr/local/bastille/templates/bastillebsd-templates/adguardhome/usr/local/bin/AdGuardHome.yaml -&gt; /usr/local/bastille/jails/adguardhome/root/usr/local/bin/AdGuardHome.yaml
+
+[adguardhome]:
+adguardhome_enable:  -&gt; YES
+
+[adguardhome]:
+Starting adguardhome.
+
+tcp 80 80
+udp 53 53
+Template applied: bastillebsd-templates/adguardhome
+</code></pre><h2 id="usage">Usage</h2>
+<p>Now that the container is running you can access the service through the host
+machine. Using the redirected ports on tcp/80 and udp/53 we can now point to
+the host system IP address and access the container service.</p>
+<p>In this example the IP of the host machine is <code>192.168.86.2</code>. Entering that IP
+in my browser will show the AdGuard Home login page. The template sets the
+default username to <code>adguard</code> and password to <code>BastilleBSD!</code></p>
+<p>Changing the password is done by editing the <code>AdGuardHome.yaml</code> located
+alongside the main AdGuard binary. Note: stop the AdGuard Home service before
+making changes to the configuration.</p>
 
     </div>
 
@@ -614,7 +759,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://bastillebsd.org/blog/2019/11/25/captain-jack/&amp;text=Release%20Notes%20-%20Captain%20Jack" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&amp;text=Bastille%20Template:%20AdGuard%20Home" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -627,7 +772,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://bastillebsd.org/blog/2019/11/25/captain-jack/&amp;t=Release%20Notes%20-%20Captain%20Jack" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&amp;t=Bastille%20Template:%20AdGuard%20Home" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -640,7 +785,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="mailto:?subject=Release%20Notes%20-%20Captain%20Jack&amp;body=https://bastillebsd.org/blog/2019/11/25/captain-jack/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Bastille%20Template:%20AdGuard%20Home&amp;body=https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -653,7 +798,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://bastillebsd.org/blog/2019/11/25/captain-jack/&amp;title=Release%20Notes%20-%20Captain%20Jack" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&amp;title=Bastille%20Template:%20AdGuard%20Home" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -666,7 +811,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Release%20Notes%20-%20Captain%20Jack%20https://bastillebsd.org/blog/2019/11/25/captain-jack/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Bastille%20Template:%20AdGuard%20Home%20https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -679,7 +824,7 @@ will bind the ip to that interface on start.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://bastillebsd.org/blog/2019/11/25/captain-jack/&amp;title=Release%20Notes%20-%20Captain%20Jack" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&amp;title=Bastille%20Template:%20AdGuard%20Home" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

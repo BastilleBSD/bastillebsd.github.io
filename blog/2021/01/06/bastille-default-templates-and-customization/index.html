@@ -387,6 +387,28 @@
         
 
         <li class="nav-item">
+          <a class="nav-link " href="/compare/"><span>Compare</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -533,6 +555,7 @@ containerized applications on FreeBSD.</p>
 <li>Join the discussion <a href="https://discord.gg/FawhD6DUdm">BastilleBSD on Discord</a></li>
 <li>Join the discussion <a href="https://t.me/BastilleBSD">BastilleBSD on Telegram</a></li>
 <li>Subscribe to <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA">BastilleBSD on YouTube</a></li>
+<li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
 <h2 id="bastille-default-templates">Bastille Default Templates</h2>
@@ -560,7 +583,7 @@ to specify a TARGET. The target is defined when applying the template.</p>
 <p>Given these simple requirements you can execute any Bastille sub-command in any
 order by defining them <em>one per line</em> in the <code>Bastillefile</code>.</p>
 <p><strong>Simple Bastillefile Example: nginx</strong></p>
-<pre><code>PKG nginx
+<pre tabindex="0"><code>PKG nginx
 CP usr /
 SYSRC nginx_enable=YES
 SERVICE nginx start
@@ -593,7 +616,7 @@ containers. These &ldquo;default&rdquo; templates are:</p>
 </ul>
 <p>These default templates are defined in the <code>bastille.conf</code> like so:</p>
 <p><strong>bastille.conf</strong></p>
-<pre><code>+## Default Templates
+<pre tabindex="0"><code>+## Default Templates
 +bastille_template_base=&quot;default/base&quot;      ## default: &quot;default/base&quot;
 +bastille_template_empty=&quot;default/empty&quot;    ## default: &quot;default/empty&quot;
 +bastille_template_thick=&quot;default/thick&quot;    ## default: &quot;default/thick&quot;
@@ -609,7 +632,7 @@ templates.</p>
 <h3 id="examples">Examples</h3>
 <p>Below is a copy of these five default templates for reference.</p>
 <p><strong>default/base</strong></p>
-<pre><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
+<pre tabindex="0"><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 CMD touch /etc/rc.conf
 SYSRC syslogd_flags=&quot;-ss&quot;
@@ -621,17 +644,17 @@ SYSRC cron_flags=&quot;-J 60&quot;
 
 CP &quot;${HOST_RESOLV_CONF}&quot; /etc/resolv.conf
 </code></pre><p><strong>default/thin</strong></p>
-<pre><code>ARG BASE_TEMPLATE=default/base
+<pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
 </code></pre><p><strong>default/thick</strong></p>
-<pre><code>ARG BASE_TEMPLATE=default/base
+<pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
 </code></pre><p><strong>default/vnet</strong></p>
-<pre><code>ARG BASE_TEMPLATE=default/base
+<pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
@@ -645,27 +668,27 @@ SYSRC ifconfig_vnet0=&quot;${IFCONFIG}&quot;
 # GATEWAY will be empty for a DHCP config. -- cwells
 CMD if [ -n &quot;${GATEWAY}&quot; ]; then /usr/sbin/sysrc defaultrouter=&quot;${GATEWAY}&quot;; fi
 </code></pre><p><strong>default/empty</strong></p>
-<pre><code></code></pre><p>As the name implies this is an empty container. No custom configuration
+<pre tabindex="0"><code></code></pre><p>As the name implies this is an empty container. No custom configuration
 is defined.</p>
 <h3 id="template-arg">Template ARG</h3>
 <p>The keen observer will notice many of the default templates use the keyword
 <code>ARG</code> to define variables. In this case:</p>
-<pre><code>ARG BASE_TEMPLATE=default/base
+<pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 </code></pre><p>These variables can be referenced later in the template:</p>
-<pre><code>INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+<pre tabindex="0"><code>INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
 </code></pre><p>The above example variables would translate into:</p>
-<pre><code>INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
+<pre tabindex="0"><code>INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
 </code></pre><p>Additionally you can define and later <code>RENDER</code> these custom variables inside
 configuration files.</p>
 <p>Tip: The variables <code>${JAIL_NAME}</code> and <code>${JAIL_IP}</code> are automatically included
 and can be used within container configuration files.</p>
 <p><strong>Example: RENDER file</strong></p>
-<pre><code>PKG nginx
+<pre tabindex="0"><code>PKG nginx
 CP usr /
 RENDER /usr/local/etc/nginx/nginx.conf
 </code></pre><p><strong>Example: RENDER directory (recursive)</strong></p>
-<pre><code>PKG nginx
+<pre tabindex="0"><code>PKG nginx
 CP usr /
 RENDER /usr/local/www
 ...
@@ -682,17 +705,17 @@ update it is not recommended to edit the default template(s) themselves.</strong
 new template namespace is often a username or team/project name. Within this
 namespace you can create new templates and extend the defaults.</p>
 <p><strong>Example for admin: cedwards</strong></p>
-<pre><code>mkdir /usr/local/bastille/templates/cedwards/base 
+<pre tabindex="0"><code>mkdir /usr/local/bastille/templates/cedwards/base 
 </code></pre><p>From here we can extend the <code>default/base</code> template with our own template.</p>
 <p>Included below is an example <code>Bastillefile</code> that enables outbound sendmail.</p>
 <p><strong>cedwards/base/Bastillefile</strong></p>
-<pre><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
+<pre tabindex="0"><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
 INCLUDE default/base --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
 
 SYSRC sendmail_outbound_enable=&quot;YES&quot;
 SYSRC sendmail_msp_queue_enable=&quot;YES&quot;
 </code></pre><p>Update the <code>bastille.conf</code> to use <code>cedwards/base</code> as the new default:</p>
-<pre><code>bastille_template_base=&quot;cedwards/base&quot;      ## default: &quot;default/base&quot;
+<pre tabindex="0"><code>bastille_template_base=&quot;cedwards/base&quot;      ## default: &quot;default/base&quot;
 </code></pre><p>With this configuration every new container would have <code>default/base</code> applied
 (due to the <code>INCLUDE</code> from <code>cedwards/base</code>) followed by the additional
 configuration in the <code>cedwards/base</code> template.</p>
@@ -894,23 +917,6 @@ container type and can be extended using any Bastille sub-command.</p>
       
     
     <li>
-      <a href="https://t.me/BastilleBSD" target="_blank" rel="noopener">
-        <i class="fab fa-telegram"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
       <a href="https://discord.gg/FawhD6DUdm" target="_blank" rel="noopener">
         <i class="fab fa-discord"></i>
       </a>
@@ -930,6 +936,23 @@ container type and can be extended using any Bastille sub-command.</p>
     <li>
       <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA" target="_blank" rel="noopener">
         <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://patreon.com/BastilleBSD" target="_blank" rel="noopener">
+        <i class="fab fa-patreon"></i>
       </a>
     </li>
   
