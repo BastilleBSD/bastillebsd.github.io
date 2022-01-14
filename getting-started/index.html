@@ -569,7 +569,7 @@ Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span
 <span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.17.5...
 <span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.17.5: 100%
 root@freebsd:~ <span style="color:#75715e">#</span>
-</code></pre></div><p>Note: this bootstrapping step can be automated using the following command:
+</code></pre></div><p>Tip: this bootstrapping step can be automated using the following command:
 <code>env ASSUME_ALWAYS_YES=YES pkg bootstrap</code></p>
 <p><strong>Quarterly</strong></p>
 <p>If you take a closer look at the line of output after the bootstrap
@@ -592,8 +592,8 @@ echo <span style="color:#e6db74">&#39;FreeBSD: { url: &#39;</span>pkg+http://pkg
 install a few creature comforts. FreeBSD&rsquo;s binary package manager works much
 like others you may have used.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pkg install vim-tiny git-lite bash ca_root_nss
-</code></pre></div><p>The above pkg install command will add the <code>vim-tiny</code>, <code>git-lite</code>, <code>bash</code> and
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pkg install vim git-lite bash ca_root_nss
+</code></pre></div><p>The above pkg install command will add the <code>vim</code>, <code>git-lite</code>, <code>bash</code> and
 <code>ca_root_nss</code> (CA certificates) from the quarterly/latest repositories.
 Naturally you can replace <code>bash</code> with <code>zsh</code> (or another shell of your choice).</p>
 <p>You may also search the pkg repository for named packages. <code>pkg search foo</code>
@@ -640,11 +640,11 @@ network interface for containers.</p>
 <p><strong>/usr/local/etc/bastille/bastille.conf</strong></p>
 <p>I recommend looking at the following:</p>
 <h2 id="default-timezone">default timezone</h2>
-<p>If you&rsquo;d prefer to use a local timezone for your containers you may change it
-here. The default is etc/UTC. Requires format America/Denver or Europe/Paris.
-(see <code>/usr/share/zoneinfo</code>)</p>
-<pre tabindex="0"><code>bastille_tzdata=&quot;Etc/UTC&quot;  ## default: &quot;Etc/UTC&quot;
-</code></pre><h2 id="zfs-optional">ZFS (optional)</h2>
+<p>If you&rsquo;d prefer to set a specific timezone for your containers you may change
+it here. The default is to use the timezone of the host.</p>
+<p>Requires format &ldquo;America/Denver&rdquo; or &ldquo;Europe/Paris&rdquo;.  (see <code>/usr/share/zoneinfo</code>)</p>
+<pre tabindex="0"><code>bastille_tzdata=&quot;&quot;  ## default: empty to use host's time zone
+</code></pre><h2 id="zfs-recommended">ZFS (recommended)</h2>
 <p>If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to <code>YES</code> and define the <code>zpool</code>. If either is undefined ZFS will
 not be used.</p>
@@ -718,17 +718,77 @@ IP, it&rsquo;s safe to use any address within that range.</p>
 </blockquote>
 <p>Container creation should be very quick.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 13.0-RELEASE 10.17.89.50
-</code></pre></div><h2 id="start">start</h2>
-<p>You&rsquo;ll need to start the container before you can interact with it.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille start alcatraz
 </code></pre></div><h2 id="list">list</h2>
 <p>You can list running containers.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille list
+</code></pre></div><h2 id="pkg">pkg</h2>
+<p>Install packages inside the container.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz install -y htop
+</code></pre></div><h2 id="htop">htop</h2>
+<p>htop is an interactive process viewer. When you view processes inside a
+container you only see that container&rsquo;s processes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille htop alcatraz
+</code></pre></div><p>Notice that <code>syslogd</code> and <code>cron</code> are the only default processes.</p>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+<img src="/img/bastille-htop-alcatraz.png" alt="" >
+
+
+  
+  
+  <figcaption>
+    Interactive Process Viewer
+  </figcaption>
+
+
+</figure>
+
+<p>Tip: Press &ldquo;q&rdquo; to quit.</p>
+<h2 id="sysrc">sysrc</h2>
+<p>Let&rsquo;s toggle a setting inside the container and enable the <code>sshd</code> service.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille sysrc alcatraz sshd_enable<span style="color:#f92672">=</span>YES
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+sshd_enable: NO -&gt; YES
+
+</code></pre></div><h2 id="service">service</h2>
+<p>Start up the newly enabled service.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille service alcatraz sshd start
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+Generating RSA host key.
+<span style="color:#ae81ff">2048</span> SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+Generating ECDSA host key.
+<span style="color:#ae81ff">256</span> SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+Generating ED25519 host key.
+<span style="color:#ae81ff">256</span> SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+Performing sanity check on sshd configuration.
+Starting sshd.
+</code></pre></div><h2 id="cmd">cmd</h2>
+<p>Execute arbitrary commands inside the container. In this case check to see that
+<code>sshd</code> is listening on port <code>:22</code> using the <code>sockstat -4</code> command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille cmd alcatraz sockstat -4
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
+root     sshd       <span style="color:#ae81ff">34994</span> <span style="color:#ae81ff">4</span>  tcp4   10.17.89.50:22        *:*
+<span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>: <span style="color:#ae81ff">0</span>
 </code></pre></div><h2 id="console">console</h2>
 <p>Finally, use <code>console</code> for a password-less root login to the container and have
 a look around. You&rsquo;ll find yourself in a wholly contained FreeBSD system with
-the ability to create unique users, install binary packages, view processes and
-enable and run services.</p>
+the ability to build whatever you need to build.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille console alcatraz
 </code></pre></div><p>The <code>root</code> user is still (mostly) all powerful, but only within the confines of
 that container.</p>
@@ -979,7 +1039,7 @@ the <a href="https://docs.bastillebsd.org">Bastille Documentation</a>.</p>
   
 
   <p class="powered-by">
-    © 2018-2021 &middot; 
+    © 2018-2022 &middot; 
 
     BastilleBSD 
 

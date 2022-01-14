@@ -5,7 +5,7 @@
     <link>https://bastillebsd.org/</link>
       <atom:link href="https://bastillebsd.org/index.xml" rel="self" type="application/rss+xml" />
     <description>BastilleBSD</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021</copyright><lastBuildDate>Thu, 23 Dec 2021 15:52:01 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2022</copyright><lastBuildDate>Thu, 13 Jan 2022 12:00:10 -0700</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>BastilleBSD</title>
@@ -18,6 +18,172 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bastillebsd.org/blog/posts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Bastille Template: AdGuard Home Exporter</title>
+      <link>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</link>
+      <pubDate>Thu, 13 Jan 2022 12:00:10 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</guid>
+      <description>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/adguardhome-exporter-template.png&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    AdGuard Exporter Grafana Dashboard (ID: 13330).
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;template-adguard-home-exporter&#34;&gt;Template: AdGuard Home Exporter&lt;/h2&gt;
+&lt;p&gt;Bastille is more than just lightweight containers for FreeBSD. The template
+command allows you to automatically deploy a wide range of software!&lt;/p&gt;
+&lt;p&gt;We continue the series with a template that builds on last month&amp;rsquo;s example.
+This template will install and integrate a Prometheus exporter into the AdGuard
+Home service we installed last time.&lt;/p&gt;
+&lt;p&gt;If you missed &amp;ldquo;last time&amp;rdquo; you can find it here: &lt;a href=&#34;https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&#34;&gt;Bastille Template: AdGuard
+Home&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Prometheus is my preferred way to capture metrics and monitor a home or
+corporate network. Exporting my DNS information to Prometheus is a great
+addition to my dashboards.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to extend AdGuard Home with this Prometheus exporter follow these
+steps:&lt;/p&gt;
+&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
+Cloning into &#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome-exporter&#39;...
+warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome-exporter.git/
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 24 (delta 7), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (24/24), 6.05 KiB | 6.05 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+Detected Bastillefile hook.
+[Bastillefile]:
+PKG adguard-exporter
+SYSRC adguard_exporter_enable=YES
+SYSRC adguard_exporter_username=adguard
+SYSRC adguard_exporter_password=BastilleBSD!
+SYSRC adguard_exporter_hostname=${JAIL_IP}
+SYSRC adguard_exporter_port=80
+SYSRC adguard_exporter_protocol=http
+SERVICE adguard_exporter restart
+
+Template ready to use.
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;template&#34;&gt;Template&lt;/h3&gt;
+&lt;p&gt;Apply the new template to your existing adguardhome container created from the
+previous guide.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template adguardhome bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[adguard]:
+Applying template: bastillebsd-templates/adguardhome-exporter...
+[adguard]:
+Updating FreeBSD repository catalogue...
+FreeBSD repository is up to date.
+All repositories are up to date.
+The following 1 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	adguard-exporter: 1.14
+
+Number of packages to be installed: 1
+
+The process will require 6 MiB more space.
+2 MiB to be downloaded.
+[adguard] [1/1] Fetching adguard-exporter-1.14.pkg: 100%    2 MiB   2.0MB/s    00:01
+Checking integrity... done (0 conflicting)
+[adguard] [1/1] Installing adguard-exporter-1.14...
+===&amp;gt; Creating groups.
+Using existing group &#39;nobody&#39;.
+===&amp;gt; Creating users
+Using existing user &#39;nobody&#39;.
+[adguard] [1/1] Extracting adguard-exporter-1.14: 100%
+
+[adguard]:
+adguard_exporter_enable:  -&amp;gt; YES
+
+[adguard]:
+adguard_exporter_username:  -&amp;gt; adguard
+
+[adguard]:
+adguard_exporter_password:  -&amp;gt; BastilleBSD!
+
+[adguard]:
+adguard_exporter_hostname:  -&amp;gt; 10.17.89.53
+
+[adguard]:
+adguard_exporter_port:  -&amp;gt; 80
+
+[adguard]:
+adguard_exporter_protocol:  -&amp;gt; http
+
+[adguard]:
+Starting adguard_exporter.
+
+Template applied: bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Now that the template is applied you can add the node to your Prometheus targets.
+The exporter presents metrics on port &lt;code&gt;:9617&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll probably want to import the &lt;a href=&#34;https://grafana.com/grafana/dashboards/13330&#34;&gt;AdGuard Exporter Grafana
+Dashboard&lt;/a&gt; too.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bastille 0.9.20211225 Demo Livestream</title>
+      <link>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</link>
+      <pubDate>Fri, 07 Jan 2022 12:00:10 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;bastille-0920211225-demo-livestream&#34;&gt;Bastille 0.9.20211225 Demo Livestream&lt;/h1&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Ur43kOWdYJ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
@@ -230,11 +396,11 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;template-adguard-home&#34;&gt;Template: AdGuard Home&lt;/h1&gt;
+&lt;h2 id=&#34;template-adguard-home&#34;&gt;Template: AdGuard Home&lt;/h2&gt;
 &lt;p&gt;Bastille is more than just lightweight containers for FreeBSD. The template
 command allows you to automatically deploy a wide range of software! This post
 begins a series highlighting examples of deploying popular applications using
@@ -252,7 +418,7 @@ devices. The dashboard results have been enlightening in understanding DNS
 behavior on my network. Who knew the streaming device connected to my TV would
 be a top offender!&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;d like to run AdGuard Home with Bastille follow these steps:&lt;/p&gt;
-&lt;h2 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h2&gt;
+&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
@@ -274,7 +440,7 @@ RDR tcp 80 80
 RDR udp 53 53
 
 Template ready to use.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create&#34;&gt;Create&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create&#34;&gt;Create&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
@@ -320,7 +486,7 @@ adguard: removed
 
 [adguardhome]:
 adguard: created
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;template&#34;&gt;Template&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;template&#34;&gt;Template&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template adguardhome bastillebsd-templates/adguardhome
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille template adguardhome bastillebsd-templates/adguardhome
@@ -403,7 +569,7 @@ Starting adguardhome.
 tcp 80 80
 udp 53 53
 Template applied: bastillebsd-templates/adguardhome
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;Now that the container is running you can access the service through the host
 machine. Using the redirected ports on tcp/80 and udp/53 we can now point to
 the host system IP address and access the container service.&lt;/p&gt;
@@ -801,7 +967,7 @@ Verifying signature with trusted certificate pkg.freebsd.org.2013102301... &lt;s
 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-1.17.5...
 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-1.17.5: 100%
 root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: this bootstrapping step can be automated using the following command:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tip: this bootstrapping step can be automated using the following command:
 &lt;code&gt;env ASSUME_ALWAYS_YES=YES pkg bootstrap&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Quarterly&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you take a closer look at the line of output after the bootstrap
@@ -824,8 +990,8 @@ echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FreeBSD: { url: &amp;#39
 install a few creature comforts. FreeBSD&amp;rsquo;s binary package manager works much
 like others you may have used.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install vim-tiny git-lite bash ca_root_nss
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above pkg install command will add the &lt;code&gt;vim-tiny&lt;/code&gt;, &lt;code&gt;git-lite&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt; and
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install vim git-lite bash ca_root_nss
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above pkg install command will add the &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;git-lite&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt; and
 &lt;code&gt;ca_root_nss&lt;/code&gt; (CA certificates) from the quarterly/latest repositories.
 Naturally you can replace &lt;code&gt;bash&lt;/code&gt; with &lt;code&gt;zsh&lt;/code&gt; (or another shell of your choice).&lt;/p&gt;
 &lt;p&gt;You may also search the pkg repository for named packages. &lt;code&gt;pkg search foo&lt;/code&gt;
@@ -872,11 +1038,11 @@ network interface for containers.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;/usr/local/etc/bastille/bastille.conf&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I recommend looking at the following:&lt;/p&gt;
 &lt;h2 id=&#34;default-timezone&#34;&gt;default timezone&lt;/h2&gt;
-&lt;p&gt;If you&amp;rsquo;d prefer to use a local timezone for your containers you may change it
-here. The default is etc/UTC. Requires format America/Denver or Europe/Paris.
-(see &lt;code&gt;/usr/share/zoneinfo&lt;/code&gt;)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_tzdata=&amp;quot;Etc/UTC&amp;quot;  ## default: &amp;quot;Etc/UTC&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;zfs-optional&#34;&gt;ZFS (optional)&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;d prefer to set a specific timezone for your containers you may change
+it here. The default is to use the timezone of the host.&lt;/p&gt;
+&lt;p&gt;Requires format &amp;ldquo;America/Denver&amp;rdquo; or &amp;ldquo;Europe/Paris&amp;rdquo;.  (see &lt;code&gt;/usr/share/zoneinfo&lt;/code&gt;)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_tzdata=&amp;quot;&amp;quot;  ## default: empty to use host&#39;s time zone
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;zfs-recommended&#34;&gt;ZFS (recommended)&lt;/h2&gt;
 &lt;p&gt;If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to &lt;code&gt;YES&lt;/code&gt; and define the &lt;code&gt;zpool&lt;/code&gt;. If either is undefined ZFS will
 not be used.&lt;/p&gt;
@@ -950,17 +1116,77 @@ IP, it&amp;rsquo;s safe to use any address within that range.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Container creation should be very quick.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create alcatraz 13.0-RELEASE 10.17.89.50
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;start&#34;&gt;start&lt;/h2&gt;
-&lt;p&gt;You&amp;rsquo;ll need to start the container before you can interact with it.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille start alcatraz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list&#34;&gt;list&lt;/h2&gt;
 &lt;p&gt;You can list running containers.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pkg&#34;&gt;pkg&lt;/h2&gt;
+&lt;p&gt;Install packages inside the container.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille pkg alcatraz install -y htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;htop&#34;&gt;htop&lt;/h2&gt;
+&lt;p&gt;htop is an interactive process viewer. When you view processes inside a
+container you only see that container&amp;rsquo;s processes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille htop alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notice that &lt;code&gt;syslogd&lt;/code&gt; and &lt;code&gt;cron&lt;/code&gt; are the only default processes.&lt;/p&gt;
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/bastille-htop-alcatraz.png&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Interactive Process Viewer
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Tip: Press &amp;ldquo;q&amp;rdquo; to quit.&lt;/p&gt;
+&lt;h2 id=&#34;sysrc&#34;&gt;sysrc&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s toggle a setting inside the container and enable the &lt;code&gt;sshd&lt;/code&gt; service.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille sysrc alcatraz sshd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+sshd_enable: NO -&amp;gt; YES
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service&#34;&gt;service&lt;/h2&gt;
+&lt;p&gt;Start up the newly enabled service.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille service alcatraz sshd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+Generating RSA host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Generating ECDSA host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Generating ED25519 host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ED25519&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Performing sanity check on sshd configuration.
+Starting sshd.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cmd&#34;&gt;cmd&lt;/h2&gt;
+&lt;p&gt;Execute arbitrary commands inside the container. In this case check to see that
+&lt;code&gt;sshd&lt;/code&gt; is listening on port &lt;code&gt;:22&lt;/code&gt; using the &lt;code&gt;sockstat -4&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille cmd alcatraz sockstat -4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
+root     sshd       &lt;span style=&#34;color:#ae81ff&#34;&gt;34994&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  tcp4   10.17.89.50:22        *:*
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;console&#34;&gt;console&lt;/h2&gt;
 &lt;p&gt;Finally, use &lt;code&gt;console&lt;/code&gt; for a password-less root login to the container and have
 a look around. You&amp;rsquo;ll find yourself in a wholly contained FreeBSD system with
-the ability to create unique users, install binary packages, view processes and
-enable and run services.&lt;/p&gt;
+the ability to build whatever you need to build.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille console alcatraz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;root&lt;/code&gt; user is still (mostly) all powerful, but only within the confines of
 that container.&lt;/p&gt;

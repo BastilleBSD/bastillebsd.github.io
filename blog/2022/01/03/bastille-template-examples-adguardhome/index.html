@@ -554,11 +554,11 @@ containerized applications on FreeBSD.</p>
 <li>Follow <a href="https://twitter.com/BastilleBSD">@BastilleBSD on Twitter</a></li>
 <li>Join the discussion <a href="https://discord.gg/FawhD6DUdm">BastilleBSD on Discord</a></li>
 <li>Join the discussion <a href="https://t.me/BastilleBSD">BastilleBSD on Telegram</a></li>
-<li>Subscribe to <a href="https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA">BastilleBSD on YouTube</a></li>
+<li>Subscribe to <a href="https://www.youtube.com/c/BastilleBSD">BastilleBSD on YouTube</a></li>
 <li>Support <a href="https://patreon.com/BastilleBSD">BastilleBSD on Patreon</a></li>
 </ul>
 <hr>
-<h1 id="template-adguard-home">Template: AdGuard Home</h1>
+<h2 id="template-adguard-home">Template: AdGuard Home</h2>
 <p>Bastille is more than just lightweight containers for FreeBSD. The template
 command allows you to automatically deploy a wide range of software! This post
 begins a series highlighting examples of deploying popular applications using
@@ -576,7 +576,7 @@ devices. The dashboard results have been enlightening in understanding DNS
 behavior on my network. Who knew the streaming device connected to my TV would
 be a top offender!</p>
 <p>If you&rsquo;d like to run AdGuard Home with Bastille follow these steps:</p>
-<h2 id="bootstrap">Bootstrap</h2>
+<h3 id="bootstrap">Bootstrap</h3>
 <pre tabindex="0"><code>bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
 </code></pre><p><strong>Output Example</strong></p>
 <pre tabindex="0"><code>ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
@@ -598,7 +598,7 @@ RDR tcp 80 80
 RDR udp 53 53
 
 Template ready to use.
-</code></pre><h2 id="create">Create</h2>
+</code></pre><h3 id="create">Create</h3>
 <pre tabindex="0"><code>bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
 </code></pre><p><strong>Output Example</strong></p>
 <pre tabindex="0"><code>ishmael ~ # bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
@@ -644,7 +644,7 @@ adguard: removed
 
 [adguardhome]:
 adguard: created
-</code></pre><h2 id="template">Template</h2>
+</code></pre><h3 id="template">Template</h3>
 <pre tabindex="0"><code>bastille template adguardhome bastillebsd-templates/adguardhome
 </code></pre><p><strong>Output Example</strong></p>
 <pre tabindex="0"><code>ishmael ~ # bastille template adguardhome bastillebsd-templates/adguardhome
@@ -727,7 +727,7 @@ Starting adguardhome.
 tcp 80 80
 udp 53 53
 Template applied: bastillebsd-templates/adguardhome
-</code></pre><h2 id="usage">Usage</h2>
+</code></pre><h3 id="usage">Usage</h3>
 <p>Now that the container is running you can access the service through the host
 machine. Using the redirected ports on tcp/80 and udp/53 we can now point to
 the host system IP address and access the container service.</p>
@@ -1067,7 +1067,7 @@ making changes to the configuration.</p>
   
 
   <p class="powered-by">
-    © 2018-2021 &middot; 
+    © 2018-2022 &middot; 
 
     BastilleBSD 
 
