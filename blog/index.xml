@@ -5,7 +5,7 @@
     <link>https://bastillebsd.org/blog/</link>
       <atom:link href="https://bastillebsd.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Bastille Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2021</copyright><lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2022</copyright><lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>Bastille Blog</title>
@@ -18,6 +18,172 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://bastillebsd.org/blog/posts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Bastille Template: AdGuard Home Exporter</title>
+      <link>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</link>
+      <pubDate>Thu, 13 Jan 2022 12:00:10 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</guid>
+      <description>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/adguardhome-exporter-template.png&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    AdGuard Exporter Grafana Dashboard (ID: 13330).
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;template-adguard-home-exporter&#34;&gt;Template: AdGuard Home Exporter&lt;/h2&gt;
+&lt;p&gt;Bastille is more than just lightweight containers for FreeBSD. The template
+command allows you to automatically deploy a wide range of software!&lt;/p&gt;
+&lt;p&gt;We continue the series with a template that builds on last month&amp;rsquo;s example.
+This template will install and integrate a Prometheus exporter into the AdGuard
+Home service we installed last time.&lt;/p&gt;
+&lt;p&gt;If you missed &amp;ldquo;last time&amp;rdquo; you can find it here: &lt;a href=&#34;https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/&#34;&gt;Bastille Template: AdGuard
+Home&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Prometheus is my preferred way to capture metrics and monitor a home or
+corporate network. Exporting my DNS information to Prometheus is a great
+addition to my dashboards.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;d like to extend AdGuard Home with this Prometheus exporter follow these
+steps:&lt;/p&gt;
+&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
+Cloning into &#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome-exporter&#39;...
+warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome-exporter.git/
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 24 (delta 7), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (24/24), 6.05 KiB | 6.05 MiB/s, done.
+Resolving deltas: 100% (7/7), done.
+Detected Bastillefile hook.
+[Bastillefile]:
+PKG adguard-exporter
+SYSRC adguard_exporter_enable=YES
+SYSRC adguard_exporter_username=adguard
+SYSRC adguard_exporter_password=BastilleBSD!
+SYSRC adguard_exporter_hostname=${JAIL_IP}
+SYSRC adguard_exporter_port=80
+SYSRC adguard_exporter_protocol=http
+SERVICE adguard_exporter restart
+
+Template ready to use.
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;template&#34;&gt;Template&lt;/h3&gt;
+&lt;p&gt;Apply the new template to your existing adguardhome container created from the
+previous guide.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template adguardhome bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[adguard]:
+Applying template: bastillebsd-templates/adguardhome-exporter...
+[adguard]:
+Updating FreeBSD repository catalogue...
+FreeBSD repository is up to date.
+All repositories are up to date.
+The following 1 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	adguard-exporter: 1.14
+
+Number of packages to be installed: 1
+
+The process will require 6 MiB more space.
+2 MiB to be downloaded.
+[adguard] [1/1] Fetching adguard-exporter-1.14.pkg: 100%    2 MiB   2.0MB/s    00:01
+Checking integrity... done (0 conflicting)
+[adguard] [1/1] Installing adguard-exporter-1.14...
+===&amp;gt; Creating groups.
+Using existing group &#39;nobody&#39;.
+===&amp;gt; Creating users
+Using existing user &#39;nobody&#39;.
+[adguard] [1/1] Extracting adguard-exporter-1.14: 100%
+
+[adguard]:
+adguard_exporter_enable:  -&amp;gt; YES
+
+[adguard]:
+adguard_exporter_username:  -&amp;gt; adguard
+
+[adguard]:
+adguard_exporter_password:  -&amp;gt; BastilleBSD!
+
+[adguard]:
+adguard_exporter_hostname:  -&amp;gt; 10.17.89.53
+
+[adguard]:
+adguard_exporter_port:  -&amp;gt; 80
+
+[adguard]:
+adguard_exporter_protocol:  -&amp;gt; http
+
+[adguard]:
+Starting adguard_exporter.
+
+Template applied: bastillebsd-templates/adguardhome-exporter
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Now that the template is applied you can add the node to your Prometheus targets.
+The exporter presents metrics on port &lt;code&gt;:9617&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You&amp;rsquo;ll probably want to import the &lt;a href=&#34;https://grafana.com/grafana/dashboards/13330&#34;&gt;AdGuard Exporter Grafana
+Dashboard&lt;/a&gt; too.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bastille 0.9.20211225 Demo Livestream</title>
+      <link>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</link>
+      <pubDate>Fri, 07 Jan 2022 12:00:10 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;Bastille is an open-source system for automating deployment and management
+containerized applications on FreeBSD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;bastille-0920211225-demo-livestream&#34;&gt;Bastille 0.9.20211225 Demo Livestream&lt;/h1&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Ur43kOWdYJ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
@@ -230,11 +396,11 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;template-adguard-home&#34;&gt;Template: AdGuard Home&lt;/h1&gt;
+&lt;h2 id=&#34;template-adguard-home&#34;&gt;Template: AdGuard Home&lt;/h2&gt;
 &lt;p&gt;Bastille is more than just lightweight containers for FreeBSD. The template
 command allows you to automatically deploy a wide range of software! This post
 begins a series highlighting examples of deploying popular applications using
@@ -252,7 +418,7 @@ devices. The dashboard results have been enlightening in understanding DNS
 behavior on my network. Who knew the streaming device connected to my TV would
 be a top offender!&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;d like to run AdGuard Home with Bastille follow these steps:&lt;/p&gt;
-&lt;h2 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h2&gt;
+&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
@@ -274,7 +440,7 @@ RDR tcp 80 80
 RDR udp 53 53
 
 Template ready to use.
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;create&#34;&gt;Create&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;create&#34;&gt;Create&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille create adguardhome 13.0-RELEASE 10.17.89.53 bastille0
@@ -320,7 +486,7 @@ adguard: removed
 
 [adguardhome]:
 adguard: created
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;template&#34;&gt;Template&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;template&#34;&gt;Template&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template adguardhome bastillebsd-templates/adguardhome
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille template adguardhome bastillebsd-templates/adguardhome
@@ -403,7 +569,7 @@ Starting adguardhome.
 tcp 80 80
 udp 53 53
 Template applied: bastillebsd-templates/adguardhome
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
 &lt;p&gt;Now that the container is running you can access the service through the host
 machine. Using the redirected ports on tcp/80 and udp/53 we can now point to
 the host system IP address and access the container service.&lt;/p&gt;
