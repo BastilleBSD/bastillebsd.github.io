@@ -538,17 +538,17 @@ invalid network configurations and other minor cosmetic improvements.</p>
 changes the way it manages entries in the firewall to go along with this.</p>
 <p><strong>It is important, if upgrading, to update the firewall as follows</strong>:</p>
 <p><strong>Step 1:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">## /etc/pf.conf
-<span style="color:#a6e22e">+ table &lt;jails&gt; persist
-</span><span style="color:#a6e22e">+ nat on $ext_if from &lt;jails&gt; to any -&gt; ($ext_if:0)
-</span><span style="color:#a6e22e"></span><span style="color:#f92672">- nat on $ext_if from bastille0:network to any -&gt; ($ext_if)
-</span></code></pre></div><p><strong>Step 2:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>## /etc/pf.conf
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ table &lt;jails&gt; persist
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ nat on $ext_if from &lt;jails&gt; to any -&gt; ($ext_if:0)
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#f92672">- nat on $ext_if from bastille0:network to any -&gt; ($ext_if)
+</span></span></span></code></pre></div><p><strong>Step 2:</strong>
 Reload the firewall rules:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pfctl -vf /etc/pf.conf
-</code></pre></div><p><strong>Step 3:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pfctl -vf /etc/pf.conf
+</span></span></code></pre></div><p><strong>Step 3:</strong>
 Restart running containers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille restart ALL
-</code></pre></div><p>All public documentation has been updated to reflect this new method. This
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille restart ALL
+</span></span></code></pre></div><p>All public documentation has been updated to reflect this new method. This
 avoids a reported issue and ensures firewall state is retained.</p>
 
     </div>
@@ -864,7 +864,7 @@ avoids a reported issue and ensures firewall state is retained.</p>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.61b963f83e775f373dc9d7232e5cac2c.js"></script>
 
     
 

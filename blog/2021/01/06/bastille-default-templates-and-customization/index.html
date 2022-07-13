@@ -617,11 +617,11 @@ containers. These &ldquo;default&rdquo; templates are:</p>
 <p>These default templates are defined in the <code>bastille.conf</code> like so:</p>
 <p><strong>bastille.conf</strong></p>
 <pre tabindex="0"><code>+## Default Templates
-+bastille_template_base=&quot;default/base&quot;      ## default: &quot;default/base&quot;
-+bastille_template_empty=&quot;default/empty&quot;    ## default: &quot;default/empty&quot;
-+bastille_template_thick=&quot;default/thick&quot;    ## default: &quot;default/thick&quot;
-+bastille_template_thin=&quot;default/thin&quot;      ## default: &quot;default/thin&quot;
-+bastille_template_vnet=&quot;default/vnet&quot;      ## default: &quot;default/vnet&quot;
++bastille_template_base=&#34;default/base&#34;      ## default: &#34;default/base&#34;
++bastille_template_empty=&#34;default/empty&#34;    ## default: &#34;default/empty&#34;
++bastille_template_thick=&#34;default/thick&#34;    ## default: &#34;default/thick&#34;
++bastille_template_thin=&#34;default/thin&#34;      ## default: &#34;default/thin&#34;
++bastille_template_vnet=&#34;default/vnet&#34;      ## default: &#34;default/vnet&#34;
 </code></pre><p><strong>If upgrading from a previous release be sure these lines have been merged
 into your bastille.conf</strong></p>
 <p>These templates are included in the installation at
@@ -635,38 +635,38 @@ templates.</p>
 <pre tabindex="0"><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 CMD touch /etc/rc.conf
-SYSRC syslogd_flags=&quot;-ss&quot;
-SYSRC sendmail_enable=&quot;NO&quot;
-SYSRC sendmail_submit_enable=&quot;NO&quot;
-SYSRC sendmail_outbound_enable=&quot;NO&quot;
-SYSRC sendmail_msp_queue_enable=&quot;NO&quot;
-SYSRC cron_flags=&quot;-J 60&quot;
+SYSRC syslogd_flags=&#34;-ss&#34;
+SYSRC sendmail_enable=&#34;NO&#34;
+SYSRC sendmail_submit_enable=&#34;NO&#34;
+SYSRC sendmail_outbound_enable=&#34;NO&#34;
+SYSRC sendmail_msp_queue_enable=&#34;NO&#34;
+SYSRC cron_flags=&#34;-J 60&#34;
 
-CP &quot;${HOST_RESOLV_CONF}&quot; /etc/resolv.conf
+CP &#34;${HOST_RESOLV_CONF}&#34; /etc/resolv.conf
 </code></pre><p><strong>default/thin</strong></p>
 <pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&#34;${HOST_RESOLV_CONF}&#34;
 </code></pre><p><strong>default/thick</strong></p>
 <pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&#34;${HOST_RESOLV_CONF}&#34;
 </code></pre><p><strong>default/vnet</strong></p>
 <pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&#34;${HOST_RESOLV_CONF}&#34;
 
 ARG EPAIR
 ARG GATEWAY
-ARG IFCONFIG=&quot;SYNCDHCP&quot;
+ARG IFCONFIG=&#34;SYNCDHCP&#34;
 
 SYSRC ifconfig_${EPAIR}_name=vnet0
-SYSRC ifconfig_vnet0=&quot;${IFCONFIG}&quot;
+SYSRC ifconfig_vnet0=&#34;${IFCONFIG}&#34;
 # GATEWAY will be empty for a DHCP config. -- cwells
-CMD if [ -n &quot;${GATEWAY}&quot; ]; then /usr/sbin/sysrc defaultrouter=&quot;${GATEWAY}&quot;; fi
+CMD if [ -n &#34;${GATEWAY}&#34; ]; then /usr/sbin/sysrc defaultrouter=&#34;${GATEWAY}&#34;; fi
 </code></pre><p><strong>default/empty</strong></p>
 <pre tabindex="0"><code></code></pre><p>As the name implies this is an empty container. No custom configuration
 is defined.</p>
@@ -676,7 +676,7 @@ is defined.</p>
 <pre tabindex="0"><code>ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 </code></pre><p>These variables can be referenced later in the template:</p>
-<pre tabindex="0"><code>INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+<pre tabindex="0"><code>INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&#34;${HOST_RESOLV_CONF}&#34;
 </code></pre><p>The above example variables would translate into:</p>
 <pre tabindex="0"><code>INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
 </code></pre><p>Additionally you can define and later <code>RENDER</code> these custom variables inside
@@ -710,12 +710,12 @@ namespace you can create new templates and extend the defaults.</p>
 <p>Included below is an example <code>Bastillefile</code> that enables outbound sendmail.</p>
 <p><strong>cedwards/base/Bastillefile</strong></p>
 <pre tabindex="0"><code>ARG HOST_RESOLV_CONF=/etc/resolv.conf
-INCLUDE default/base --arg HOST_RESOLV_CONF=&quot;${HOST_RESOLV_CONF}&quot;
+INCLUDE default/base --arg HOST_RESOLV_CONF=&#34;${HOST_RESOLV_CONF}&#34;
 
-SYSRC sendmail_outbound_enable=&quot;YES&quot;
-SYSRC sendmail_msp_queue_enable=&quot;YES&quot;
+SYSRC sendmail_outbound_enable=&#34;YES&#34;
+SYSRC sendmail_msp_queue_enable=&#34;YES&#34;
 </code></pre><p>Update the <code>bastille.conf</code> to use <code>cedwards/base</code> as the new default:</p>
-<pre tabindex="0"><code>bastille_template_base=&quot;cedwards/base&quot;      ## default: &quot;default/base&quot;
+<pre tabindex="0"><code>bastille_template_base=&#34;cedwards/base&#34;      ## default: &#34;default/base&#34;
 </code></pre><p>With this configuration every new container would have <code>default/base</code> applied
 (due to the <code>INCLUDE</code> from <code>cedwards/base</code>) followed by the additional
 configuration in the <code>cedwards/base</code> template.</p>
@@ -1040,7 +1040,7 @@ container type and can be extended using any Bastille sub-command.</p>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.61b963f83e775f373dc9d7232e5cac2c.js"></script>
 
     
 

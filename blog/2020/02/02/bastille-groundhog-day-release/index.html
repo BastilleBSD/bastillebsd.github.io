@@ -541,35 +541,35 @@ deployment.</p>
 (depending on the underlying filesystem) of TARGET. This archive will be placed
 in a <code>backups</code> directory which is found alongside the standard Bastille
 directories (<code>jails</code>, <code>releases</code>, etc).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille export TARGET
-</code></pre></div><p>This archive can later be imported automatically creating the container as
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille export TARGET
+</span></span></code></pre></div><p>This archive can later be imported automatically creating the container as
 needed.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille import archive.xz
-</code></pre></div><p>Note: <code>bastille list backups</code> to output a listing of exported archives.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille import archive.xz
+</span></span></code></pre></div><p>Note: <code>bastille list backups</code> to output a listing of exported archives.</p>
 <h2 id="bastille-convert">bastille convert</h2>
 <p>With this release it is now possible to convert a &ldquo;thin&rdquo; container to a &ldquo;thick&rdquo;
 container.<br>
 Support for bi-directional conversion is in the works.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille convert alcatraz
-</code></pre></div><h2 id="bastille-rdr">bastille rdr</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille convert alcatraz
+</span></span></code></pre></div><h2 id="bastille-rdr">bastille rdr</h2>
 <p>Dynamic rules allowing redirecting host port to container port. This example
 would redirect connections on the host port 2001 to container port 22. See
 documentation for full details.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille rdr TARGET tcp <span style="color:#ae81ff">2001</span> <span style="color:#ae81ff">22</span>
-</code></pre></div><h2 id="bastille-limits">bastille limits</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille rdr TARGET tcp <span style="color:#ae81ff">2001</span> <span style="color:#ae81ff">22</span>
+</span></span></code></pre></div><h2 id="bastille-limits">bastille limits</h2>
 <p>Initial support for resource control (<code>rctl</code>) was contributed by the community.
 Thank you Sven!</p>
 <p>A new <code>limits</code> sub-command allows you to set resource controls on containers
 dynamically. See <code>rctl(8)</code> for a deep dive but get started with this example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille limits TARGET memoryuse 1G
-</code></pre></div><p>The template system also now supports automated resource controls backed by the
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille limits TARGET memoryuse 1G
+</span></span></code></pre></div><p>The template system also now supports automated resource controls backed by the
 <code>limits</code> sub-command. This means resource limits can be applied automatically
 to containers as they are built. Support is new&ndash;your mileage may vary&ndash;but so
 far results are promising. Please report otherwise.</p>
 <p>A template hook to apply resource limits looks something like:</p>
 <p><strong>template/LIMITS</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">memoryuse 1G
-</code></pre></div><p>Bastille will also automatically add and remove resource limits for containers
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>memoryuse 1G
+</span></span></code></pre></div><p>Bastille will also automatically add and remove resource limits for containers
 as they are started and stopped.</p>
 <h2 id="improvements">Improvements</h2>
 <h3 id="fstab-template-hook">FSTAB template hook</h3>
@@ -936,7 +936,7 @@ checkout. Use at your own risk; don&rsquo;t use in production.</p>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.61b963f83e775f373dc9d7232e5cac2c.js"></script>
 
     
 
