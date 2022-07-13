@@ -544,15 +544,15 @@ version independent of any other container.</p>
 <p>To use or test this method of container storage use the new <code>-T|--thick</code>
 option to the <code>create</code> sub-command.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create -T alcatraz 12.1-RELEASE 10.17.89.10
-</code></pre></div><h3 id="syntax-improvements">Syntax Improvements</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create -T alcatraz 12.1-RELEASE 10.17.89.10
+</span></span></code></pre></div><h3 id="syntax-improvements">Syntax Improvements</h3>
 <p>In previous versions it was required to put quotes (&quot;&quot;) around long arguments
 in Bastille commands. This is no longer the case, but backward compatibility is
 retained.</p>
 <p>These two statements are equivalent.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz install zsh vim-console git-lite htop
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz <span style="color:#e6db74">&#39;install zsh vim-console git-lite htop&#39;</span>
-</code></pre></div><p>While the <code>pkg</code> sub-command is used for the example above, all Bastille
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille pkg alcatraz install zsh vim-console git-lite htop
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille pkg alcatraz <span style="color:#e6db74">&#39;install zsh vim-console git-lite htop&#39;</span>
+</span></span></code></pre></div><p>While the <code>pkg</code> sub-command is used for the example above, all Bastille
 sub-commands should now be compabitle with either syntax. Including <code>service</code>,
 <code>sysrc</code>, <code>cmd</code>, etc.</p>
 <h2 id="template-testing">Template Testing</h2>
@@ -572,13 +572,13 @@ time of bootstrapping. This means you can bootstrap 12.0-RELEASE and bring it
 up to -p11 in the same step.</p>
 <p>The <code>update</code> argument is a new option to <code>bootstrap</code>.</p>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille bootstrap 12.0-RELEASE update
-</code></pre></div><h3 id="createsh">create.sh</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 12.0-RELEASE update
+</span></span></code></pre></div><h3 id="createsh">create.sh</h3>
 <p>Container network defaults can be overridden during the <code>create</code> step. Append
 the network interface name to the end of a standard <code>create</code> and the container
 will bind the ip to that interface on start.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
-</code></pre></div><h2 id="bastillebsd">BastilleBSD</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
+</span></span></code></pre></div><h2 id="bastillebsd">BastilleBSD</h2>
 <p><a href="https://bastillebsd.org">BastilleBSD</a> has been updated to reflect this release.</p>
 <p>Follow <a href="https://twitter.com/BastilleBSD">@BastilleBSD</a> on Twitter for regular updates.</p>
 <h2 id="bug-fixes">bug fixes</h2>
@@ -906,7 +906,7 @@ will bind the ip to that interface on start.</p>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.61b963f83e775f373dc9d7232e5cac2c.js"></script>
 
     
 

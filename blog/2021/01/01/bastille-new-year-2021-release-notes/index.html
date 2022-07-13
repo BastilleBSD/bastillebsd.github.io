@@ -543,11 +543,11 @@ will automatically have one of the default templates applied when created.
 Default templates include: <code>base</code>, <code>empty</code>, <code>thick</code>, <code>thin</code>, and <code>vnet</code>.</p>
 <p><strong>bastille.conf changes</strong></p>
 <pre tabindex="0"><code>## Default Templates
-bastille_template_base=&quot;default/base&quot;      ## default: &quot;default/base&quot;
-bastille_template_empty=&quot;default/empty&quot;    ## default: &quot;default/empty&quot;
-bastille_template_thick=&quot;default/thick&quot;    ## default: &quot;default/thick&quot;
-bastille_template_thin=&quot;default/thin&quot;      ## default: &quot;default/thin&quot;
-bastille_template_vnet=&quot;default/vnet&quot;      ## default: &quot;default/vnet&quot;
+bastille_template_base=&#34;default/base&#34;      ## default: &#34;default/base&#34;
+bastille_template_empty=&#34;default/empty&#34;    ## default: &#34;default/empty&#34;
+bastille_template_thick=&#34;default/thick&#34;    ## default: &#34;default/thick&#34;
+bastille_template_thin=&#34;default/thin&#34;      ## default: &#34;default/thin&#34;
+bastille_template_vnet=&#34;default/vnet&#34;      ## default: &#34;default/vnet&#34;
 </code></pre><h3 id="development-release">Development RELEASE</h3>
 <p>Bastille now supports bootstrapping 13-CURRENT releases for testing and
 development. Note: container version(s) must be <code>&lt;=</code> host version. ie;
@@ -566,7 +566,7 @@ ARG user=root
 # Without a default:
 ARG domain
 # Then used in subsequent values:
-CMD echo &quot;${username}@${domain}&quot;
+CMD echo &#34;${username}@${domain}&#34;
 </code></pre><p>Values can also be applied dynamically at the time of applying the
 template:</p>
 <pre tabindex="0"><code>bastille template webjail bastillebsd-templates/nginx --arg username=admin --arg domain=example.com
@@ -926,7 +926,7 @@ SYSRC ...
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.61b963f83e775f373dc9d7232e5cac2c.js"></script>
 
     
 
