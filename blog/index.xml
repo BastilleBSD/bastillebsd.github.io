@@ -144,7 +144,7 @@ EOF
 sysrc -f /usr/local/etc/bastill/bastille.conf bastille_zfs_zpool=zroot
 sysrc bastille_enable=YES
 
-bastille bootstrap 13.0-RELEASE update
+bastille bootstrap 13.1-RELEASE update
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;bonus-hardware-only&#34;&gt;Bonus (hardware only)&lt;/h2&gt;
 &lt;h3 id=&#34;1-microcode-update-amd--intel&#34;&gt;1. microcode update (amd / intel)&lt;/h3&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sysrc microcode_update_enable=YES
