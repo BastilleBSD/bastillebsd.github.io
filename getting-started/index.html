@@ -537,7 +537,7 @@
 
 <h2 id="bastille-on-freebsd">Bastille on FreeBSD</h2>
 <p>This document is designed to help you be successful in your use and adoption of
-Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.0 system
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.1 system
 deployed locally or in the cloud. Manual installation is not covered in this
 document.</p>
 <h2 id="firstboot">Firstboot</h2>
@@ -704,7 +704,7 @@ sub-command.</p>
 <blockquote>
 <p>You can optionally append the keyword <code>update</code> to automagically apply <code>freebsd-update</code> to the downloaded release.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 13.0-RELEASE update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 13.1-RELEASE update
 </span></span></code></pre></div><p>You can now create a container using the newly bootstrapped release.</p>
 <h2 id="create">create</h2>
 <p>In order to create a container you will need to provide a unique container
@@ -717,7 +717,7 @@ IP, it&rsquo;s safe to use any address within that range.</p>
 <p>Tip: container names cannot include the dot (&quot;.&quot;) character.</p>
 </blockquote>
 <p>Container creation should be very quick.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 13.0-RELEASE 10.17.89.50
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 13.1-RELEASE 10.17.89.50
 </span></span></code></pre></div><h2 id="list">list</h2>
 <p>You can list running containers.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille list
