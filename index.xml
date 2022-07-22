@@ -1084,7 +1084,7 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 
 &lt;h2 id=&#34;bastille-on-freebsd&#34;&gt;Bastille on FreeBSD&lt;/h2&gt;
 &lt;p&gt;This document is designed to help you be successful in your use and adoption of
-Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.0 system
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.1 system
 deployed locally or in the cloud. Manual installation is not covered in this
 document.&lt;/p&gt;
 &lt;h2 id=&#34;firstboot&#34;&gt;Firstboot&lt;/h2&gt;
@@ -1251,7 +1251,7 @@ sub-command.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can optionally append the keyword &lt;code&gt;update&lt;/code&gt; to automagically apply &lt;code&gt;freebsd-update&lt;/code&gt; to the downloaded release.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille bootstrap 13.0-RELEASE update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille bootstrap 13.1-RELEASE update
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now create a container using the newly bootstrapped release.&lt;/p&gt;
 &lt;h2 id=&#34;create&#34;&gt;create&lt;/h2&gt;
 &lt;p&gt;In order to create a container you will need to provide a unique container
@@ -1264,7 +1264,7 @@ IP, it&amp;rsquo;s safe to use any address within that range.&lt;/p&gt;
 &lt;p&gt;Tip: container names cannot include the dot (&amp;quot;.&amp;quot;) character.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Container creation should be very quick.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create alcatraz 13.0-RELEASE 10.17.89.50
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create alcatraz 13.1-RELEASE 10.17.89.50
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list&#34;&gt;list&lt;/h2&gt;
 &lt;p&gt;You can list running containers.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille list
