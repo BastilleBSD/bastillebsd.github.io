@@ -58,7 +58,7 @@
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -118,11 +118,11 @@ service netif cloneup
 ext_if=&amp;#34;vtnet0&amp;#34; ## &amp;lt;- change vtnet0 to match host interface
 
 set block-policy return
-scrub in on $ext_if all fragment reassemble
+scrub in on \$ext_if all fragment reassemble
 set skip on lo
 
 table &amp;lt;jails&amp;gt; persist
-nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; ($ext_if:0)
+nat on \$ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; (\$ext_if:0)
 rdr-anchor &amp;#34;rdr/*&amp;#34;
 
 block in all
@@ -208,7 +208,7 @@ service ntpd restart
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -320,7 +320,7 @@ Dashboard&lt;/a&gt; too.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -374,7 +374,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -543,7 +543,7 @@ supports multiple options as described here:&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/c/BastilleBSD&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -769,7 +769,7 @@ making changes to the configuration.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1019,7 +1019,7 @@ templates to automate Linux containers. This means by default the
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1078,7 +1078,7 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1191,7 +1191,7 @@ access services from outside.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1378,7 +1378,7 @@ container type and can be extended using any Bastille sub-command.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1480,7 +1480,7 @@ SYSRC ...
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1581,7 +1581,7 @@ provide the IP &lt;code&gt;0.0.0.0&lt;/code&gt; and the container will be config
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1693,7 +1693,7 @@ checkout. Use at your own risk; don&amp;rsquo;t use in production.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1717,7 +1717,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1741,7 +1741,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1765,7 +1765,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1789,7 +1789,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1814,7 +1814,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1854,7 +1854,7 @@ avoids a reported issue and ensures firewall state is retained.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
@@ -1912,7 +1912,7 @@ will bind the ip to that interface on start.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastillebsd&#34;&gt;BastilleBSD&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://bastillebsd.org&#34;&gt;BastilleBSD&lt;/a&gt; has been updated to reflect this release.&lt;/p&gt;
-&lt;p&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD&lt;/a&gt; on Twitter for regular updates.&lt;/p&gt;
+&lt;p&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD&lt;/a&gt; on Mastodon for regular updates.&lt;/p&gt;
 &lt;h2 id=&#34;bug-fixes&#34;&gt;bug fixes&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;fixed an issue with creating 12.1-RELEASE containers in 0.4.20191025&lt;/li&gt;
@@ -1936,7 +1936,7 @@ will bind the ip to that interface on start.&lt;/p&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://twitter.com/BastilleBSD&#34;&gt;@BastilleBSD on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
