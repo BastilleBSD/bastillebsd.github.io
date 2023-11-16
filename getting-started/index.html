@@ -154,7 +154,7 @@
   <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-01-15T12:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-11-15T12:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2021-01-19T13:01:28-07:00">
   
@@ -537,7 +537,7 @@
 
 <h2 id="bastille-on-freebsd">Bastille on FreeBSD</h2>
 <p>This document is designed to help you be successful in your use and adoption of
-Bastille and FreeBSD. This document begins with a brand-new FreeBSD 13.1 system
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 14.0 system
 deployed locally or in the cloud. Manual installation is not covered in this
 document.</p>
 <h2 id="firstboot">Firstboot</h2>
@@ -564,7 +564,7 @@ the first time:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@freebsd:~ <span style="color:#75715e"># pkg bootstrap</span>
 </span></span><span style="display:flex;"><span>The package management tool is not yet installed on your system.
 </span></span><span style="display:flex;"><span>Do you want to fetch and install it now? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
-</span></span><span style="display:flex;"><span>Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:13:amd64/quarterly, please wait...
+</span></span><span style="display:flex;"><span>Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
 </span></span><span style="display:flex;"><span>Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span style="color:#66d9ef">done</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.17.5...
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.17.5: 100%
@@ -575,7 +575,7 @@ the first time:</p>
 <p>If you take a closer look at the line of output after the bootstrap
 confirmation you&rsquo;ll notice that the last part of the URL says <code>quarterly</code>:</p>
 <blockquote>
-<p>Bootstrapping pkg &hellip; pkg.FreeBSD.org/FreeBSD:13:amd64/<code>quarterly</code>, please wait&hellip;</p>
+<p>Bootstrapping pkg &hellip; pkg.FreeBSD.org/FreeBSD:14:amd64/<code>quarterly</code>, please wait&hellip;</p>
 </blockquote>
 <p>This subscribes the host to a quarterly release cycle for binary packages. For
 most systems this is adequate.  No changes are needed to subscribe to the
@@ -704,7 +704,7 @@ sub-command.</p>
 <blockquote>
 <p>You can optionally append the keyword <code>update</code> to automagically apply <code>freebsd-update</code> to the downloaded release.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 13.1-RELEASE update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 14.0-RELEASE update
 </span></span></code></pre></div><p>You can now create a container using the newly bootstrapped release.</p>
 <h2 id="create">create</h2>
 <p>In order to create a container you will need to provide a unique container
@@ -717,7 +717,7 @@ IP, it&rsquo;s safe to use any address within that range.</p>
 <p>Tip: container names cannot include the dot (&quot;.&quot;) character.</p>
 </blockquote>
 <p>Container creation should be very quick.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 13.1-RELEASE 10.17.89.50
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 14.0-RELEASE 10.17.89.50/24
 </span></span></code></pre></div><h2 id="list">list</h2>
 <p>You can list running containers.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille list
@@ -1021,7 +1021,7 @@ the <a href="https://docs.bastillebsd.org">Bastille Documentation</a>.</p>
     
     
     
-    <script src="/js/academic.min.a3985c66e92c3ccc353f8a7edcefe851.js"></script>
+    <script src="/js/academic.min.3fc2bda5946eba229f88056933b48355.js"></script>
 
     
 
@@ -1037,7 +1037,7 @@ the <a href="https://docs.bastillebsd.org">Bastille Documentation</a>.</p>
   
 
   <p class="powered-by">
-    © 2018-2022 &middot; 
+    © 2018-2023 &middot; 
 
     BastilleBSD 
 
