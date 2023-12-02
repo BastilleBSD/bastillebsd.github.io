@@ -21,6 +21,30 @@
     </item>
     
     <item>
+      <title>Bastille In The Wild</title>
+      <link>https://bastillebsd.org/press/</link>
+      <pubDate>Fri, 01 Dec 2023 12:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/press/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BastilleBSD Release History</title>
+      <link>https://bastillebsd.org/history/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compare Bastille</title>
+      <link>https://bastillebsd.org/compare/</link>
+      <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/compare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Getting Started With Bastille</title>
       <link>https://bastillebsd.org/getting-started/</link>
       <pubDate>Wed, 15 Nov 2023 12:00:00 +0000</pubDate>
@@ -62,13 +86,13 @@ document.&lt;/p&gt;
 &lt;h2 id=&#34;firstboot&#34;&gt;Firstboot&lt;/h2&gt;
 &lt;p&gt;Upon logging into a system for the first time it is recommended to apply any
 security patches available:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;freebsd-update fetch install
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;reboot
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After the &lt;code&gt;reboot&lt;/code&gt; is complete, run &lt;code&gt;freebsd-update install&lt;/code&gt; once again.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;freebsd-update install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verify your version and patch level with &lt;code&gt;freebsd-version&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;freebsd-version
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;freebsd-update fetch install
+reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After the &lt;code&gt;reboot&lt;/code&gt; is complete, run &lt;code&gt;freebsd-update install&lt;/code&gt; once again.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;freebsd-update install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verify your version and patch level with &lt;code&gt;freebsd-version&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;freebsd-version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Tip: subscribe to &lt;a href=&#34;https://lists.freebsd.org/mailman/listinfo/freebsd-security-notifications&#34;&gt;this mailing
 list&lt;/a&gt;
 for FreeBSD security notifications (low volume). Anytime you receive an email
@@ -80,15 +104,15 @@ branches. These binary packages are built from the FreeBSD ports tree, which
 follows a rolling-release model. This means up-to-date packages are often
 available.  To use the binary package manager, bootstrap it by running &lt;code&gt;pkg&lt;/code&gt; for
 the first time:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;# pkg bootstrap&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;The package management tool is not yet installed on your system.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Do you want to fetch and install it now? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y/N&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: y
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Verifying signature with trusted certificate pkg.freebsd.org.2013102301... &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-1.17.5...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-1.17.5: 100%
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tip: this bootstrapping step can be automated using the following command:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;# pkg bootstrap&lt;/span&gt;
+The package management tool is not yet installed on your system.
+Do you want to fetch and install it now? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y/N&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: y
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-1.17.5...
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-1.17.5: 100%
+root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tip: this bootstrapping step can be automated using the following command:
 &lt;code&gt;env ASSUME_ALWAYS_YES=YES pkg bootstrap&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Quarterly&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;If you take a closer look at the line of output after the bootstrap
@@ -104,15 +128,15 @@ quarterly repository.&lt;/p&gt;
 instead.  A simple way to override the default settings is to create a new
 repository config with the updated path of &lt;code&gt;latest&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Migrate to latest:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir -p /usr/local/etc/pkg/repos
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FreeBSD: { url: &amp;#39;&lt;/span&gt;pkg+http://pkg.FreeBSD.org/&lt;span style=&#34;color:#ae81ff&#34;&gt;\$\{&lt;/span&gt;ABI&lt;span style=&#34;color:#ae81ff&#34;&gt;\}&lt;/span&gt;/latest&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;, enabled: yes }&amp;#39;&lt;/span&gt; &amp;gt; /usr/local/etc/pkg/repos/FreeBSD.conf
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;package-basics&#34;&gt;Package Basics&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;mkdir -p /usr/local/etc/pkg/repos
+echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FreeBSD: { url: &amp;#39;&lt;/span&gt;pkg+http://pkg.FreeBSD.org/&lt;span style=&#34;color:#ae81ff&#34;&gt;\$\{&lt;/span&gt;ABI&lt;span style=&#34;color:#ae81ff&#34;&gt;\}&lt;/span&gt;/latest&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;, enabled: yes }&amp;#39;&lt;/span&gt; &amp;gt; /usr/local/etc/pkg/repos/FreeBSD.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;package-basics&#34;&gt;Package Basics&lt;/h2&gt;
 &lt;p&gt;In this section you&amp;rsquo;ll learn the basics of using the package manager, and
 install a few creature comforts. FreeBSD&amp;rsquo;s binary package manager works much
 like others you may have used.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg install vim git-lite bash ca_root_nss
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above pkg install command will add the &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;git-lite&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt; and
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install vim git-lite bash ca_root_nss
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above pkg install command will add the &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;git-lite&lt;/code&gt;, &lt;code&gt;bash&lt;/code&gt; and
 &lt;code&gt;ca_root_nss&lt;/code&gt; (CA certificates) from the quarterly/latest repositories.
 Naturally you can replace &lt;code&gt;bash&lt;/code&gt; with &lt;code&gt;zsh&lt;/code&gt; (or another shell of your choice).&lt;/p&gt;
 &lt;p&gt;You may also search the pkg repository for named packages. &lt;code&gt;pkg search foo&lt;/code&gt;
@@ -120,37 +144,37 @@ will match packages including &lt;code&gt;foo&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Tip: Check out &lt;a href=&#34;https://freshports.org&#34;&gt;FreshPorts&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg help
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can always find help and a list of other options using &lt;code&gt;pkg help&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can always find help and a list of other options using &lt;code&gt;pkg help&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;install-bastille&#34;&gt;Install Bastille&lt;/h2&gt;
 &lt;p&gt;Now that you&amp;rsquo;ve had a crash course in package basics, let&amp;rsquo;s install &lt;code&gt;bastille&lt;/code&gt;
 and start working with containers. Use one of the three options below. These
 are listed in order of preference / support.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PKG&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg install bastille
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install bastille
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Note: as outlined above, the version of Bastille installed may differ depending on whether you&amp;rsquo;re using &lt;code&gt;quarterly&lt;/code&gt; or &lt;code&gt;latest&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;PORTS&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;portsnap fetch auto
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -C /usr/ports/sysutils/bastille install clean
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GIT(bleeding edge/unstable)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/BastilleBSD/bastille.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd bastille
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service-management&#34;&gt;Service Management&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;portsnap fetch auto
+make -C /usr/ports/sysutils/bastille install clean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GIT(bleeding edge/unstable)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/BastilleBSD/bastille.git
+cd bastille
+make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service-management&#34;&gt;Service Management&lt;/h2&gt;
 &lt;p&gt;Services in FreeBSD are managed centrally in the &lt;code&gt;/etc/rc.conf&lt;/code&gt; and use a
 syntax of &lt;code&gt;name_enable=(YES|NO)&lt;/code&gt;. For example, to start containers
 automatically at boot you can set &lt;code&gt;bastille_enable=YES&lt;/code&gt; using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc bastille_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By default, Bastille will start all created containers at boot when enabled.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc bastille_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By default, Bastille will start all created containers at boot when enabled.&lt;/p&gt;
 &lt;p&gt;To specify a limited list of containers to start at boot, set the optional
 &lt;code&gt;bastille_list&lt;/code&gt; value to the name(s) of containers to start.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc bastille_list&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;azkaban arkham alcatraz&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once services have been enabled in the &lt;code&gt;/etc/rc.conf&lt;/code&gt;, they can be managed
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc bastille_list&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;azkaban arkham alcatraz&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once services have been enabled in the &lt;code&gt;/etc/rc.conf&lt;/code&gt;, they can be managed
 using the &lt;code&gt;service&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service foo &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;start|stop|restart&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bastille does not run as a service and does not need to be started as such.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;service foo &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;start|stop|restart&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bastille does not run as a service and does not need to be started as such.
 Enabling Bastille primarily manages containers at startup and shutdown.&lt;/p&gt;
 &lt;h2 id=&#34;bastille-containers&#34;&gt;Bastille Containers&lt;/h2&gt;
 &lt;p&gt;Once Bastille is installed you&amp;rsquo;ll want to verify the configuration. This is
@@ -162,14 +186,14 @@ network interface for containers.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;d prefer to set a specific timezone for your containers you may change
 it here. The default is to use the timezone of the host.&lt;/p&gt;
 &lt;p&gt;Requires format &amp;ldquo;America/Denver&amp;rdquo; or &amp;ldquo;Europe/Paris&amp;rdquo;.  (see &lt;code&gt;/usr/share/zoneinfo&lt;/code&gt;)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_tzdata=&amp;#34;&amp;#34;  ## default: empty to use host&amp;#39;s time zone
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_tzdata=&amp;quot;&amp;quot;  ## default: empty to use host&#39;s time zone
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;zfs-recommended&#34;&gt;ZFS (recommended)&lt;/h2&gt;
 &lt;p&gt;If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to &lt;code&gt;YES&lt;/code&gt; and define the &lt;code&gt;zpool&lt;/code&gt;. If either is undefined ZFS will
 not be used.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## ZFS options
-bastille_zfs_enable=&amp;#34;&amp;#34;  ## default: &amp;#34;&amp;#34;
-bastille_zfs_zpool=&amp;#34;&amp;#34;   ## default: &amp;#34;&amp;#34;
+bastille_zfs_enable=&amp;quot;&amp;quot;  ## default: &amp;quot;&amp;quot;
+bastille_zfs_zpool=&amp;quot;&amp;quot;   ## default: &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
 &lt;p&gt;Bastille can be flexible about the way it handles networking. In this document
 we will use the more portable &amp;ldquo;loopback&amp;rdquo; network design. This can be used in
@@ -178,14 +202,14 @@ the same way in the cloud or on local networks. Bastille uses this method by def
 Documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;There is a one-time setup requirement to configure a new &lt;code&gt;bastille0&lt;/code&gt; loopback
 interface and define firewall rules:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc cloned_interfaces&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;lo1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc ifconfig_lo1_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bastille0&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service netif cloneup
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this in place we can create the firewall rules that will both limit access
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc cloned_interfaces&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;lo1
+sysrc ifconfig_lo1_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bastille0&amp;#34;&lt;/span&gt;
+service netif cloneup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With this in place we can create the firewall rules that will both limit access
 to the host system and containers, and also provide a NAT rule for the new
 &lt;code&gt;bastille0&lt;/code&gt; loopback interface to access the broader network.&lt;/p&gt;
 &lt;p&gt;Create &lt;code&gt;/etc/pf.conf&lt;/code&gt; and use the following rules:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ext_if=&amp;#34;vtnet0&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ext_if=&amp;quot;vtnet0&amp;quot;
 
 set block-policy return
 scrub in on $ext_if all fragment reassemble
@@ -193,7 +217,7 @@ set skip on lo
 
 table &amp;lt;jails&amp;gt; persist
 nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; ($ext_if:0)
-rdr-anchor &amp;#34;rdr/*&amp;#34;
+rdr-anchor &amp;quot;rdr/*&amp;quot;
 
 block in all
 pass out quick keep state
@@ -213,9 +237,9 @@ for the containers.&lt;/p&gt;
 connection you may be using now). SSH inbound access is allowed by the new
 policy, simply reconnect.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc pf_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service pf start
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now equipped with a robust firewall and a sane configuration you&amp;rsquo;re ready to
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc pf_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+service pf start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now equipped with a robust firewall and a sane configuration you&amp;rsquo;re ready to
 bootstrap a release and begin creating containers!&lt;/p&gt;
 &lt;h2 id=&#34;bootstrap&#34;&gt;bootstrap&lt;/h2&gt;
 &lt;p&gt;To &lt;code&gt;bootstrap&lt;/code&gt; a release for use with your container use the &lt;code&gt;bootstrap&lt;/code&gt;
@@ -223,8 +247,8 @@ sub-command.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can optionally append the keyword &lt;code&gt;update&lt;/code&gt; to automagically apply &lt;code&gt;freebsd-update&lt;/code&gt; to the downloaded release.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille bootstrap 14.0-RELEASE update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now create a container using the newly bootstrapped release.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille bootstrap 14.0-RELEASE update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now create a container using the newly bootstrapped release.&lt;/p&gt;
 &lt;h2 id=&#34;create&#34;&gt;create&lt;/h2&gt;
 &lt;p&gt;In order to create a container you will need to provide a unique container
 name, a bootstrapped release name and static IP address.&lt;/p&gt;
@@ -236,18 +260,18 @@ IP, it&amp;rsquo;s safe to use any address within that range.&lt;/p&gt;
 &lt;p&gt;Tip: container names cannot include the dot (&amp;quot;.&amp;quot;) character.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Container creation should be very quick.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create alcatraz 14.0-RELEASE 10.17.89.50/24
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list&#34;&gt;list&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create alcatraz 14.0-RELEASE 10.17.89.50/24
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list&#34;&gt;list&lt;/h2&gt;
 &lt;p&gt;You can list running containers.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille list
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pkg&#34;&gt;pkg&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pkg&#34;&gt;pkg&lt;/h2&gt;
 &lt;p&gt;Install packages inside the container.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille pkg alcatraz install -y htop
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;htop&#34;&gt;htop&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille pkg alcatraz install -y htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;htop&#34;&gt;htop&lt;/h2&gt;
 &lt;p&gt;htop is an interactive process viewer. When you view processes inside a
 container you only see that container&amp;rsquo;s processes.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille htop alcatraz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notice that &lt;code&gt;syslogd&lt;/code&gt; and &lt;code&gt;cron&lt;/code&gt; are the only default processes.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille htop alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notice that &lt;code&gt;syslogd&lt;/code&gt; and &lt;code&gt;cron&lt;/code&gt; are the only default processes.&lt;/p&gt;
 
 
 
@@ -280,45 +304,46 @@ container you only see that container&amp;rsquo;s processes.&lt;/p&gt;
 &lt;p&gt;Tip: Press &amp;ldquo;q&amp;rdquo; to quit.&lt;/p&gt;
 &lt;h2 id=&#34;sysrc&#34;&gt;sysrc&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s toggle a setting inside the container and enable the &lt;code&gt;sshd&lt;/code&gt; service.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille sysrc alcatraz sshd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sshd_enable: NO -&amp;gt; YES
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service&#34;&gt;service&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille sysrc alcatraz sshd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+sshd_enable: NO -&amp;gt; YES
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service&#34;&gt;service&lt;/h2&gt;
 &lt;p&gt;Start up the newly enabled service.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille service alcatraz sshd start
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Generating RSA host key.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Generating ECDSA host key.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Generating ED25519 host key.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ED25519&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Performing sanity check on sshd configuration.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Starting sshd.
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cmd&#34;&gt;cmd&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille service alcatraz sshd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+Generating RSA host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;2048&lt;/span&gt; SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;RSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Generating ECDSA host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ECDSA&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Generating ED25519 host key.
+&lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ED25519&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+Performing sanity check on sshd configuration.
+Starting sshd.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cmd&#34;&gt;cmd&lt;/h2&gt;
 &lt;p&gt;Execute arbitrary commands inside the container. In this case check to see that
 &lt;code&gt;sshd&lt;/code&gt; is listening on port &lt;code&gt;:22&lt;/code&gt; using the &lt;code&gt;sockstat -4&lt;/code&gt; command.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille cmd alcatraz sockstat -4
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root     sshd       &lt;span style=&#34;color:#ae81ff&#34;&gt;34994&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  tcp4   10.17.89.50:22        *:*
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;console&#34;&gt;console&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille cmd alcatraz sockstat -4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:
+USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
+root     sshd       &lt;span style=&#34;color:#ae81ff&#34;&gt;34994&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;  tcp4   10.17.89.50:22        *:*
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;alcatraz&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;console&#34;&gt;console&lt;/h2&gt;
 &lt;p&gt;Finally, use &lt;code&gt;console&lt;/code&gt; for a password-less root login to the container and have
 a look around. You&amp;rsquo;ll find yourself in a wholly contained FreeBSD system with
 the ability to build whatever you need to build.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille console alcatraz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;root&lt;/code&gt; user is still (mostly) all powerful, but only within the confines of
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille console alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;root&lt;/code&gt; user is still (mostly) all powerful, but only within the confines of
 that container.&lt;/p&gt;
 &lt;p&gt;When you&amp;rsquo;re finished, log out of the container as normal with &lt;code&gt;exit&lt;/code&gt; or
 &lt;code&gt;ctrl-d&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;stop&#34;&gt;stop&lt;/h2&gt;
 &lt;p&gt;When you&amp;rsquo;re done testing your container you can shut it off.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille stop alcatraz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;destroy&#34;&gt;destroy&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille stop alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;destroy&#34;&gt;destroy&lt;/h2&gt;
 &lt;p&gt;Lastly, destroy your lightweight container.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille destroy alcatraz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille destroy alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;usage&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Bastille is an open-source system for automating deployment and management of
 containerized applications on FreeBSD.
 
@@ -357,11 +382,12 @@ Available Commands:
   umount      Unmount a volume from within the targeted container(s).
   update      Update container base -pX release.
   upgrade     Upgrade container release to X.Y-RELEASE.
-  verify      Compare release against a &amp;#34;known good&amp;#34; index.
+  verify      Compare release against a &amp;quot;known good&amp;quot; index.
   zfs         Manage (get|set) ZFS attributes on targeted container(s).
 
-Use &amp;#34;bastille -v|--version&amp;#34; for version information.
-Use &amp;#34;bastille command -h|--help&amp;#34; for more information about a command.
+Use &amp;quot;bastille -v|--version&amp;quot; for version information.
+Use &amp;quot;bastille command -h|--help&amp;quot; for more information about a command.
+
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;p&gt;To learn more about automating containerized applications, see
 the &lt;a href=&#34;https://docs.bastillebsd.org&#34;&gt;Bastille Documentation&lt;/a&gt;.&lt;/p&gt;
@@ -416,21 +442,21 @@ containerized applications on FreeBSD.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-hushlogin&#34;&gt;1. ~/.hushlogin&lt;/h2&gt;
 &lt;p&gt;Makes login quieter. (&lt;a href=&#34;https://www.freebsd.org/cgi/man.cgi?login(1)&#34;&gt;man login&lt;/a&gt;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch ~/.hushlogin
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-apply-patches&#34;&gt;2. Apply Patches&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;touch ~/.hushlogin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-apply-patches&#34;&gt;2. Apply Patches&lt;/h2&gt;
 &lt;p&gt;Apply updates to the host. (&lt;a href=&#34;https://www.freebsd.org/cgi/man.cgi?freebsd-update(8)&#34;&gt;man freebsd-update&lt;/a&gt;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;freebsd-update fetch install
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;reboot
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;freebsd-update install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-disable-atime-zfs&#34;&gt;3. disable atime (ZFS)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;freebsd-update fetch install
+reboot
+freebsd-update install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-disable-atime-zfs&#34;&gt;3. disable atime (ZFS)&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zfs set atime=off zroot
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;4-install-required-packages&#34;&gt;4. install required packages&lt;/h2&gt;
 &lt;p&gt;Bootstrap the binary package manager and install core packages.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Virtual Hardware&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg install vim git-lite zsh htop tree node_exporter doas bastille rocinante
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Physical Hardware&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg install vim git-lite zsh htop tree smartmontools node_exporter doas devcpu-data bastille rocinante
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-configure-zsh-shell&#34;&gt;5. configure zsh shell&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install vim git-lite zsh htop tree node_exporter doas bastille rocinante
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Physical Hardware&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pkg install vim git-lite zsh htop tree smartmontools node_exporter doas devcpu-data bastille rocinante
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-configure-zsh-shell&#34;&gt;5. configure zsh shell&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fetch https://git.io/antigen -o /usr/local/share/zsh/antigen.zsh
 &lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat &amp;lt;&amp;lt;EOF&amp;gt;~/.zshrc
 source /usr/local/share/zsh/antigen.zsh
@@ -453,10 +479,10 @@ EOF
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;7-generate-ssh-keys&#34;&gt;7. generate SSH keys&lt;/h2&gt;
 &lt;p&gt;Delete the auto-generated SSH keys and regenerate using only good key types.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;rm /etc/ssh/ssh_host_*
-sysrc sshd_dsa_enable=&amp;#34;no&amp;#34;
-sysrc sshd_ecdsa_enable=&amp;#34;no&amp;#34;
-sysrc sshd_ed25519_enable=&amp;#34;yes&amp;#34;
-sysrc sshd_rsa_enable=&amp;#34;yes&amp;#34;
+sysrc sshd_dsa_enable=&amp;quot;no&amp;quot;
+sysrc sshd_ecdsa_enable=&amp;quot;no&amp;quot;
+sysrc sshd_ed25519_enable=&amp;quot;yes&amp;quot;
+sysrc sshd_rsa_enable=&amp;quot;yes&amp;quot;
 service sshd keygen
 service sshd restart
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;8-network--firewall&#34;&gt;8. network &amp;amp; firewall&lt;/h2&gt;
@@ -464,7 +490,7 @@ service sshd restart
 sysrc ifconfig_lo1_name=bastille0
 service netif cloneup
 &lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat &amp;lt;&amp;lt;EOF&amp;gt;/etc/pf.conf
-ext_if=&amp;#34;vtnet0&amp;#34; ## &amp;lt;- change vtnet0 to match host interface
+ext_if=&amp;quot;vtnet0&amp;quot; ## &amp;lt;- change vtnet0 to match host interface
 
 set block-policy return
 scrub in on \$ext_if all fragment reassemble
@@ -472,7 +498,7 @@ set skip on lo
 
 table &amp;lt;jails&amp;gt; persist
 nat on \$ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; (\$ext_if:0)
-rdr-anchor &amp;#34;rdr/*&amp;#34;
+rdr-anchor &amp;quot;rdr/*&amp;quot;
 
 block in all
 pass out quick keep state
@@ -480,15 +506,15 @@ pass in inet proto tcp from any to any port ssh flags S/SA keep state
 pass in inet proto tcp from any to any port bootps flags S/SA keep state
 pass in inet proto tcp from any to any port {9100,9124} flags S/SA keep state
 EOF
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc pf_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service pf start
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;9-metrics-prom_sysctl--node_exporter&#34;&gt;9. metrics (prom_sysctl &amp;amp; node_exporter)&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc inetd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc node_exporter_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc node_exporter_args&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--collector.devstat --collector.ntp&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service inetd start
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service node_exporter start
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;10-bastille&#34;&gt;10. bastille&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc pf_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+service pf start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;9-metrics-prom_sysctl--node_exporter&#34;&gt;9. metrics (prom_sysctl &amp;amp; node_exporter)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc inetd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+sysrc node_exporter_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+sysrc node_exporter_args&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;--collector.devstat --collector.ntp&amp;#34;&lt;/span&gt;
+service inetd start
+service node_exporter start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;10-bastille&#34;&gt;10. bastille&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sysrc -f /usr/local/etc/bastill/bastille.conf bastille_zfs_enable=YES
 sysrc -f /usr/local/etc/bastill/bastille.conf bastille_zfs_zpool=zroot
 sysrc bastille_enable=YES
@@ -499,24 +525,24 @@ bastille bootstrap 13.0-RELEASE update
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sysrc microcode_update_enable=YES
 service microcode_update start
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2-ntp-aka-what-time-is-it&#34;&gt;2. NTP aka What time is it?&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/etc/ntp.conf	2021-04-09 00:25:48.000000000 -0600
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/etc/ntp.conf	2021-12-23 21:51:41.700029000 -0700
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -30,6 +30,9 @@
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; # The option `iburst&amp;#39; is used for faster initial synchronization.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; #
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; pool 0.freebsd.pool.ntp.org iburst
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 1.freebsd.pool.ntp.org iburst
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 2.freebsd.pool.ntp.org iburst
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 3.freebsd.pool.ntp.org iburst
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; #
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # If you want to pick yourself which country&amp;#39;s public NTP server
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sysrc ntpd_enable=YES
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;--- a/etc/ntp.conf	2021-04-09 00:25:48.000000000 -0600
+&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+++ b/etc/ntp.conf	2021-12-23 21:51:41.700029000 -0700
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;@@ -30,6 +30,9 @@
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; # The option `iburst&amp;#39; is used for faster initial synchronization.
+ #
+ pool 0.freebsd.pool.ntp.org iburst
+&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 1.freebsd.pool.ntp.org iburst
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 2.freebsd.pool.ntp.org iburst
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+pool 3.freebsd.pool.ntp.org iburst
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;
+ #
+ # If you want to pick yourself which country&amp;#39;s public NTP server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sysrc ntpd_enable=YES
 service ntpd restart
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-smartd&#34;&gt;3. smartd&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc smartd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service smartd start
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc smartd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+service smartd start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -581,7 +607,7 @@ steps:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome-exporter
-Cloning into &amp;#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome-exporter&amp;#39;...
+Cloning into &#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome-exporter&#39;...
 warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome-exporter.git/
 remote: Enumerating objects: 24, done.
 remote: Counting objects: 100% (24/24), done.
@@ -625,9 +651,9 @@ The process will require 6 MiB more space.
 Checking integrity... done (0 conflicting)
 [adguard] [1/1] Installing adguard-exporter-1.14...
 ===&amp;gt; Creating groups.
-Using existing group &amp;#39;nobody&amp;#39;.
+Using existing group &#39;nobody&#39;.
 ===&amp;gt; Creating users
-Using existing user &amp;#39;nobody&amp;#39;.
+Using existing user &#39;nobody&#39;.
 [adguard] [1/1] Extracting adguard-exporter-1.14: 100%
 
 [adguard]:
@@ -921,7 +947,7 @@ be a top offender!&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Output Example&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ishmael ~ # bastille bootstrap https://gitlab.com/bastillebsd-templates/adguardhome
-Cloning into &amp;#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome&amp;#39;...
+Cloning into &#39;/usr/local/bastille/templates/bastillebsd-templates/adguardhome&#39;...
 warning: redirecting to https://gitlab.com/bastillebsd-templates/adguardhome.git/
 remote: Enumerating objects: 30, done.
 remote: Counting objects: 100% (15/15), done.
@@ -1050,7 +1076,7 @@ Message from adguardhome-0.107.0.b.7:
 --
 You installed AdGuardHome: Network-wide ads &amp;amp; trackers blocking DNS server.
 
-In order to use it please start the service &amp;#39;adguardhome&amp;#39; and
+In order to use it please start the service &#39;adguardhome&#39; and
 then access the URL http://0.0.0.0:3010/ in your favorite browser.
 
 [adguardhome]:
@@ -1156,6 +1182,7 @@ I: Resolving dependencies of required packages...
 I: Resolving dependencies of base packages...
 I: Checking component main on http://archive.ubuntu.com/ubuntu...
 ...
+
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This will download and extract ~102M worth of packages using &lt;code&gt;debootstrap&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Ubuntu 20.04 &amp;ldquo;Focal Fossa&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Usage:&lt;/p&gt;
@@ -1360,14 +1387,6 @@ templates to automate Linux containers. This means by default the
     </item>
     
     <item>
-      <title>Bastille Use-Cases &amp; User Feedback</title>
-      <link>https://bastillebsd.org/use-cases/</link>
-      <pubDate>Sat, 16 Jan 2021 12:00:00 +0000</pubDate>
-      <guid>https://bastillebsd.org/use-cases/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bastille New Year 2021 Bug Fix Release Notes</title>
       <link>https://bastillebsd.org/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</link>
       <pubDate>Fri, 15 Jan 2021 22:16:57 -0700</pubDate>
@@ -1392,8 +1411,8 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 &lt;li&gt;don&amp;rsquo;t start empty jails by default (&lt;a href=&#34;https://github.com/BastilleBSD/bastille/pull/311&#34;&gt;#311&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This also includes a minor change to the &lt;code&gt;bastille.conf&lt;/code&gt;.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-bastille_template_empty=&amp;#34;default/empty&amp;#34;    ## default: &amp;#34;default/empty&amp;#34;
-+bastille_template_empty=&amp;#34;&amp;#34;                 ## default: &amp;#34;&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;-bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
++bastille_template_empty=&amp;quot;&amp;quot;                 ## default: &amp;quot;&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
@@ -1511,14 +1530,6 @@ access services from outside.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Compare Bastille</title>
-      <link>https://bastillebsd.org/compare/</link>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://bastillebsd.org/compare/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Bastille Default Templates and Customization</title>
       <link>https://bastillebsd.org/blog/2021/01/06/bastille-default-templates-and-customization/</link>
       <pubDate>Sat, 09 Jan 2021 12:00:00 -0700</pubDate>
@@ -1622,11 +1633,11 @@ containers. These &amp;ldquo;default&amp;rdquo; templates are:&lt;/p&gt;
 &lt;p&gt;These default templates are defined in the &lt;code&gt;bastille.conf&lt;/code&gt; like so:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bastille.conf&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+## Default Templates
-+bastille_template_base=&amp;#34;default/base&amp;#34;      ## default: &amp;#34;default/base&amp;#34;
-+bastille_template_empty=&amp;#34;default/empty&amp;#34;    ## default: &amp;#34;default/empty&amp;#34;
-+bastille_template_thick=&amp;#34;default/thick&amp;#34;    ## default: &amp;#34;default/thick&amp;#34;
-+bastille_template_thin=&amp;#34;default/thin&amp;#34;      ## default: &amp;#34;default/thin&amp;#34;
-+bastille_template_vnet=&amp;#34;default/vnet&amp;#34;      ## default: &amp;#34;default/vnet&amp;#34;
++bastille_template_base=&amp;quot;default/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
++bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
++bastille_template_thick=&amp;quot;default/thick&amp;quot;    ## default: &amp;quot;default/thick&amp;quot;
++bastille_template_thin=&amp;quot;default/thin&amp;quot;      ## default: &amp;quot;default/thin&amp;quot;
++bastille_template_vnet=&amp;quot;default/vnet&amp;quot;      ## default: &amp;quot;default/vnet&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;If upgrading from a previous release be sure these lines have been merged
 into your bastille.conf&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;These templates are included in the installation at
@@ -1640,38 +1651,38 @@ templates.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
 CMD touch /etc/rc.conf
-SYSRC syslogd_flags=&amp;#34;-ss&amp;#34;
-SYSRC sendmail_enable=&amp;#34;NO&amp;#34;
-SYSRC sendmail_submit_enable=&amp;#34;NO&amp;#34;
-SYSRC sendmail_outbound_enable=&amp;#34;NO&amp;#34;
-SYSRC sendmail_msp_queue_enable=&amp;#34;NO&amp;#34;
-SYSRC cron_flags=&amp;#34;-J 60&amp;#34;
+SYSRC syslogd_flags=&amp;quot;-ss&amp;quot;
+SYSRC sendmail_enable=&amp;quot;NO&amp;quot;
+SYSRC sendmail_submit_enable=&amp;quot;NO&amp;quot;
+SYSRC sendmail_outbound_enable=&amp;quot;NO&amp;quot;
+SYSRC sendmail_msp_queue_enable=&amp;quot;NO&amp;quot;
+SYSRC cron_flags=&amp;quot;-J 60&amp;quot;
 
-CP &amp;#34;${HOST_RESOLV_CONF}&amp;#34; /etc/resolv.conf
+CP &amp;quot;${HOST_RESOLV_CONF}&amp;quot; /etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/thin&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;#34;${HOST_RESOLV_CONF}&amp;#34;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/thick&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;#34;${HOST_RESOLV_CONF}&amp;#34;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/vnet&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 
-INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;#34;${HOST_RESOLV_CONF}&amp;#34;
+INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 
 ARG EPAIR
 ARG GATEWAY
-ARG IFCONFIG=&amp;#34;SYNCDHCP&amp;#34;
+ARG IFCONFIG=&amp;quot;SYNCDHCP&amp;quot;
 
 SYSRC ifconfig_${EPAIR}_name=vnet0
-SYSRC ifconfig_vnet0=&amp;#34;${IFCONFIG}&amp;#34;
+SYSRC ifconfig_vnet0=&amp;quot;${IFCONFIG}&amp;quot;
 # GATEWAY will be empty for a DHCP config. -- cwells
-CMD if [ -n &amp;#34;${GATEWAY}&amp;#34; ]; then /usr/sbin/sysrc defaultrouter=&amp;#34;${GATEWAY}&amp;#34;; fi
+CMD if [ -n &amp;quot;${GATEWAY}&amp;quot; ]; then /usr/sbin/sysrc defaultrouter=&amp;quot;${GATEWAY}&amp;quot;; fi
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;default/empty&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As the name implies this is an empty container. No custom configuration
 is defined.&lt;/p&gt;
@@ -1681,7 +1692,7 @@ is defined.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG BASE_TEMPLATE=default/base
 ARG HOST_RESOLV_CONF=/etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;These variables can be referenced later in the template:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;#34;${HOST_RESOLV_CONF}&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;INCLUDE ${BASE_TEMPLATE} --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above example variables would translate into:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;INCLUDE default/base --arg HOST_RESOLV_CONF=/etc/resolv.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Additionally you can define and later &lt;code&gt;RENDER&lt;/code&gt; these custom variables inside
@@ -1715,12 +1726,12 @@ namespace you can create new templates and extend the defaults.&lt;/p&gt;
 &lt;p&gt;Included below is an example &lt;code&gt;Bastillefile&lt;/code&gt; that enables outbound sendmail.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;cedwards/base/Bastillefile&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ARG HOST_RESOLV_CONF=/etc/resolv.conf
-INCLUDE default/base --arg HOST_RESOLV_CONF=&amp;#34;${HOST_RESOLV_CONF}&amp;#34;
+INCLUDE default/base --arg HOST_RESOLV_CONF=&amp;quot;${HOST_RESOLV_CONF}&amp;quot;
 
-SYSRC sendmail_outbound_enable=&amp;#34;YES&amp;#34;
-SYSRC sendmail_msp_queue_enable=&amp;#34;YES&amp;#34;
+SYSRC sendmail_outbound_enable=&amp;quot;YES&amp;quot;
+SYSRC sendmail_msp_queue_enable=&amp;quot;YES&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update the &lt;code&gt;bastille.conf&lt;/code&gt; to use &lt;code&gt;cedwards/base&lt;/code&gt; as the new default:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_template_base=&amp;#34;cedwards/base&amp;#34;      ## default: &amp;#34;default/base&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille_template_base=&amp;quot;cedwards/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With this configuration every new container would have &lt;code&gt;default/base&lt;/code&gt; applied
 (due to the &lt;code&gt;INCLUDE&lt;/code&gt; from &lt;code&gt;cedwards/base&lt;/code&gt;) followed by the additional
 configuration in the &lt;code&gt;cedwards/base&lt;/code&gt; template.&lt;/p&gt;
@@ -1764,11 +1775,11 @@ will automatically have one of the default templates applied when created.
 Default templates include: &lt;code&gt;base&lt;/code&gt;, &lt;code&gt;empty&lt;/code&gt;, &lt;code&gt;thick&lt;/code&gt;, &lt;code&gt;thin&lt;/code&gt;, and &lt;code&gt;vnet&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bastille.conf changes&lt;/strong&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## Default Templates
-bastille_template_base=&amp;#34;default/base&amp;#34;      ## default: &amp;#34;default/base&amp;#34;
-bastille_template_empty=&amp;#34;default/empty&amp;#34;    ## default: &amp;#34;default/empty&amp;#34;
-bastille_template_thick=&amp;#34;default/thick&amp;#34;    ## default: &amp;#34;default/thick&amp;#34;
-bastille_template_thin=&amp;#34;default/thin&amp;#34;      ## default: &amp;#34;default/thin&amp;#34;
-bastille_template_vnet=&amp;#34;default/vnet&amp;#34;      ## default: &amp;#34;default/vnet&amp;#34;
+bastille_template_base=&amp;quot;default/base&amp;quot;      ## default: &amp;quot;default/base&amp;quot;
+bastille_template_empty=&amp;quot;default/empty&amp;quot;    ## default: &amp;quot;default/empty&amp;quot;
+bastille_template_thick=&amp;quot;default/thick&amp;quot;    ## default: &amp;quot;default/thick&amp;quot;
+bastille_template_thin=&amp;quot;default/thin&amp;quot;      ## default: &amp;quot;default/thin&amp;quot;
+bastille_template_vnet=&amp;quot;default/vnet&amp;quot;      ## default: &amp;quot;default/vnet&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;development-release&#34;&gt;Development RELEASE&lt;/h3&gt;
 &lt;p&gt;Bastille now supports bootstrapping 13-CURRENT releases for testing and
 development. Note: container version(s) must be &lt;code&gt;&amp;lt;=&lt;/code&gt; host version. ie;
@@ -1787,7 +1798,7 @@ ARG user=root
 # Without a default:
 ARG domain
 # Then used in subsequent values:
-CMD echo &amp;#34;${username}@${domain}&amp;#34;
+CMD echo &amp;quot;${username}@${domain}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Values can also be applied dynamically at the time of applying the
 template:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bastille template webjail bastillebsd-templates/nginx --arg username=admin --arg domain=example.com
@@ -1882,39 +1893,39 @@ infrastructures (on-premise, data-center, cloud, etc). A host firewall is
 required in this design further securing the host and containers.&lt;/p&gt;
 &lt;p&gt;A quick one-time setup is required in this design:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;bastille0&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc cloned_interfaces&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;lo1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc ifconfig_lo1_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bastille0
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service netif cloneup
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;/etc/pf.conf&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ext_if&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vtnet0&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set block-policy &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;scrub in on $ext_if all fragment reassemble
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set skip on lo
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;table &amp;lt;jails&amp;gt; persist
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$ext_if&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rdr-anchor &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rdr/*&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;block in all
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pass out quick keep state
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;antispoof &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; $ext_if inet
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pass in inet proto tcp from any to any port ssh flags S/SA keep state
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NOTE: The &lt;code&gt;ext_if=&lt;/code&gt; in the example must be updated to match the name of the
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sysrc cloned_interfaces&lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt;lo1
+sysrc ifconfig_lo1_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;bastille0
+service netif cloneup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;/etc/pf.conf&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;ext_if&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vtnet0&amp;#34;&lt;/span&gt;
+
+set block-policy &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;
+scrub in on $ext_if all fragment reassemble
+set skip on lo
+
+table &amp;lt;jails&amp;gt; persist
+nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;$ext_if&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+rdr-anchor &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rdr/*&amp;#34;&lt;/span&gt;
+
+block in all
+pass out quick keep state
+antispoof &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; $ext_if inet
+pass in inet proto tcp from any to any port ssh flags S/SA keep state
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NOTE: The &lt;code&gt;ext_if=&lt;/code&gt; in the example must be updated to match the name of the
 host external interface. This is usually &lt;code&gt;em0&lt;/code&gt;, &lt;code&gt;re0&lt;/code&gt;, &lt;code&gt;vtnet0&lt;/code&gt;, etc.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;ipv4&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create nginx 12.2-RELEASE 10.17.89.10 bastille0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 bastille0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;lan-host-alias&#34;&gt;LAN (host alias)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create nginx 12.2-RELEASE 10.17.89.10 bastille0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 bastille0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;lan-host-alias&#34;&gt;LAN (host alias)&lt;/h3&gt;
 &lt;p&gt;The &amp;ldquo;LAN&amp;rdquo; design uses the hosts existing interface(s) and assigns container
 addresses as aliases to these interfaces. In FreeBSD interfaces are named after
 the hardware/driver. This means you&amp;rsquo;ll find a range of interface names such as
 &lt;code&gt;re0&lt;/code&gt;, &lt;code&gt;igb0&lt;/code&gt;, &lt;code&gt;em0&lt;/code&gt;, &lt;code&gt;vtnet0&lt;/code&gt;, etc.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create nginx 12.2-RELEASE 192.168.1.13 re0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;vnet-vnet0&#34;&gt;VNET (vnet0)&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create nginx 12.2-RELEASE 192.168.1.13 re0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;vnet-vnet0&#34;&gt;VNET (vnet0)&lt;/h3&gt;
 &lt;p&gt;VNET support was added in the second half of the 0.6.x series (0.6.20200224).&lt;/p&gt;
 &lt;p&gt;VNET (virtual network) provides a virtual network interface to the container.
 In this design the container does not share an interface with any other
@@ -1937,12 +1948,12 @@ conatiner by copying the host&amp;rsquo;s default route.&lt;/p&gt;
 &lt;p&gt;Bastille provides a shortcut to creating a DHCP-enabled container. Simply
 provide the IP &lt;code&gt;0.0.0.0&lt;/code&gt; and the container will be configured to use DHCP.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;DHCP&lt;/strong&gt; (ipv4)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create -V nginx 12.2-RELEASE 0.0.0.0 re0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv4&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create -V nginx 12.2-RELEASE 192.168.1.13 re0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create -V nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create -V nginx 12.2-RELEASE 0.0.0.0 re0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv4&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create -V nginx 12.2-RELEASE 192.168.1.13 re0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;ipv6&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create -V nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1973,35 +1984,35 @@ deployment.&lt;/p&gt;
 (depending on the underlying filesystem) of TARGET. This archive will be placed
 in a &lt;code&gt;backups&lt;/code&gt; directory which is found alongside the standard Bastille
 directories (&lt;code&gt;jails&lt;/code&gt;, &lt;code&gt;releases&lt;/code&gt;, etc).&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille export TARGET
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This archive can later be imported automatically creating the container as
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille export TARGET
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This archive can later be imported automatically creating the container as
 needed.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille import archive.xz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: &lt;code&gt;bastille list backups&lt;/code&gt; to output a listing of exported archives.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille import archive.xz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: &lt;code&gt;bastille list backups&lt;/code&gt; to output a listing of exported archives.&lt;/p&gt;
 &lt;h2 id=&#34;bastille-convert&#34;&gt;bastille convert&lt;/h2&gt;
 &lt;p&gt;With this release it is now possible to convert a &amp;ldquo;thin&amp;rdquo; container to a &amp;ldquo;thick&amp;rdquo;
 container.&lt;br&gt;
 Support for bi-directional conversion is in the works.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille convert alcatraz
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastille-rdr&#34;&gt;bastille rdr&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille convert alcatraz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastille-rdr&#34;&gt;bastille rdr&lt;/h2&gt;
 &lt;p&gt;Dynamic rules allowing redirecting host port to container port. This example
 would redirect connections on the host port 2001 to container port 22. See
 documentation for full details.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille rdr TARGET tcp &lt;span style=&#34;color:#ae81ff&#34;&gt;2001&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastille-limits&#34;&gt;bastille limits&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille rdr TARGET tcp &lt;span style=&#34;color:#ae81ff&#34;&gt;2001&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastille-limits&#34;&gt;bastille limits&lt;/h2&gt;
 &lt;p&gt;Initial support for resource control (&lt;code&gt;rctl&lt;/code&gt;) was contributed by the community.
 Thank you Sven!&lt;/p&gt;
 &lt;p&gt;A new &lt;code&gt;limits&lt;/code&gt; sub-command allows you to set resource controls on containers
 dynamically. See &lt;code&gt;rctl(8)&lt;/code&gt; for a deep dive but get started with this example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille limits TARGET memoryuse 1G
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The template system also now supports automated resource controls backed by the
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille limits TARGET memoryuse 1G
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The template system also now supports automated resource controls backed by the
 &lt;code&gt;limits&lt;/code&gt; sub-command. This means resource limits can be applied automatically
 to containers as they are built. Support is new&amp;ndash;your mileage may vary&amp;ndash;but so
 far results are promising. Please report otherwise.&lt;/p&gt;
 &lt;p&gt;A template hook to apply resource limits looks something like:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;template/LIMITS&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;memoryuse 1G
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bastille will also automatically add and remove resource limits for containers
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;memoryuse 1G
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bastille will also automatically add and remove resource limits for containers
 as they are started and stopped.&lt;/p&gt;
 &lt;h2 id=&#34;improvements&#34;&gt;Improvements&lt;/h2&gt;
 &lt;h3 id=&#34;fstab-template-hook&#34;&gt;FSTAB template hook&lt;/h3&gt;
@@ -2211,17 +2222,17 @@ invalid network configurations and other minor cosmetic improvements.&lt;/p&gt;
 changes the way it manages entries in the firewall to go along with this.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;It is important, if upgrading, to update the firewall as follows&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;## /etc/pf.conf
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+ table &amp;lt;jails&amp;gt; persist
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+ nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; ($ext_if:0)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;- nat on $ext_if from bastille0:network to any -&amp;gt; ($ext_if)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;## /etc/pf.conf
+&lt;span style=&#34;color:#a6e22e&#34;&gt;+ table &amp;lt;jails&amp;gt; persist
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+ nat on $ext_if from &amp;lt;jails&amp;gt; to any -&amp;gt; ($ext_if:0)
+&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;- nat on $ext_if from bastille0:network to any -&amp;gt; ($ext_if)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 2:&lt;/strong&gt;
 Reload the firewall rules:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pfctl -vf /etc/pf.conf
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pfctl -vf /etc/pf.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Step 3:&lt;/strong&gt;
 Restart running containers:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille restart ALL
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All public documentation has been updated to reflect this new method. This
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille restart ALL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;All public documentation has been updated to reflect this new method. This
 avoids a reported issue and ensures firewall state is retained.&lt;/p&gt;
 </description>
     </item>
@@ -2257,15 +2268,15 @@ version independent of any other container.&lt;/p&gt;
 &lt;p&gt;To use or test this method of container storage use the new &lt;code&gt;-T|--thick&lt;/code&gt;
 option to the &lt;code&gt;create&lt;/code&gt; sub-command.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create -T alcatraz 12.1-RELEASE 10.17.89.10
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;syntax-improvements&#34;&gt;Syntax Improvements&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create -T alcatraz 12.1-RELEASE 10.17.89.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;syntax-improvements&#34;&gt;Syntax Improvements&lt;/h3&gt;
 &lt;p&gt;In previous versions it was required to put quotes (&amp;quot;&amp;quot;) around long arguments
 in Bastille commands. This is no longer the case, but backward compatibility is
 retained.&lt;/p&gt;
 &lt;p&gt;These two statements are equivalent.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille pkg alcatraz install zsh vim-console git-lite htop
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille pkg alcatraz &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;install zsh vim-console git-lite htop&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;While the &lt;code&gt;pkg&lt;/code&gt; sub-command is used for the example above, all Bastille
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille pkg alcatraz install zsh vim-console git-lite htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille pkg alcatraz &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;install zsh vim-console git-lite htop&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;While the &lt;code&gt;pkg&lt;/code&gt; sub-command is used for the example above, all Bastille
 sub-commands should now be compabitle with either syntax. Including &lt;code&gt;service&lt;/code&gt;,
 &lt;code&gt;sysrc&lt;/code&gt;, &lt;code&gt;cmd&lt;/code&gt;, etc.&lt;/p&gt;
 &lt;h2 id=&#34;template-testing&#34;&gt;Template Testing&lt;/h2&gt;
@@ -2285,13 +2296,13 @@ time of bootstrapping. This means you can bootstrap 12.0-RELEASE and bring it
 up to -p11 in the same step.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;update&lt;/code&gt; argument is a new option to &lt;code&gt;bootstrap&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille bootstrap 12.0-RELEASE update
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;createsh&#34;&gt;create.sh&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille bootstrap 12.0-RELEASE update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;createsh&#34;&gt;create.sh&lt;/h3&gt;
 &lt;p&gt;Container network defaults can be overridden during the &lt;code&gt;create&lt;/code&gt; step. Append
 the network interface name to the end of a standard &lt;code&gt;create&lt;/code&gt; and the container
 will bind the ip to that interface on start.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastillebsd&#34;&gt;BastilleBSD&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;bastille create alcatraz 12.1-RELEASE 10.17.89.15 vtnet0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bastillebsd&#34;&gt;BastilleBSD&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://bastillebsd.org&#34;&gt;BastilleBSD&lt;/a&gt; has been updated to reflect this release.&lt;/p&gt;
 &lt;p&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD&lt;/a&gt; on Mastodon for regular updates.&lt;/p&gt;
 &lt;h2 id=&#34;bug-fixes&#34;&gt;bug fixes&lt;/h2&gt;
@@ -2334,14 +2345,6 @@ and merge changes as necessary.&lt;/p&gt;
 &lt;p&gt;Configuration options that are of primary concern are the ZFS and Network
 related options.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>BastilleBSD Release History</title>
-      <link>https://bastillebsd.org/history/</link>
-      <pubDate>Tue, 19 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://bastillebsd.org/history/</guid>
-      <description></description>
     </item>
     
     <item>

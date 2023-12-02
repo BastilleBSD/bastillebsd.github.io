@@ -131,6 +131,7 @@
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
   <link rel="canonical" href="https://bastillebsd.org/blog/2019/11/28/thanksgiving-2019/">
 
@@ -535,17 +536,17 @@ invalid network configurations and other minor cosmetic improvements.</p>
 changes the way it manages entries in the firewall to go along with this.</p>
 <p><strong>It is important, if upgrading, to update the firewall as follows</strong>:</p>
 <p><strong>Step 1:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-diff" data-lang="diff"><span style="display:flex;"><span>## /etc/pf.conf
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ table &lt;jails&gt; persist
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">+ nat on $ext_if from &lt;jails&gt; to any -&gt; ($ext_if:0)
-</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e"></span><span style="color:#f92672">- nat on $ext_if from bastille0:network to any -&gt; ($ext_if)
-</span></span></span></code></pre></div><p><strong>Step 2:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-diff" data-lang="diff">## /etc/pf.conf
+<span style="color:#a6e22e">+ table &lt;jails&gt; persist
+</span><span style="color:#a6e22e">+ nat on $ext_if from &lt;jails&gt; to any -&gt; ($ext_if:0)
+</span><span style="color:#a6e22e"></span><span style="color:#f92672">- nat on $ext_if from bastille0:network to any -&gt; ($ext_if)
+</span></code></pre></div><p><strong>Step 2:</strong>
 Reload the firewall rules:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pfctl -vf /etc/pf.conf
-</span></span></code></pre></div><p><strong>Step 3:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pfctl -vf /etc/pf.conf
+</code></pre></div><p><strong>Step 3:</strong>
 Restart running containers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille restart ALL
-</span></span></code></pre></div><p>All public documentation has been updated to reflect this new method. This
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille restart ALL
+</code></pre></div><p>All public documentation has been updated to reflect this new method. This
 avoids a reported issue and ensures firewall state is retained.</p>
 
     </div>
@@ -671,8 +672,8 @@ avoids a reported issue and ensures firewall state is retained.</p>
 
     <div class="media-body">
       <h5 class="card-title"><a href="/authors/admin/">Christer Edwards</a></h5>
-      <h6 class="card-subtitle">Creator of Bastille</h6>
-      <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD. I build cool stuff.</p>
+      <h6 class="card-subtitle">Code Custodian</h6>
+      <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -777,6 +778,23 @@ avoids a reported issue and ensures firewall state is retained.</p>
       </a>
     </li>
   
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/groups/14356171/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
 </ul>
 
     </div>
@@ -861,7 +879,7 @@ avoids a reported issue and ensures firewall state is retained.</p>
     
     
     
-    <script src="/js/academic.min.3fc2bda5946eba229f88056933b48355.js"></script>
+    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
 
     
 

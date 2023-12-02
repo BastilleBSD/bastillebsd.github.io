@@ -131,6 +131,7 @@
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
   <link rel="canonical" href="https://bastillebsd.org/getting-started/">
 
@@ -540,13 +541,13 @@ document.</p>
 <h2 id="firstboot">Firstboot</h2>
 <p>Upon logging into a system for the first time it is recommended to apply any
 security patches available:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>freebsd-update fetch install
-</span></span><span style="display:flex;"><span>reboot
-</span></span></code></pre></div><p>After the <code>reboot</code> is complete, run <code>freebsd-update install</code> once again.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>freebsd-update install
-</span></span></code></pre></div><p>Verify your version and patch level with <code>freebsd-version</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>freebsd-version
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">freebsd-update fetch install
+reboot
+</code></pre></div><p>After the <code>reboot</code> is complete, run <code>freebsd-update install</code> once again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">freebsd-update install
+</code></pre></div><p>Verify your version and patch level with <code>freebsd-version</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">freebsd-version
+</code></pre></div><blockquote>
 <p>Tip: subscribe to <a href="https://lists.freebsd.org/mailman/listinfo/freebsd-security-notifications">this mailing
 list</a>
 for FreeBSD security notifications (low volume). Anytime you receive an email
@@ -558,15 +559,15 @@ branches. These binary packages are built from the FreeBSD ports tree, which
 follows a rolling-release model. This means up-to-date packages are often
 available.  To use the binary package manager, bootstrap it by running <code>pkg</code> for
 the first time:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>root@freebsd:~ <span style="color:#75715e"># pkg bootstrap</span>
-</span></span><span style="display:flex;"><span>The package management tool is not yet installed on your system.
-</span></span><span style="display:flex;"><span>Do you want to fetch and install it now? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
-</span></span><span style="display:flex;"><span>Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
-</span></span><span style="display:flex;"><span>Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span style="color:#66d9ef">done</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.17.5...
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.17.5: 100%
-</span></span><span style="display:flex;"><span>root@freebsd:~ <span style="color:#75715e">#</span>
-</span></span></code></pre></div><p>Tip: this bootstrapping step can be automated using the following command:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">root@freebsd:~ <span style="color:#75715e"># pkg bootstrap</span>
+The package management tool is not yet installed on your system.
+Do you want to fetch and install it now? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
+Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span style="color:#66d9ef">done</span>
+<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-1.17.5...
+<span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-1.17.5: 100%
+root@freebsd:~ <span style="color:#75715e">#</span>
+</code></pre></div><p>Tip: this bootstrapping step can be automated using the following command:
 <code>env ASSUME_ALWAYS_YES=YES pkg bootstrap</code></p>
 <p><strong>Quarterly</strong></p>
 <p>If you take a closer look at the line of output after the bootstrap
@@ -582,15 +583,15 @@ quarterly repository.</p>
 instead.  A simple way to override the default settings is to create a new
 repository config with the updated path of <code>latest</code>.</p>
 <p><strong>Migrate to latest:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mkdir -p /usr/local/etc/pkg/repos
-</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;FreeBSD: { url: &#39;</span>pkg+http://pkg.FreeBSD.org/<span style="color:#ae81ff">\$\{</span>ABI<span style="color:#ae81ff">\}</span>/latest<span style="color:#e6db74">&#39;, enabled: yes }&#39;</span> &gt; /usr/local/etc/pkg/repos/FreeBSD.conf
-</span></span></code></pre></div><h2 id="package-basics">Package Basics</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mkdir -p /usr/local/etc/pkg/repos
+echo <span style="color:#e6db74">&#39;FreeBSD: { url: &#39;</span>pkg+http://pkg.FreeBSD.org/<span style="color:#ae81ff">\$\{</span>ABI<span style="color:#ae81ff">\}</span>/latest<span style="color:#e6db74">&#39;, enabled: yes }&#39;</span> &gt; /usr/local/etc/pkg/repos/FreeBSD.conf
+</code></pre></div><h2 id="package-basics">Package Basics</h2>
 <p>In this section you&rsquo;ll learn the basics of using the package manager, and
 install a few creature comforts. FreeBSD&rsquo;s binary package manager works much
 like others you may have used.</p>
 <p><strong>Example</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pkg install vim git-lite bash ca_root_nss
-</span></span></code></pre></div><p>The above pkg install command will add the <code>vim</code>, <code>git-lite</code>, <code>bash</code> and
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pkg install vim git-lite bash ca_root_nss
+</code></pre></div><p>The above pkg install command will add the <code>vim</code>, <code>git-lite</code>, <code>bash</code> and
 <code>ca_root_nss</code> (CA certificates) from the quarterly/latest repositories.
 Naturally you can replace <code>bash</code> with <code>zsh</code> (or another shell of your choice).</p>
 <p>You may also search the pkg repository for named packages. <code>pkg search foo</code>
@@ -598,37 +599,37 @@ will match packages including <code>foo</code>.</p>
 <blockquote>
 <p>Tip: Check out <a href="https://freshports.org">FreshPorts</a>.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pkg help
-</span></span></code></pre></div><p>You can always find help and a list of other options using <code>pkg help</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pkg help
+</code></pre></div><p>You can always find help and a list of other options using <code>pkg help</code>.</p>
 <h2 id="install-bastille">Install Bastille</h2>
 <p>Now that you&rsquo;ve had a crash course in package basics, let&rsquo;s install <code>bastille</code>
 and start working with containers. Use one of the three options below. These
 are listed in order of preference / support.</p>
 <p><strong>PKG</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pkg install bastille
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pkg install bastille
+</code></pre></div><blockquote>
 <p>Note: as outlined above, the version of Bastille installed may differ depending on whether you&rsquo;re using <code>quarterly</code> or <code>latest</code>.</p>
 </blockquote>
 <p><strong>PORTS</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>portsnap fetch auto
-</span></span><span style="display:flex;"><span>make -C /usr/ports/sysutils/bastille install clean
-</span></span></code></pre></div><p><strong>GIT(bleeding edge/unstable)</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/BastilleBSD/bastille.git
-</span></span><span style="display:flex;"><span>cd bastille
-</span></span><span style="display:flex;"><span>make install
-</span></span></code></pre></div><h2 id="service-management">Service Management</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">portsnap fetch auto
+make -C /usr/ports/sysutils/bastille install clean
+</code></pre></div><p><strong>GIT(bleeding edge/unstable)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/BastilleBSD/bastille.git
+cd bastille
+make install
+</code></pre></div><h2 id="service-management">Service Management</h2>
 <p>Services in FreeBSD are managed centrally in the <code>/etc/rc.conf</code> and use a
 syntax of <code>name_enable=(YES|NO)</code>. For example, to start containers
 automatically at boot you can set <code>bastille_enable=YES</code> using:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc bastille_enable<span style="color:#f92672">=</span>YES
-</span></span></code></pre></div><p>By default, Bastille will start all created containers at boot when enabled.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sysrc bastille_enable<span style="color:#f92672">=</span>YES
+</code></pre></div><p>By default, Bastille will start all created containers at boot when enabled.</p>
 <p>To specify a limited list of containers to start at boot, set the optional
 <code>bastille_list</code> value to the name(s) of containers to start.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc bastille_list<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;azkaban arkham alcatraz&#34;</span>
-</span></span></code></pre></div><p>Once services have been enabled in the <code>/etc/rc.conf</code>, they can be managed
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sysrc bastille_list<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;azkaban arkham alcatraz&#34;</span>
+</code></pre></div><p>Once services have been enabled in the <code>/etc/rc.conf</code>, they can be managed
 using the <code>service</code> command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>service foo <span style="color:#f92672">[</span>start|stop|restart<span style="color:#f92672">]</span>
-</span></span></code></pre></div><p>Bastille does not run as a service and does not need to be started as such.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">service foo <span style="color:#f92672">[</span>start|stop|restart<span style="color:#f92672">]</span>
+</code></pre></div><p>Bastille does not run as a service and does not need to be started as such.
 Enabling Bastille primarily manages containers at startup and shutdown.</p>
 <h2 id="bastille-containers">Bastille Containers</h2>
 <p>Once Bastille is installed you&rsquo;ll want to verify the configuration. This is
@@ -640,14 +641,14 @@ network interface for containers.</p>
 <p>If you&rsquo;d prefer to set a specific timezone for your containers you may change
 it here. The default is to use the timezone of the host.</p>
 <p>Requires format &ldquo;America/Denver&rdquo; or &ldquo;Europe/Paris&rdquo;.  (see <code>/usr/share/zoneinfo</code>)</p>
-<pre tabindex="0"><code>bastille_tzdata=&#34;&#34;  ## default: empty to use host&#39;s time zone
+<pre tabindex="0"><code>bastille_tzdata=&quot;&quot;  ## default: empty to use host's time zone
 </code></pre><h2 id="zfs-recommended">ZFS (recommended)</h2>
 <p>If your system uses ZFS as a filesystem you can make use of that here. Set the
 enable option to <code>YES</code> and define the <code>zpool</code>. If either is undefined ZFS will
 not be used.</p>
 <pre tabindex="0"><code>## ZFS options
-bastille_zfs_enable=&#34;&#34;  ## default: &#34;&#34;
-bastille_zfs_zpool=&#34;&#34;   ## default: &#34;&#34;
+bastille_zfs_enable=&quot;&quot;  ## default: &quot;&quot;
+bastille_zfs_zpool=&quot;&quot;   ## default: &quot;&quot;
 </code></pre><h2 id="networking">Networking</h2>
 <p>Bastille can be flexible about the way it handles networking. In this document
 we will use the more portable &ldquo;loopback&rdquo; network design. This can be used in
@@ -656,14 +657,14 @@ the same way in the cloud or on local networks. Bastille uses this method by def
 Documentation</a>.</p>
 <p>There is a one-time setup requirement to configure a new <code>bastille0</code> loopback
 interface and define firewall rules:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc cloned_interfaces<span style="color:#f92672">+=</span>lo1
-</span></span><span style="display:flex;"><span>sysrc ifconfig_lo1_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bastille0&#34;</span>
-</span></span><span style="display:flex;"><span>service netif cloneup
-</span></span></code></pre></div><p>With this in place we can create the firewall rules that will both limit access
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sysrc cloned_interfaces<span style="color:#f92672">+=</span>lo1
+sysrc ifconfig_lo1_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bastille0&#34;</span>
+service netif cloneup
+</code></pre></div><p>With this in place we can create the firewall rules that will both limit access
 to the host system and containers, and also provide a NAT rule for the new
 <code>bastille0</code> loopback interface to access the broader network.</p>
 <p>Create <code>/etc/pf.conf</code> and use the following rules:</p>
-<pre tabindex="0"><code>ext_if=&#34;vtnet0&#34;
+<pre tabindex="0"><code>ext_if=&quot;vtnet0&quot;
 
 set block-policy return
 scrub in on $ext_if all fragment reassemble
@@ -671,7 +672,7 @@ set skip on lo
 
 table &lt;jails&gt; persist
 nat on $ext_if from &lt;jails&gt; to any -&gt; ($ext_if:0)
-rdr-anchor &#34;rdr/*&#34;
+rdr-anchor &quot;rdr/*&quot;
 
 block in all
 pass out quick keep state
@@ -691,9 +692,9 @@ for the containers.</p>
 connection you may be using now). SSH inbound access is allowed by the new
 policy, simply reconnect.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc pf_enable<span style="color:#f92672">=</span>YES
-</span></span><span style="display:flex;"><span>service pf start
-</span></span></code></pre></div><p>Now equipped with a robust firewall and a sane configuration you&rsquo;re ready to
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sysrc pf_enable<span style="color:#f92672">=</span>YES
+service pf start
+</code></pre></div><p>Now equipped with a robust firewall and a sane configuration you&rsquo;re ready to
 bootstrap a release and begin creating containers!</p>
 <h2 id="bootstrap">bootstrap</h2>
 <p>To <code>bootstrap</code> a release for use with your container use the <code>bootstrap</code>
@@ -701,8 +702,8 @@ sub-command.</p>
 <blockquote>
 <p>You can optionally append the keyword <code>update</code> to automagically apply <code>freebsd-update</code> to the downloaded release.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille bootstrap 14.0-RELEASE update
-</span></span></code></pre></div><p>You can now create a container using the newly bootstrapped release.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille bootstrap 14.0-RELEASE update
+</code></pre></div><p>You can now create a container using the newly bootstrapped release.</p>
 <h2 id="create">create</h2>
 <p>In order to create a container you will need to provide a unique container
 name, a bootstrapped release name and static IP address.</p>
@@ -714,18 +715,18 @@ IP, it&rsquo;s safe to use any address within that range.</p>
 <p>Tip: container names cannot include the dot (&quot;.&quot;) character.</p>
 </blockquote>
 <p>Container creation should be very quick.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create alcatraz 14.0-RELEASE 10.17.89.50/24
-</span></span></code></pre></div><h2 id="list">list</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create alcatraz 14.0-RELEASE 10.17.89.50/24
+</code></pre></div><h2 id="list">list</h2>
 <p>You can list running containers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille list
-</span></span></code></pre></div><h2 id="pkg">pkg</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille list
+</code></pre></div><h2 id="pkg">pkg</h2>
 <p>Install packages inside the container.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille pkg alcatraz install -y htop
-</span></span></code></pre></div><h2 id="htop">htop</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille pkg alcatraz install -y htop
+</code></pre></div><h2 id="htop">htop</h2>
 <p>htop is an interactive process viewer. When you view processes inside a
 container you only see that container&rsquo;s processes.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille htop alcatraz
-</span></span></code></pre></div><p>Notice that <code>syslogd</code> and <code>cron</code> are the only default processes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille htop alcatraz
+</code></pre></div><p>Notice that <code>syslogd</code> and <code>cron</code> are the only default processes.</p>
 
 
 
@@ -758,45 +759,46 @@ container you only see that container&rsquo;s processes.</p>
 <p>Tip: Press &ldquo;q&rdquo; to quit.</p>
 <h2 id="sysrc">sysrc</h2>
 <p>Let&rsquo;s toggle a setting inside the container and enable the <code>sshd</code> service.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille sysrc alcatraz sshd_enable<span style="color:#f92672">=</span>YES
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
-</span></span><span style="display:flex;"><span>sshd_enable: NO -&gt; YES
-</span></span></code></pre></div><h2 id="service">service</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille sysrc alcatraz sshd_enable<span style="color:#f92672">=</span>YES
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+sshd_enable: NO -&gt; YES
+
+</code></pre></div><h2 id="service">service</h2>
 <p>Start up the newly enabled service.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille service alcatraz sshd start
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
-</span></span><span style="display:flex;"><span>Generating RSA host key.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2048</span> SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Generating ECDSA host key.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">256</span> SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Generating ED25519 host key.
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">256</span> SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Performing sanity check on sshd configuration.
-</span></span><span style="display:flex;"><span>Starting sshd.
-</span></span></code></pre></div><h2 id="cmd">cmd</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille service alcatraz sshd start
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+Generating RSA host key.
+<span style="color:#ae81ff">2048</span> SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz <span style="color:#f92672">(</span>RSA<span style="color:#f92672">)</span>
+Generating ECDSA host key.
+<span style="color:#ae81ff">256</span> SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz <span style="color:#f92672">(</span>ECDSA<span style="color:#f92672">)</span>
+Generating ED25519 host key.
+<span style="color:#ae81ff">256</span> SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz <span style="color:#f92672">(</span>ED25519<span style="color:#f92672">)</span>
+Performing sanity check on sshd configuration.
+Starting sshd.
+</code></pre></div><h2 id="cmd">cmd</h2>
 <p>Execute arbitrary commands inside the container. In this case check to see that
 <code>sshd</code> is listening on port <code>:22</code> using the <code>sockstat -4</code> command.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille cmd alcatraz sockstat -4
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
-</span></span><span style="display:flex;"><span>USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
-</span></span><span style="display:flex;"><span>root     sshd       <span style="color:#ae81ff">34994</span> <span style="color:#ae81ff">4</span>  tcp4   10.17.89.50:22        *:*
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>: <span style="color:#ae81ff">0</span>
-</span></span></code></pre></div><h2 id="console">console</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille cmd alcatraz sockstat -4
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>:
+USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
+root     sshd       <span style="color:#ae81ff">34994</span> <span style="color:#ae81ff">4</span>  tcp4   10.17.89.50:22        *:*
+<span style="color:#f92672">[</span>alcatraz<span style="color:#f92672">]</span>: <span style="color:#ae81ff">0</span>
+</code></pre></div><h2 id="console">console</h2>
 <p>Finally, use <code>console</code> for a password-less root login to the container and have
 a look around. You&rsquo;ll find yourself in a wholly contained FreeBSD system with
 the ability to build whatever you need to build.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille console alcatraz
-</span></span></code></pre></div><p>The <code>root</code> user is still (mostly) all powerful, but only within the confines of
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille console alcatraz
+</code></pre></div><p>The <code>root</code> user is still (mostly) all powerful, but only within the confines of
 that container.</p>
 <p>When you&rsquo;re finished, log out of the container as normal with <code>exit</code> or
 <code>ctrl-d</code>.</p>
 <h2 id="stop">stop</h2>
 <p>When you&rsquo;re done testing your container you can shut it off.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille stop alcatraz
-</span></span></code></pre></div><h2 id="destroy">destroy</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille stop alcatraz
+</code></pre></div><h2 id="destroy">destroy</h2>
 <p>Lastly, destroy your lightweight container.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille destroy alcatraz
-</span></span></code></pre></div><h2 id="usage">usage</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille destroy alcatraz
+</code></pre></div><h2 id="usage">usage</h2>
 <pre tabindex="0"><code>Bastille is an open-source system for automating deployment and management of
 containerized applications on FreeBSD.
 
@@ -835,11 +837,12 @@ Available Commands:
   umount      Unmount a volume from within the targeted container(s).
   update      Update container base -pX release.
   upgrade     Upgrade container release to X.Y-RELEASE.
-  verify      Compare release against a &#34;known good&#34; index.
+  verify      Compare release against a &quot;known good&quot; index.
   zfs         Manage (get|set) ZFS attributes on targeted container(s).
 
-Use &#34;bastille -v|--version&#34; for version information.
-Use &#34;bastille command -h|--help&#34; for more information about a command.
+Use &quot;bastille -v|--version&quot; for version information.
+Use &quot;bastille command -h|--help&quot; for more information about a command.
+
 </code></pre><hr>
 <p>To learn more about automating containerized applications, see
 the <a href="https://docs.bastillebsd.org">Bastille Documentation</a>.</p>
@@ -1019,7 +1022,7 @@ the <a href="https://docs.bastillebsd.org">Bastille Documentation</a>.</p>
     
     
     
-    <script src="/js/academic.min.3fc2bda5946eba229f88056933b48355.js"></script>
+    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
 
     
 

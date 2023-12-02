@@ -131,6 +131,7 @@
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
   <link rel="canonical" href="https://bastillebsd.org/compare/">
 
@@ -151,7 +152,7 @@
   <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-01-10T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-12-01T00:00:00&#43;00:00">
     
     <meta property="article:modified_time" content="2021-01-10T10:46:21-07:00">
   
@@ -506,7 +507,7 @@
 <tr>
 <td style="text-align:right"><strong>ZFS support</strong></td>
 <td style="text-align:center">Supported</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">Required</td>
 <td style="text-align:center">Required</td>
 <td style="text-align:center">Supported</td>
 <td style="text-align:left"><strong>ZFS support</strong></td>
@@ -522,15 +523,15 @@
 <tr>
 <td style="text-align:right"><strong>Automation</strong></td>
 <td style="text-align:center">Templates</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">flavours</td>
 <td style="text-align:center">Plugins</td>
 <td style="text-align:center">flavours</td>
 <td style="text-align:left"><strong>Automation</strong></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Jail Type</strong></td>
-<td style="text-align:center">thin, thick, vnet, Linux, empty</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">thin, thick, clone, Linux, empty</td>
+<td style="text-align:center">thin, thick, containers</td>
 <td style="text-align:center">thin, thick, empty</td>
 <td style="text-align:center">thin</td>
 <td style="text-align:left"><strong>Jail Type</strong></td>
@@ -538,7 +539,7 @@
 <tr>
 <td style="text-align:right"><strong>VNET</strong></td>
 <td style="text-align:center">Supported</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">Supported</td>
 <td style="text-align:center">Supported</td>
 <td style="text-align:center">Not Supported</td>
 <td style="text-align:left"><strong>VNET</strong></td>
@@ -554,15 +555,15 @@
 <tr>
 <td style="text-align:right"><strong>Import/Export</strong></td>
 <td style="text-align:center">Yes (+import iocage/ezjail)</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">images</td>
 <td style="text-align:center">Yes</td>
 <td style="text-align:center">Yes</td>
 <td style="text-align:left"><strong>Import/Export</strong></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Package Size</strong></td>
-<td style="text-align:center">220K</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">611K</td>
+<td style="text-align:center">172KB</td>
 <td style="text-align:center">300M+</td>
 <td style="text-align:center">120K</td>
 <td style="text-align:left"><strong>Package Size</strong></td>
@@ -570,7 +571,7 @@
 <tr>
 <td style="text-align:right"><strong>Dynamic Firewall</strong></td>
 <td style="text-align:center">dynamic port redirection</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">export ports</td>
 <td style="text-align:center">??</td>
 <td style="text-align:center">Not Supported</td>
 <td style="text-align:left"><strong>Dynamic Firewall</strong></td>
@@ -578,7 +579,7 @@
 <tr>
 <td style="text-align:right"><strong>Resource Control</strong></td>
 <td style="text-align:center">Yes (rctl)</td>
-<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes (rctl)</td>
 <td style="text-align:center">??</td>
 <td style="text-align:center">??</td>
 <td style="text-align:left"><strong>Resource Control</strong></td>
@@ -586,7 +587,7 @@
 <tr>
 <td style="text-align:right"><strong>IPv6 Support</strong></td>
 <td style="text-align:center">Yes</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">Yes</td>
 <td style="text-align:center">Yes</td>
 <td style="text-align:center">Yes?</td>
 <td style="text-align:left"><strong>IPv6 Support</strong></td>
@@ -594,18 +595,26 @@
 <tr>
 <td style="text-align:right"><strong>Linux Containers</strong></td>
 <td style="text-align:center">Yes</td>
-<td style="text-align:center">??</td>
-<td style="text-align:center">??</td>
-<td style="text-align:center">??</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
 <td style="text-align:left"><strong>Linux Containers</strong></td>
 </tr>
 <tr>
 <td style="text-align:right"><strong>Latest Release</strong></td>
-<td style="text-align:center">0.10.20231013 (2023-10-13)</td>
-<td style="text-align:center">0.14.0 (2021-10-31)</td>
+<td style="text-align:center">0.10.20231125 (2023-11-25)</td>
+<td style="text-align:center">0.15.5 (2023-06-29)</td>
 <td style="text-align:center">1.2 (2019-09-26)</td>
 <td style="text-align:center">3.4.2 (2015-11-23)</td>
 <td style="text-align:left"><strong>Latest Release</strong></td>
+</tr>
+<tr>
+<td style="text-align:right"><strong>Active Project</strong></td>
+<td style="text-align:center">Yes (Active 2023)</td>
+<td style="text-align:center">Yes (Active 2023)</td>
+<td style="text-align:center">No Longer Maintained</td>
+<td style="text-align:center">No Longer Maintained</td>
+<td style="text-align:left"><strong>Active Project</strong></td>
 </tr>
 </tbody>
 </table>
@@ -684,7 +693,7 @@
     
     
     
-    <script src="/js/academic.min.3fc2bda5946eba229f88056933b48355.js"></script>
+    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
 
     
 
