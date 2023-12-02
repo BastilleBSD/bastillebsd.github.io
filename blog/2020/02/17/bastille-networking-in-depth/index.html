@@ -131,6 +131,7 @@
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
   <link rel="canonical" href="https://bastillebsd.org/blog/2020/02/17/bastille-networking-in-depth/">
 
@@ -548,39 +549,39 @@ infrastructures (on-premise, data-center, cloud, etc). A host firewall is
 required in this design further securing the host and containers.</p>
 <p>A quick one-time setup is required in this design:</p>
 <p><strong>bastille0</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc cloned_interfaces<span style="color:#f92672">+=</span>lo1
-</span></span><span style="display:flex;"><span>sysrc ifconfig_lo1_name<span style="color:#f92672">=</span>bastille0
-</span></span><span style="display:flex;"><span>service netif cloneup
-</span></span></code></pre></div><p><strong>/etc/pf.conf</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>ext_if<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vtnet0&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>set block-policy <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>scrub in on $ext_if all fragment reassemble
-</span></span><span style="display:flex;"><span>set skip on lo
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>table &lt;jails&gt; persist
-</span></span><span style="display:flex;"><span>nat on $ext_if from &lt;jails&gt; to any -&gt; <span style="color:#f92672">(</span>$ext_if<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>rdr-anchor <span style="color:#e6db74">&#34;rdr/*&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>block in all
-</span></span><span style="display:flex;"><span>pass out quick keep state
-</span></span><span style="display:flex;"><span>antispoof <span style="color:#66d9ef">for</span> $ext_if inet
-</span></span><span style="display:flex;"><span>pass in inet proto tcp from any to any port ssh flags S/SA keep state
-</span></span></code></pre></div><p>NOTE: The <code>ext_if=</code> in the example must be updated to match the name of the
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sysrc cloned_interfaces<span style="color:#f92672">+=</span>lo1
+sysrc ifconfig_lo1_name<span style="color:#f92672">=</span>bastille0
+service netif cloneup
+</code></pre></div><p><strong>/etc/pf.conf</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ext_if<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;vtnet0&#34;</span>
+
+set block-policy <span style="color:#66d9ef">return</span>
+scrub in on $ext_if all fragment reassemble
+set skip on lo
+
+table &lt;jails&gt; persist
+nat on $ext_if from &lt;jails&gt; to any -&gt; <span style="color:#f92672">(</span>$ext_if<span style="color:#f92672">)</span>
+rdr-anchor <span style="color:#e6db74">&#34;rdr/*&#34;</span>
+
+block in all
+pass out quick keep state
+antispoof <span style="color:#66d9ef">for</span> $ext_if inet
+pass in inet proto tcp from any to any port ssh flags S/SA keep state
+</code></pre></div><p>NOTE: The <code>ext_if=</code> in the example must be updated to match the name of the
 host external interface. This is usually <code>em0</code>, <code>re0</code>, <code>vtnet0</code>, etc.</p>
 <p><strong>ipv4</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create nginx 12.2-RELEASE 10.17.89.10 bastille0
-</span></span></code></pre></div><p><strong>ipv6</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 bastille0
-</span></span></code></pre></div><h3 id="lan-host-alias">LAN (host alias)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create nginx 12.2-RELEASE 10.17.89.10 bastille0
+</code></pre></div><p><strong>ipv6</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 bastille0
+</code></pre></div><h3 id="lan-host-alias">LAN (host alias)</h3>
 <p>The &ldquo;LAN&rdquo; design uses the hosts existing interface(s) and assigns container
 addresses as aliases to these interfaces. In FreeBSD interfaces are named after
 the hardware/driver. This means you&rsquo;ll find a range of interface names such as
 <code>re0</code>, <code>igb0</code>, <code>em0</code>, <code>vtnet0</code>, etc.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create nginx 12.2-RELEASE 192.168.1.13 re0
-</span></span></code></pre></div><p><strong>ipv6</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
-</span></span></code></pre></div><h3 id="vnet-vnet0">VNET (vnet0)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create nginx 12.2-RELEASE 192.168.1.13 re0
+</code></pre></div><p><strong>ipv6</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
+</code></pre></div><h3 id="vnet-vnet0">VNET (vnet0)</h3>
 <p>VNET support was added in the second half of the 0.6.x series (0.6.20200224).</p>
 <p>VNET (virtual network) provides a virtual network interface to the container.
 In this design the container does not share an interface with any other
@@ -603,12 +604,12 @@ conatiner by copying the host&rsquo;s default route.</p>
 <p>Bastille provides a shortcut to creating a DHCP-enabled container. Simply
 provide the IP <code>0.0.0.0</code> and the container will be configured to use DHCP.</p>
 <p><strong>DHCP</strong> (ipv4)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create -V nginx 12.2-RELEASE 0.0.0.0 re0
-</span></span></code></pre></div><p><strong>ipv4</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create -V nginx 12.2-RELEASE 192.168.1.13 re0
-</span></span></code></pre></div><p><strong>ipv6</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>bastille create -V nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create -V nginx 12.2-RELEASE 0.0.0.0 re0
+</code></pre></div><p><strong>ipv4</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create -V nginx 12.2-RELEASE 192.168.1.13 re0
+</code></pre></div><p><strong>ipv6</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bastille create -V nginx 12.2-RELEASE fde3:e1d5:8af6:5a79::13 re0
+</code></pre></div>
     </div>
 
     
@@ -732,8 +733,8 @@ provide the IP <code>0.0.0.0</code> and the container will be configured to use 
 
     <div class="media-body">
       <h5 class="card-title"><a href="/authors/admin/">Christer Edwards</a></h5>
-      <h6 class="card-subtitle">Creator of Bastille</h6>
-      <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD. I build cool stuff.</p>
+      <h6 class="card-subtitle">Code Custodian</h6>
+      <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -838,6 +839,23 @@ provide the IP <code>0.0.0.0</code> and the container will be configured to use 
       </a>
     </li>
   
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/groups/14356171/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
 </ul>
 
     </div>
@@ -922,7 +940,7 @@ provide the IP <code>0.0.0.0</code> and the container will be configured to use 
     
     
     
-    <script src="/js/academic.min.3fc2bda5946eba229f88056933b48355.js"></script>
+    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
 
     
 
