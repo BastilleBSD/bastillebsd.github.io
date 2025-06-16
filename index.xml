@@ -5,7 +5,7 @@
     <link>https://bastillebsd.org/</link>
       <atom:link href="https://bastillebsd.org/index.xml" rel="self" type="application/rss+xml" />
     <description>BastilleBSD</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Sun, 15 Jun 2025 12:52:13 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Wed, 18 Jun 2025 12:52:13 -0700</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>BastilleBSD</title>
@@ -444,6 +444,150 @@ Use &amp;#34;bastille -p|--parallel VALUE command&amp;#34; to run bastille in pa
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;p&gt;To learn more about automating containerized applications, see
 the &lt;a href=&#34;https://docs.bastillebsd.org&#34;&gt;Bastille Documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rocinante</title>
+      <link>https://bastillebsd.org/rocinante/</link>
+      <pubDate>Sat, 14 Jun 2025 12:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/rocinante/</guid>
+      <description>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://bastillebsd.org/img/rocinante.jpeg&#34; alt=&#34;&#34; &gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Rocinante is lightweight configuration management software by the same team that brought you BastilleBSD.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Rocinante&lt;/strong&gt;
+&lt;em&gt;noun&lt;/em&gt; | \ ˌrä-zə-ˈnän-tē \
+&lt;em&gt;Spanish pronunciation:&lt;/em&gt; [roθiˈnante] (Castilian) | [rosiˈnante] (Latin American)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; &lt;em&gt;Literary.&lt;/em&gt; The worn-out and gaunt but spirited horse of Don Quixote in Miguel de Cervantes’ novel &lt;em&gt;Don Quixote&lt;/em&gt; (1605/1615). Often used symbolically to represent noble but impractical idealism or outdated grandeur.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; &lt;em&gt;Figurative.&lt;/em&gt; Any outdated or underpowered vehicle, system, or companion elevated by its purpose or mission despite its humble nature.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Etymology:&lt;/strong&gt;
+From Spanish &lt;em&gt;Rocinante&lt;/em&gt;, a combination of &lt;em&gt;rocín&lt;/em&gt; (“workhorse” or “nag”) and &lt;em&gt;antes&lt;/em&gt; (“before” or “formerly”), suggesting a transformation from a common plow horse to a noble steed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;rocinante-on-freebsd&#34;&gt;Rocinante on FreeBSD&lt;/h2&gt;
+&lt;p&gt;This document is designed to help you be successful in your use and adoption of
+Rocinante and FreeBSD. This document begins with a brand-new FreeBSD 14.3 system
+deployed locally or in the cloud. Manual installation is not covered in this
+document.&lt;/p&gt;
+&lt;h2 id=&#34;install-rocinante&#34;&gt;Install Rocinante&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;PKG&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pkg install rocinante
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;PORTS&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;portsnap fetch auto
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -C /usr/ports/sysutils/rocinante install clean
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;GIT(bleeding edge/unstable)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/BastilleBSD/rocinante.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd rocinante
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;bootstrap&#34;&gt;bootstrap&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante bootstrap https://github.com/cedwards/freebsd-install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cmd&#34;&gt;cmd&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cmd: Execute arbitrary command(s).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante cmd fetch https://git.io/antigen -o /usr/local/share/zsh/antigen.zsh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cp&#34;&gt;cp&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cp: Copy files from source to destination. See cp(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante cp 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;limits&#34;&gt;limits&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;limits: Apply resource limits. See rctl(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante limits ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;list&#34;&gt;list&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;list: List bootstrapped templates.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pkg&#34;&gt;pkg&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pkg: Manipulate binary packages. See pkg(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante pkg install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;service&#34;&gt;service&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;service: Manage services. See service(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante service sshd start
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sysctl&#34;&gt;sysctl&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sysctl: Manage sysctl values. See sysctl(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante sysctl kern.randompid&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;sysrc&#34;&gt;sysrc&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sysrc: Safely edit rc files. See syscrc(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante sysrc sshd_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;template&#34;&gt;template&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;template: Apply templates.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante template template/path
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;update&#34;&gt;update&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;update: Update release to latest -pX. See freebsd-update(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante update ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;upgrade&#34;&gt;upgrade&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;upgrade: Upgrade release to X.Y-RELEASE. See freebsd-update(8).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante upgrade ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;verify&#34;&gt;verify&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;verify: Compare release against a &amp;ldquo;known good&amp;rdquo; index.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante verify ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;zfs&#34;&gt;zfs&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;zfs: Manage (get|set) ZFS attributes on targeted container(s).&lt;/p&gt;&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rocinante zfs ...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;usage&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Rocinate is lightweight configuration management software for FreeBSD.
+
+Usage:
+  rocinante command [args]
+
+Available Commands:
+  bootstrap   Bootstrap an automation template from an http(s) endpoint.
+  cmd         Execute arbitrary command(s).
+  cp          Copy files from source to destination. See cp(8).
+  help        Display this usage information.
+  limits      Apply resource limits. See rctl(8).
+  list        List bootstrapped templates.
+  pkg         Manipulate binary packages. See pkg(8).
+  service     Manage services. See service(8).
+  sysctl      Manage sysctl values. See sysctl(8).
+  sysrc       Safely edit rc files. See syscrc(8).
+  template    Apply templates.
+  update      Update release to latest -pX. See freebsd-update(8).
+  upgrade     Upgrade release to X.Y-RELEASE. See freebsd-update(8).
+  verify      Compare release against a &amp;#34;known good&amp;#34; index.
+  zfs         Manage (get|set) ZFS attributes on targeted container(s).
+
+Use &amp;#34;rocinante -v|--version&amp;#34; for version information.
+Use &amp;#34;rocinante command -h|--help&amp;#34; for more information about a command.
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;To learn more about automating FreeBSD configuration, see
+the &lt;a href=&#34;https://docs.rocinante.sh&#34;&gt;Rocinante Documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 </description>
     </item>
