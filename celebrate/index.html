@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Celebrate Bastille Day with Bastille Swag">
+  <meta name="description" content="Bastille is an open-source system for automating deployment and management of containerized applications on FreeBSD.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/celebrate/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/celebrate/">
 
   
 
@@ -85,47 +85,8 @@
   
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-493849-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           document.location = url;
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target);  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-493849-18', { 'anonymize_ip': true });
-
   
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
-  
-
-
+  <link rel="alternate" href="/celebrate/index.xml" type="application/rss+xml" title="BastilleBSD">
   
 
   <link rel="manifest" href="/index.webmanifest">
@@ -133,7 +94,7 @@
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
   <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
-  <link rel="canonical" href="https://bastillebsd.org/celebrate/">
+  <link rel="canonical" href="http://localhost:1313/celebrate/">
 
   
   
@@ -146,20 +107,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="BastilleBSD">
-  <meta property="og:url" content="https://bastillebsd.org/celebrate/">
-  <meta property="og:title" content="Celebrate Bastille Day! | BastilleBSD">
-  <meta property="og:description" content="Celebrate Bastille Day with Bastille Swag"><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
-  <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:url" content="http://localhost:1313/celebrate/">
+  <meta property="og:title" content="Celebrates | BastilleBSD">
+  <meta property="og:description" content="Bastille is an open-source system for automating deployment and management of containerized applications on FreeBSD."><meta property="og:image" content="http://localhost:1313/img/icon-192.png">
+  <meta property="twitter:image" content="http://localhost:1313/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-    <meta property="article:modified_time" content="2021-01-03T20:22:00-07:00">
   
 
   
 
 
-
-  
 
 
   
@@ -197,11 +155,11 @@
 
 
 
-  <title>Celebrate Bastille Day! | BastilleBSD</title>
+  <title>Celebrates | BastilleBSD</title>
 
 </head>
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -273,7 +231,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/" data-target="[]"><span>Home</span></a>
+          <a class="nav-link  active" href="/"><span>Home</span></a>
         </li>
 
         
@@ -383,28 +341,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/compare/"><span>Compare</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -431,20 +367,44 @@
 
 
   
-<span class="js-widget-page d-none"></span>
+
+
+
+
+
+
+
+
 
 
 
 
   
 
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
+  <h1>Celebrates</h1>
+
+  
+
+  
+</div>
 
 
 
+<div class="universal-wrapper">
+  
 
+  
+  
 
+  
 
-
+</div>
 
       
 
@@ -509,7 +469,7 @@
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.23450efb3a44cb57aeb4b7ee382f39e8.js"></script>
 
     
 
@@ -525,7 +485,7 @@
   
 
   <p class="powered-by">
-    © 2018-2023 &middot; 
+    © 2018-2025 &middot; 
 
     BastilleBSD 
 

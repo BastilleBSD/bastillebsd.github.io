@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
   <meta name="description" content="Port redirection is required to allow external access to your Bastille cluster.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/">
 
   
 
@@ -85,47 +85,6 @@
   
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-493849-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           document.location = url;
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target);  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-493849-18', { 'anonymize_ip': true });
-
-  
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
-  
-
-
   
 
   <link rel="manifest" href="/index.webmanifest">
@@ -133,7 +92,7 @@
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
   <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
-  <link rel="canonical" href="https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/">
+  <link rel="canonical" href="http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/">
 
   
   
@@ -146,10 +105,10 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="BastilleBSD">
-  <meta property="og:url" content="https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/">
+  <meta property="og:url" content="http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/">
   <meta property="og:title" content="Bastille Port Redirection and Persistence | BastilleBSD">
-  <meta property="og:description" content="Port redirection is required to allow external access to your Bastille cluster."><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
-  <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="Port redirection is required to allow external access to your Bastille cluster."><meta property="og:image" content="http://localhost:1313/img/icon-192.png">
+  <meta property="twitter:image" content="http://localhost:1313/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2021-01-13T12:00:00-07:00">
@@ -364,28 +323,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="/history/"><span>History</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/compare/"><span>Compare</span></a>
         </li>
 
         
@@ -643,7 +580,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;text=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;text=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -656,7 +593,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;t=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;t=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -669,7 +606,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="mailto:?subject=Bastille%20Port%20Redirection%20and%20Persistence&amp;body=https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Bastille%20Port%20Redirection%20and%20Persistence&amp;body=http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -682,7 +619,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;title=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;title=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -695,7 +632,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Bastille%20Port%20Redirection%20and%20Persistence%20https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Bastille%20Port%20Redirection%20and%20Persistence%20http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -708,7 +645,7 @@ access services from outside.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;title=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/&amp;title=Bastille%20Port%20Redirection%20and%20Persistence" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -744,7 +681,7 @@ access services from outside.</p>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="/authors/admin/">Christer Edwards</a></h5>
+      <h5 class="card-title"><a href="/authors/authors/">Christer Edwards</a></h5>
       <h6 class="card-subtitle">Code Custodian</h6>
       <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -952,7 +889,7 @@ access services from outside.</p>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.23450efb3a44cb57aeb4b7ee382f39e8.js"></script>
 
     
 
@@ -968,7 +905,7 @@ access services from outside.</p>
   
 
   <p class="powered-by">
-    © 2018-2023 &middot; 
+    © 2018-2025 &middot; 
 
     BastilleBSD 
 

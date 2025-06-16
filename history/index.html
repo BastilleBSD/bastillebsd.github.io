@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
   <meta name="description" content="The history of Bastille from proof of concept to open-source container automation toolkit.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/history/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/history/">
 
   
 
@@ -85,47 +85,6 @@
   
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-493849-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           document.location = url;
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target);  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-493849-18', { 'anonymize_ip': true });
-
-  
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
-  
-
-
   
 
   <link rel="manifest" href="/index.webmanifest">
@@ -133,7 +92,7 @@
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
   <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
-  <link rel="canonical" href="https://bastillebsd.org/history/">
+  <link rel="canonical" href="http://localhost:1313/history/">
 
   
   
@@ -146,15 +105,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="BastilleBSD">
-  <meta property="og:url" content="https://bastillebsd.org/history/">
+  <meta property="og:url" content="http://localhost:1313/history/">
   <meta property="og:title" content="BastilleBSD Release History | BastilleBSD">
-  <meta property="og:description" content="The history of Bastille from proof of concept to open-source container automation toolkit."><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
-  <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="The history of Bastille from proof of concept to open-source container automation toolkit."><meta property="og:image" content="http://localhost:1313/img/icon-192.png">
+  <meta property="twitter:image" content="http://localhost:1313/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2023-12-01T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2025-06-14T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-01-03T20:22:00-07:00">
+    <meta property="article:modified_time" content="2025-06-15T16:52:10-07:00">
   
 
   
@@ -385,28 +344,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/compare/"><span>Compare</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -501,7 +438,7 @@ industry best practices.</p>
 <p>Combining these security and automation best practices with
 <a href="https://freebsd.org">FreeBSD</a>&rsquo;s production tested solution and you have
 Bastille.</p>
-<p>Over the past six years Bastille has seen improvements from open-source
+<p>Over the past seven years Bastille has seen improvements from open-source
 contributors around the world, making it more robust, more mature and better
 able to handle a wide range of use cases.</p>
 <p>To everyone that has contributed to Bastille, thank you!</p>
@@ -523,6 +460,7 @@ able to handle a wide range of use cases.</p>
 <li>Egor Kuzmichev</li>
 <li>Eric Borisch</li>
 <li>Eric Hodel</li>
+<li>Eva Winterschön</li>
 <li>Fabian Peters</li>
 <li>Florian Gattermeier</li>
 <li>Giacomo Olgeni</li>
@@ -539,13 +477,16 @@ able to handle a wide range of use cases.</p>
 <li>Lucas Holt</li>
 <li>Marius van Witzenburg</li>
 <li>Matt Audesse</li>
+<li>Matthias Petermann</li>
 <li>Michal Procházka</li>
 <li>Niketh Murali</li>
 <li>Nikos Chondros</li>
 <li>Pat Maddox</li>
 <li>Paul C.</li>
+<li>Paul Wilde</li>
 <li>Petru T. Garstea</li>
 <li>Phil Krylov</li>
+<li>Pietro Cerutti</li>
 <li>Rob Arnold</li>
 <li>Robert Gogolok</li>
 <li>Romain Tartière</li>
@@ -553,6 +494,7 @@ able to handle a wide range of use cases.</p>
 <li>Sven R.</li>
 <li>Théo Bertin</li>
 <li>Tobias Tom</li>
+<li>Victor Tschetter</li>
 <li>and many more!</li>
 </ul>
 <h3 id="special-thanks">Special thanks</h3>
@@ -578,40 +520,41 @@ in some way.</p>
 <p>Bastille has seen contributions from the following places (locations are
 self-reported):</p>
 <ul>
+<li>Alberta, Canada (CA)</li>
 <li>Amboy, Washington (US)</li>
 <li>Austria (AT)</li>
-<li>Belgium - Tienen (BE)</li>
 <li>Berlin, Germany (DE)</li>
-<li>California (US)</li>
 <li>Cologne, Germany (DE)</li>
 <li>Czech Republic; Olomoucký kraj (CZ)</li>
+<li>Devon, United Kingdom (UK)</li>
+<li>Dresden, Germany (DE)</li>
 <li>España (ES)</li>
 <li>Faa‘a, Tahiti, French Polynesia (PF)</li>
 <li>Ferrara, Italy (IT)</li>
-<li>Germany (DE)</li>
-<li>Heidelberg (DE)</li>
+<li>Heidelberg, Germany (DE)</li>
 <li>Lyon, France (FR)</li>
 <li>Maine (US)</li>
 <li>Medellín, Colombia (CO)</li>
-<li>Montreal (CA)</li>
+<li>Montreal, Canada (CA)</li>
 <li>Moscow, Russia (RU)</li>
-<li>Phoenix, AZ (US)</li>
+<li>Patras, Greece (GR)</li>
+<li>Phoenix, Arizona (US)</li>
 <li>Prague (CZ)</li>
 <li>Puerto Rico (PR)</li>
-<li>Rochester, MN (US)</li>
-<li>Russia (RU)</li>
-<li>Sacramento, CA (US)</li>
-<li>Seattle, WA (US)</li>
+<li>Rochester, Minnesota (US)</li>
+<li>Sacramento, California (US)</li>
+<li>Seattle, Washington (US)</li>
 <li>Siegburg, Germany (DE)</li>
 <li>South Germany (DE)</li>
 <li>Switzerland (CH)</li>
 <li>The Netherlands (NL)</li>
+<li>Tienen, Belgium (BE)</li>
 <li>Utah (US)</li>
 <li>Vancouver, WA (US)</li>
 <li>Victoria, Australia (AU)</li>
 <li>Vienna, Austria (AT)</li>
 <li>Viterbo, Italy (IT)</li>
-<li>Ypslianti, MI (US)</li>
+<li>Ypslianti, Michigan (US)</li>
 </ul>
 </p>
   </div>
@@ -640,16 +583,282 @@ self-reported):</p>
       <div class="col py-2">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title exp-title text-muted mt-0 mb-1">November 25, 2023</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.10.20231125" target="_blank" rel="noopener">Thanksgiving 2023 (0.10.20231125)</a></h4>
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">April 20, 2025</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.14.20250420" target="_blank" rel="noopener">Easter Release (0.14.20250420)</a></h4>
             <div class="text-muted exp-meta">
-              Nov 25, 2023 –
+              Apr 20, 2025 –
               
                 Present
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.10.20231125 includes improvements for bootstrapping BETA, RC and EOL releases. Additionally, a new <code>bastille_rcorder</code> startup option, a new <code>rcp</code> (reverse-copy) subcommand, bastille <code>setup</code> improvements, and more!</p>
+            <div class="card-text"><p>BastilleBSD version 0.14.20250420 introduces several new features and improvements, alongside important bug fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>Key new features include options for startup delays
+between jails, support for custom releases and user-based configurations, and
+the introduction of auto and debug modes for various subcommands. Users can now
+specify multiple targets, utilize ZFS options for jail creation,
+and configure VLAN settings for VNET jails. The release also brings new
+functions for destroy and a new network subcommand, allowing the addition or
+removal of multiple interfaces in jails. Improvements include allowing
+inheritng ip/hostname as IP options, a new style for cloning, and robust error
+handling that prevents deletion of jail content if creation fails.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Bug fixes address issues such as epair numbering, incorrect binary
+location for <code>htop</code>, variable name inconsistencies, log update problems for
+limits, and issues with JSON listing and jail IP listing. Problems with
+variables in rdr commands have also been resolved.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.14.20250420">release notes</a> for details.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">January 26, 2025</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.13.20250126" target="_blank" rel="noopener">etcupdate (0.13.20250126)</a></h4>
+            <div class="text-muted exp-meta">
+              Jan 26, 2025 –
+              
+                Apr 20, 2025
+              
+              
+            </div>
+            <div class="card-text"><p>BastilleBSD version 0.13.20250126 introduces new subcommands and various improvements, along with important bug fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>New features include the beta version of etcupdate, the jcp subcommand for
+copying files and directories between jails, and autocomplete functionality for
+jail names. Improvements have been made to top/htop with updated auto-mode and
+documentation. The update command now includes -d and -f options for release
+and thick jail updates. Other improvements cover bridge epair naming for longer
+characters, a typo fix in the clone usage block, and enhancements to the
+console subcommand.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Several bug fixes have been implemented, addressing issues such as
+&ldquo;grep: no such file&rdquo; errors in list, regex problems for the fstab hook in
+mount, and ensuring that mount allows [ro|rw|rq|sw|xx] as available mount
+options. The release also includes refactoring for static MAC options in create
+and deprecates RELEASE upgrade in favor of fixes for thick/thin jail upgrades.
+Additionally, documentation for config.rst has been created.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.13.20250126">release notes</a> for details.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">January 11, 2025</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.10.20231125" target="_blank" rel="noopener">Code Cleanup (0.12.20250111)</a></h4>
+            <div class="text-muted exp-meta">
+              Jan 11, 2025 –
+              
+                Jan 26, 2025
+              
+              
+            </div>
+            <div class="card-text"><p>BastilleBSD version 0.12.20250111 brings new features, various improvements, and essential bug fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>New features include the integration of Shellcheck with a GitHub action to run
+it, and added support for static MAC addresses along with fixes for cloning
+VNET jails. Improvements focus on enhanced bastille.conf handling, prompting
+users for its creation, and refining template awk to remove spaces from blank
+lines. The destroy.sh script now prevents the destruction of jails with mounted
+file systems, and mounting with options behind permissions is now allowed.
+Additionally, there&rsquo;s an ongoing refactoring effort to move functions to
+common.sh, specifically for top and htop.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Bug fixes in this release address pfctl errors when no rules are returned,
+alignment problems when listing jails with multiple IP addresses, and pfctl
+invocation issues when NAT is not in use, with the IP variable being changed to
+ip4. Critical mount/umount issues have been resolved, and all mount points are
+now correctly adjusted during renaming. The release also fixes the matching of
+valueless parameters in configurations, ensures list correctly prints JID
+instead of JAILNAME, and includes fixes for new shell checks.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.12.20250111">release notes</a> for details.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">November 24, 2024</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.12.20241124" target="_blank" rel="noopener">Maintenance Release (0.12.20241124)</a></h4>
+            <div class="text-muted exp-meta">
+              Jan 11, 2025 –
+              
+                Nov 24, 2024
+              
+              
+            </div>
+            <div class="card-text"><p>Bastille 0.12.20241124 is a maintenance release that focuses on several fixes and improvements.</p>
+<p><strong>Improvements</strong>:</p>
+<p>This release includes an update to the .gitignore file and the BASTILLE_VERSION
+string. Documentation for bastille_zfs_prefix has been added, and Shellcheck
+has been set up. The documentation now clearly states that &ndash;xz is for ZFS
+systems, and warnings regarding the deprecation of the bastille0 option have
+been updated.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes address an issue with bastille_zfs_prefix carried over from the previous release, and a change in loopback creation within setup.sh.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.12.20241124">release notes</a> for details.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">October 22, 2024</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.11.20241022" target="_blank" rel="noopener">Hierarchical Jails (0.11.20241022)</a></h4>
+            <div class="text-muted exp-meta">
+              Nov 24, 2024 –
+              
+                Oct 22, 2024
+              
+              
+            </div>
+            <div class="card-text"><p>Bastille 0.11.20241022 is a release focused on addressing various fixes and implementing a key improvement.</p>
+<p><strong>Improvements</strong>:</p>
+<p>A notable improvement in this version is the adjustment of devfs_ruleset to
+ensure compatibility with hierarchical jails.</p>
+<p><strong>Fixes</strong>:</p>
+<p>This release includes several fixes, such as updates to the Bastille rc script
+to properly handle jail closes, a correction for a spelling mistake, and
+accurate checking of ZFS on/off status. The check_fib() call has been restored,
+and errors in setup.sh and bootstrap.sh were resolved through diff patches.
+Additionally, rcorder startup issues have been fixed, cp and rcp commands now
+correctly handle the quiet option, and bastille_zfs_prefix is now properly
+utilized to work with pools other than &lsquo;zroot&rsquo;.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.11.20241022">release notes</a> for details.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">November 25, 2023</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.10.20231125" target="_blank" rel="noopener">Thanksgiving 2023 (0.10.20231125)</a></h4>
+            <div class="text-muted exp-meta">
+              Nov 25, 2023 –
+              
+                Oct 22, 2024
+              
+              
+            </div>
+            <div class="card-text"><p>Bastille 0.10.20231125 introduces significant features and improvements, alongside several important fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release adds support for bootstrapping and testing FreeBSD BETA and RC
+branches, and extends support for bootstrapping End-of-Life (EOL) releases all
+the way back to FreeBSD 9.0-RELEASE. The Bastille startup script now supports
+an alternative startup/shutdown ordering of jails using rcorder. A new rcp
+sub-command is included for reverse-copying files from containers back to the
+host. For new containers, osrelease = ${RELEASE}; is now set in jail.conf,
+ensuring uname -r reports the correct FreeBSD release version for the jail.
+Bastille now supports combining create options, and the setup process populates
+an /etc/devfs.rules file for VNET jails. The codebase now uses a standard
+checkyesno function for testing. Additionally, the documentation has been
+upgraded with examples for iocage migration, notes on container MOTD and
+.hushlogin, examples for compiling ports, the official container
+upgrade/downgrade process, and details on bootstrapping EOL FreeBSD releases.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes address issues such as correcting JID instead of jail name in list
+printouts, rectifying generated interface names in rc.conf for VNET jails,
+ensuring configure_zfs() properly returns the status of the zfs module, and
+applying a fix for recent EOL support patches. Readthedocs build information
+has also been corrected.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.10.20231125">release notes</a> for details.</p>
 </div>
           </div>
@@ -685,7 +894,17 @@ self-reported):</p>
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.10.20231013 includes long overdue improvements to networking with dual-stack ip4/ip6 support, a new bastille <code>setup</code> command, enhanced Linux support with Debian &ldquo;bookworm&rdquo; and Ubuntu &ldquo;jammy&rdquo;, bastille <code>tags</code> and more!</p>
+            <div class="card-text"><p>Bastille version 0.10.20231013 brings a range of significant improvements and new features.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release introduces Dual Stack Networking, enabling the creation of
+containers with both IPv4 and IPv6 stacks, along with added DHCP support. A new
+bastille setup command automates initial configuration for firewall settings,
+networking, and ZFS storage. Linux container support is extended to include
+Ubuntu Jammy (22.04) and Debian 12 &ldquo;Bookworm,&rdquo; while support for Debian 9
+&ldquo;Stretch&rdquo; has been dropped. The tags sub-command is introduced for tagging
+containers, and the pkg sub-command can now leverage the host&rsquo;s package
+manager. Other enhancements include improved version tracking for source code
+installations and updates to the documentation.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.10.20231013">release notes</a> for details.</p>
 </div>
           </div>
@@ -721,7 +940,21 @@ self-reported):</p>
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.9.20220714 includes fixes for VNET, bootstrap logic, documentation and more!</p>
+            <div class="card-text"><p>Bastille Day 2022 release (version 0.9.20220714) includes five months of
+community contributions, focusing on fixes and improvements across various
+aspects, including IPv6 support, documentation, and VNET.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release introduces the JAIL_IP6 variable for accessing ip6.addr in
+templates and extends RDR to support logging. It now permits outgoing network
+connections during the stop action and allows bastille cmd to be used on Linux
+jails.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes in this version include improved IPv6 support, resolution of
+non-unique epair creation when using VNET, and enabling Linux jails to properly
+see their mount points. Documentation tables have been repaired, and incorrect
+descriptions have been fixed. Additionally, the release prevents the creation
+of cache/RELEASE directories on Linux jails and corrects an inconsistency where
+the text mentioned defining an OVERLAY but the example used CP.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.9.20220714">release notes</a> for details.</p>
 </div>
           </div>
@@ -757,7 +990,19 @@ self-reported):</p>
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.9.20220216 includes fixes for VNET, fixes for iocage imports and more.</p>
+            <div class="card-text"><p>BastilleBSD version 0.9.20220216 introduces several new features, notable improvements, and important fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>Key additions include support for ZFS clone jails, which can be created using
+the bastille create -C command. The bastille list release command now has a -p
+option to include point releases in the list. This version also enables the
+import of iocage basejails as Bastille thin jails and adds bootstrap support
+for aarch64/arm64 Debian/Ubuntu.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Several issues have been addressed, including a regression in VNET creation and
+the prevention of double directory creation when bootstrapping Linux. An issue
+that prevented 32-bit base releases from being updated has been fixed.
+Additionally, Linux jail name entries are now updated upon jail renaming, and
+fstab paths have been corrected to reflect the new jail path.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.9.20220216">release notes</a> for details.</p>
 </div>
           </div>
@@ -793,10 +1038,30 @@ self-reported):</p>
               
               
             </div>
-            <div class="card-text"><p>This release includes code from seven new contributors. Thank you!.</p>
-<p>Bastille 0.9.20211225 includes support for Ubuntu 18.04 and 20.04 plus Debian
-9, 10 and 11. We made improvements to the template validation, CMD now
-returns exit codes, VNET improvements, updates to PKG and more!</p>
+            <div class="card-text"><p>Bastille 0.9.20211225 is a significant release bringing experimental Linux
+support, enhanced VNET capabilities, and various other improvements and fixes.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This version introduces experimental support for Debian 11 &ldquo;Bullseye,&rdquo; 10
+&ldquo;Buster,&rdquo; 9 &ldquo;Stretch,&rdquo; and Ubuntu 18.04 &ldquo;Bionic&rdquo; and 20.04 &ldquo;Focal.&rdquo; The CMD and
+PKG sub-commands now support these Linux releases, enabling initial template
+usage with Linux containers. The pkg subcommand transparently uses apt for
+Ubuntu and Debian containers, with optional support for the host&rsquo;s package
+manager. CMD now returns exit codes for individual and all jails, ensuring a
+non-zero exit code if any jail encounters an error. Bastille will now use the
+host&rsquo;s timezone unless specified otherwise in bastille.conf. VNET improvements
+include more options, support for attaching VNET containers to existing bridge
+interfaces using the create -B option, and interface descriptions that include
+the container name. Template improvements mean bastille verify now recursively
+verifies all templates in an INCLUDE chain, and templates can now be updated
+using bastille update.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Several issues have been addressed, including fixes for Linux jail creation,
+ensuring the bastille cmd exit code is respected, and resolving an overloaded
+variable in the mount command. The image path for the ZFS support screenshot
+was corrected, along with a documentation conflict (with docutils v0.18) and
+issue #403. Additionally, update_fstab() in clone.sh was fixed, a hotfix was
+applied for the VNET interface description patch, and an accidental jail name
+in a run test was corrected.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.9.20211225">release notes</a> for details.</p>
 </div>
           </div>
@@ -832,9 +1097,17 @@ returns exit codes, VNET improvements, updates to PKG and more!</p>
               
               
             </div>
-            <div class="card-text"><p>This release adds a few exciting new features as well as patching a number of reported bugs.</p>
-<p>Bastille 0.9.20210714 includes (experimental) support for Ubuntu-based containers,
-improvements to the import/export commands and an improved <code>bastille list -a</code> output.</p>
+            <div class="card-text"><p>Bastille Day 2021 release introduces several new features and important fixes.</p>
+<p><strong>Features</strong>:</p>
+<p>This release brings initial support for Ubuntu 18.04 and 20.04, along with
+support for the NO_COLOR environment variable. Preliminary support for
+MidnightBSD has been added. The list command has been extended to display the
+Up/Down state, Published Ports, and container release.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes include the CP sub-command now supporting the quiet (-q) option,
+improvements to the import and export commands, a fix to properly use the
+jailed root environment for CMD, and a fix addressing a BSD grep change in
+FreeBSD 13.0.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.9.20210714">release notes</a> for details.</p>
 </div>
           </div>
@@ -870,10 +1143,13 @@ improvements to the import/export commands and an improved <code>bastille list -
               
               
             </div>
-            <div class="card-text"><p>This release addresses a few minor issues discovered in the New Year 2021 version.</p>
-<p>Bastille 0.8.20210115 improves the dynamic port redirection and empty
-(experimental) container support..</p>
-<p>Note: there is also a change to the bastille.conf in this release.</p>
+            <div class="card-text"><p>Bastille 0.8.20210115 is a bug-fix release addressing issues found in the New Years release.</p>
+<p><strong>Improvements</strong>:</p>
+<p>This release includes associated code cleanup. Users are advised to merge these
+changes into their bastille.conf file.</p>
+<p><strong>Fixes</strong>:</p>
+<p>The primary fixes ensure that rdr persists by default, and that empty jails are
+prevented from starting by default.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.8.20210115">release notes</a> for details.</p>
 </div>
           </div>
@@ -909,10 +1185,34 @@ improvements to the import/export commands and an improved <code>bastille list -
               
               
             </div>
-            <div class="card-text"><p>I figured we should start out 2021 with a brand new Bastille release. Happy New Year!</p>
-<p>This release increments the version number from 0.7.x to 0.8.x</p>
-<p>Note: there is also a change to the bastille.conf in this release.</p>
-<p>Bastille 0.8.20210101 brings a number of improvements, bug-fixes and new features.</p>
+            <div class="card-text"><p>Bastille 0.8.20210101 marks a version increment from 0.7.x to 0.8.x, bringing a
+range of new features, significant improvements, and numerous bug fixes, along
+with a change to the bastille.conf file.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release introduces fully native Bastille templates, automatically applied
+to new containers. Default templates now include base, empty, thick, thin, and
+vnet. Bastille now supports bootstrapping 13-CURRENT releases for development
+and allows bootstrapping and running 32-bit (i386) containers on 64-bit (amd64)
+hosts. Templates now support dynamic variable definition (Template ARGS), and a
+new config sub-command allows getting or setting values in jail.conf. A
+bastille template &ndash;convert tool is included to generate a Bastillefile from
+existing legacy hook files. New and upgraded documents include iocage migration
+example, notes regarding container MOTD, uname and the use of .hushlogin,
+examples on how to compile ports inside containers, documented the &ldquo;official&rdquo;
+container upgrade/downgrade process, bootstrap EOL releases of FreeBSD
+(&gt;=9.0-RELEASE).</p>
+<p><strong>Fixes</strong>:</p>
+<p>Numerous bug fixes are included, such as resolving rctl limits, logging rctl
+events to /var/log/messages, respecting exec.fib in the bastille console
+command, and supporting 32-bit bootstrap on 64-bit hosts. The release addresses
+a bug in Makefile installation, an overlay hook in Bastillefile, and improves
+Bastillefile support for mount|fstab and copy|cp. Template verification now
+supports Bastillefile, and rdr rules are now persistent between restarts. Other
+fixes include correcting the limits sub-command argument check, improving
+template failure reporting, fixing a bootstrap + update regression, and
+creating global error functions. Improvements were also made to upgrading thick
+jails and template error reporting, and pf documentation now properly supports
+multi-IP hosts.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.8.20210101">release notes</a> for details.</p>
 </div>
           </div>
@@ -948,10 +1248,22 @@ improvements to the import/export commands and an improved <code>bastille list -
               
               
             </div>
-            <div class="card-text"><p>This release matures the project from 0.6.x -&gt; 0.7.x. Continued testing and
-bug fixes are proving Bastille capable for a range of use-cases. New
-(experimental) features are examples of innovation from community contribution
-and feedback. Thank you.</p>
+            <div class="card-text"><p>Bastille version 0.7.20200714 marks the project&rsquo;s maturation from 0.6.x to
+0.7.x, incorporating ongoing testing and bug fixes to enhance its capabilities
+for diverse use-cases.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release introduces the Bastillefile, a new template syntax that offers
+more flexible automation by allowing template hooks to be used in any order. An
+experimental empty container feature is included, enabling users to create
+Linux containers. New mount and umount sub-commands allow for dynamic addition
+and removal of storage from containers. The template sub-command now utilizes
+native sub-commands for automation execution. Additionally, the bastille.conf
+file now describes the bootstrap_archives options.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key bug fixes include bastille_logsdir now pointing to /var/log/bastille for
+new jails. A Vagrantfile has been added to the repository for quick testing.
+Improvements were made to fstab entry deduplication and full path validation,
+along with general code cleanup and formatting.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.7.20200714">release notes</a> for details.</p>
 </div>
           </div>
@@ -987,8 +1299,18 @@ and feedback. Thank you.</p>
               
               
             </div>
-            <div class="card-text"><p>Thank you to everyone that submitted bug reports and/or fixes to this release. Your support has been amazing.</p>
-<p>Primarily a bug-fix release addressing reported issues.</p>
+            <div class="card-text"><p>Bastille 0.6.20200414 is primarily a bug-fix release addressing various
+reported issues. The release notes extend gratitude to all who contributed bug
+reports and fixes.</p>
+<p><strong>Improvements</strong>:</p>
+<p>This release includes general whitespace cleanup and formatting improvements
+within the documentation.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes address the VNET DHCP hook, updating it from &ldquo;DHCP&rdquo; to &ldquo;SYNCDHCP.&rdquo;
+The SERVICE hook has been updated to remove extra quotes, and the ports
+Makefile has been adjusted to prevent clobbering the configuration. Other fixes
+include correcting the path to the default timezone (Etc/UTC), resolving route
+auto-detection in VNET, and fixing pf reload issues on non-loopback containers.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.6.20200414">release notes</a> for details.</p>
 </div>
           </div>
@@ -1024,7 +1346,16 @@ and feedback. Thank you.</p>
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.6.20200412 release is dedicated to everyone around the world quarantined by the COVID-19 pandemic.</p>
+            <div class="card-text"><p>Bastille 0.6.20200412 introduces several new features and key improvements.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release brings significant new features, including VNET and IPv6 support.
+Users can now manually edit container configuration files using bastille edit
+TARGET and rename containers with bastille rename TARGET new-name. The ability
+to import container archives from iocage or ezjail is introduced via bastille
+import (iocage|ezjail), and containers can now be cloned using bastille clone
+TARGET. Improvements in this version include enhanced HardenedBSD bootstrap, a
+more robust bastille import ARCHIVE process, and an expanded man page for
+better documentation.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.6.20200412">release notes</a> for details.</p>
 </div>
           </div>
@@ -1060,9 +1391,31 @@ and feedback. Thank you.</p>
               
               
             </div>
-            <div class="card-text"><p>Bastille 0.6.20200202 is easily the biggest update we&rsquo;ve ever had and it&rsquo;s
-all thanks to the generous FreeBSD community. Your contributions have been
-amazing! I am sincerely thankful.</p>
+            <div class="card-text"><p>Bastille version 0.6.20200202, known as &ldquo;Groundhog Day,&rdquo; introduces several
+significant new features, improvements, and important bug fixes. Bastille is an
+open-source system designed for automating the deployment and management of
+containerized applications on FreeBSD.</p>
+<p>New Features:
+This release adds Import &amp; Export functionality, allowing containers to be
+exported into compressed archives for backup or deployment. The Convert feature
+is introduced, enabling the conversion of &ldquo;thin&rdquo; containers to &ldquo;thick&rdquo;
+containers. Rdr now supports dynamic rules for redirecting host ports to
+container ports, and Limits provides initial support for dynamically setting
+resource controls on containers.</p>
+<p><strong>Improvements</strong>:</p>
+<p>The FSTAB Template Hook now allows auto-mounting directories from the host into
+containers in read-only or read-write modes. Template Validation is enhanced
+with the verify sub-command, which parses template files and displays a
+read-only overview of actions. The update sub-command can now be used on
+&ldquo;thick&rdquo; containers, simplifying their upgrade process. Minor improvements were
+made to the targeting capability of the start and stop commands. The list
+command now supports JSON output. The create sub-command sees improvements in
+tests and validation, and the bootstrap sub-command performs additional checks
+on storage and network configurations to ensure a working state.</p>
+<p><strong>Fixes</strong>:</p>
+<p>A bug in the console sub-command that could cause a user to become &ldquo;stuck&rdquo; when
+trying to log in as a non-existent user has been fixed. Additionally, Bastille
+now installs a man page for built-in documentation.</p>
 <p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.6.20200202">release notes</a> for details.</p>
 </div>
           </div>
@@ -1098,10 +1451,20 @@ amazing! I am sincerely thankful.</p>
               
               
             </div>
-            <div class="card-text"><strong>CHANGELOG:</strong>
-This is a minor bug-fix release that improves the reliability of containers
-when using loopback-based networking. It also adds some safeguards against
-invalid network configurations and other minor cosmetic improvements.</div>
+            <div class="card-text"><p>BastilleBSD&rsquo;s Thanksgiving 2019 release (version 0.5.20191128) is a minor
+bug-fix release focused on improving container reliability and network
+configurations.</p>
+<p><strong>Improvements</strong>:</p>
+<p>This release enhances the reliability of containers utilizing loopback-based
+networking. It also incorporates safeguards against invalid network
+configurations and includes minor cosmetic improvements. Public documentation
+has been updated to reflect new methods for firewall configuration.</p>
+<p><strong>Fixes</strong>:</p>
+<p>The release includes a change to the pf.conf firewall configuration to avoid a
+previously reported issue and ensure firewall state is retained. Users are
+advised to update their firewall settings according to the provided steps.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.5.20191128">release notes</a> for details.</p>
+</div>
           </div>
         </div>
       </div>
@@ -1135,22 +1498,26 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Features:</strong></p>
-<ul>
-<li>standalone &ldquo;thick&rdquo; containers now available (<code>create -T|--thick ...</code>)</li>
-<li><a href="https://gitlab.com/BastilleBSD-Templates">Bastille Templates</a>: now tested with GitLab CI/CD</li>
-<li><a href="https://docs.bastillebsd.org">Bastille Documentation</a> has been updated and extended</li>
-<li><code>bootstrap</code> now supports optional <code>update</code> command to auto-patch release</li>
-<li>Network config validation added to avoid disconnected containers</li>
-</ul>
-<p><strong>Fixes:</strong></p>
-<ul>
-<li><a href="https://github.com/BastilleBSD/bastille/issues/49">#49</a></li>
-<li><a href="https://github.com/BastilleBSD/bastille/issues/50">#50</a></li>
-<li><a href="https://github.com/BastilleBSD/bastille/issues/53">#53</a></li>
-<li><a href="https://github.com/BastilleBSD/bastille/issues/54">#54</a></li>
-<li>container target matching improved</li>
-</ul>
+            <div class="card-text"><p>BastilleBSD&rsquo;s 0.5.20191125 release introduces new features, improvements, and
+fixes for reported issues.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release introduces support for read-write containers using the -T|&ndash;thick
+option with the create sub-command, allowing containers to manage their FreeBSD
+version independently. Template testing has been enhanced, with automation
+templates moved to GitLab to leverage automated CI/CD testing, and pipeline
+status now displayed in each template&rsquo;s README. template.sh boasts more verbose
+output and stricter testing, stopping if any part exits with a non-zero status
+and displaying the exit code during template application. bootstrap.sh now
+includes an update argument, enabling release updates during bootstrapping. The
+BastilleBSD project has also been updated to reflect this release.</p>
+<p><strong>Bug Fixes</strong>:</p>
+<p>Key bug fixes address an issue with creating 12.1-RELEASE containers and
+correct the mistaken copying of usr/obj and usr/test to the wrong path.
+Improvements were made to the jail.conf generation template, and release
+filtering and validation code has been cleaned up. Template output is now
+silent when no template is found, and documentation has been updated to avoid
+pf.conf inconsistency. Lastly, BastilleBSD documentation has been updated.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.5.20191125">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1185,24 +1552,23 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Features:</strong></p>
-<ul>
-<li>Added support for FreeBSD 11.3-RELEASE, 12.1-RC1, 12.1-RC2 and 12.1-RELEASE.</li>
-<li>Added option to assign network interface during container creation, if empty bastille obeys config file.</li>
-<li>Added NIC validation.</li>
-<li>Improved IP validation.</li>
-<li>Added ability to destroy regex-matching base releases, cache content not affected.</li>
-<li>Added validation for the ZFS parameters.</li>
-</ul>
-<p><strong>Fixes:</strong></p>
-<ul>
-<li>Fix for container and releases output listing.</li>
-<li>Fix for prevent double distfile.txz file extraction on bootstrap.</li>
-<li>Fix for missing subsequent directory creation for cache/*-RELEASE.</li>
-<li>Fix for missing subsequent directory creation for releases/*-RELEASE.</li>
-<li>Fix for chflags removal and container/release directory deletion if exist.</li>
-<li>Minor code fixes.</li>
-</ul>
+            <div class="card-text"><p>BastilleBSD version 0.4.20191025 introduces new features and addresses fixes
+to existing components.</p>
+<p><strong>Features</strong>:</p>
+<p>This release adds support for FreeBSD 11.3-RELEASE, 12.1-RC1, 12.1-RC2, and
+12.1-RELEASE. Users now have the option to assign a network interface during
+jail creation, with Bastille defaulting to the config file if left empty. NIC
+and IP validation have been improved. The ability to destroy regex-matching
+base releases has been added (though cached content remains unaffected), and
+validation for ZFS parameters has been implemented.</p>
+<p><strong>Fixes</strong>:</p>
+<p>Key fixes include improvements to jail and releases output listing, prevention
+of double distfile.txz file extraction on bootstrap, and correction of missing
+subsequent directory creation for cache/<em>-RELEASE and releases/</em>-RELEASE. This
+version also addresses chflags removal and ensures proper jail/release
+directory deletion if they exist. Additionally, minor code fixes have been
+applied.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.4.20191025">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1229,7 +1595,7 @@ invalid network configurations and other minor cosmetic improvements.</div>
         <div class="card">
           <div class="card-body">
             <h4 class="card-title exp-title text-muted mt-0 mb-1">July 14, 2019</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.20190714" target="_blank" rel="noopener">Bastille Day (0.3.20190714)</a></h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.4.20190714" target="_blank" rel="noopener">Bastille Day (0.4.20190714)</a></h4>
             <div class="text-muted exp-meta">
               Jul 14, 2019 –
               
@@ -1237,17 +1603,24 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p>Happy Bastille Day! (Of course we had a release to celebrate)</p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>ip@interface syntax now (optionally) supported during bastille create.</li>
-<li>template system now supports INCLUDE and SERVICE.</li>
-<li>/usr/local/bastille now 0750 to avoid unprivileged users from accessing Bastille files, container, releases, etc.</li>
-<li>template hook CONFIG renamed to OVERLAY.</li>
-<li>support for listing container(s), template(s), log(s), release(s).</li>
-<li>only reload firewall on start/stop if loopback networking used.</li>
-<li>ZFS sub-command additions of get|set|snapshot.</li>
-</ul>
+            <div class="card-text"><p>BastilleBSD release version 0.4.20190714 includes several new features and
+improvements.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This update now supports the optional ip@interface syntax during bastille
+create. The template system has been enhanced to support INCLUDE (a
+line-delimited list of template URLs) and SERVICE template hooks, which execute
+/usr/sbin/service within the jail. The /usr/local/bastille directory now has
+permissions set to 0750 to restrict access for unprivileged users. The CONFIG
+template hook has been renamed to OVERLAY but remains supported for backward
+compatibility.</p>
+<p>Additionally, the update includes a check for uid=0 for all Bastille commands.
+Internal usage documentation has been updated with the latest sub-commands, and
+sub-command file validation now occurs before execution. Network bootstrapping
+is supported with new configuration values, and there&rsquo;s support for listing
+jails, templates, logs, and releases. The firewall is only reloaded on
+start/stop if loopback networking is used. Finally, ZFS sub-command additions
+include get, set, and snapshot.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.4.20190714">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1274,7 +1647,7 @@ invalid network configurations and other minor cosmetic improvements.</div>
         <div class="card">
           <div class="card-body">
             <h4 class="card-title exp-title text-muted mt-0 mb-1">June 22, 2019</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.2019062202" target="_blank" rel="noopener">Support ZFS! (0.3.2019062202)</a></h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.4.2019062202" target="_blank" rel="noopener">Support ZFS! (0.4.2019062202)</a></h4>
             <div class="text-muted exp-meta">
               Jun 22, 2019 –
               
@@ -1282,14 +1655,14 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Fixes:</strong></p>
-<ul>
-<li>fixes bootstrap regression in non-zfs installs</li>
-<li>makes cp sub-command verbose (cp -av)</li>
-<li>adds support for cloning templates from GitLab</li>
-<li>code cleanup and formatting service sub-command added for managing services within container</li>
-<li>verify sub-command documented properly</li>
-</ul>
+            <div class="card-text"><p>BastilleBSD&rsquo;s 0.4.2019062202 release is a minor but suggested patch focusing on
+ZFS attribute control.</p>
+<p><strong>Features and Improvements</strong>:
+This update introduces a new zfs.sh sub-command for BastilleBSD, which provides
+control over ZFS attributes.</p>
+<p><strong>Fixes</strong>:
+No specific fixes are detailed in this release summary.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.4.2019062202">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1324,11 +1697,16 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Features:</strong></p>
-<ul>
-<li>This release adds initial (basic) support for <a href="https://hardenedbsd.org">HardenedBSD</a> as a platform</li>
-<li>Bastille now works on HardenedBSD and should work on <a href="https://opnsense.org">OPNsense</a></li>
-</ul>
+            <div class="card-text"><p>BastilleBSD 0.3.20190522 release focuses on initial support for HardenedBSD
+as a platform.</p>
+<p><strong>Features and Improvements</strong>:</p>
+<p>This release includes initial functional testing of the bootstrap and create
+functions. Users can now configure default nameservers and default timezones,
+and add custom DNS options.</p>
+<p><strong>Unsupported Functions</strong>:</p>
+<p>The update, upgrade, and verify functions are not yet supported for
+HardenedBSD releases in this version.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.20190522">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1363,10 +1741,15 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Notes:</strong></p>
-<ul>
-<li>This release supports basic templates in Bastille. See README for details.</li>
-</ul>
+            <div class="card-text"><p>BastilleBSD 0.3.20181113 release focuses on the introduction of working
+templates.</p>
+<p><strong>Features</strong>:
+This release adds support for basic templates in Bastille, enabling more
+streamlined container management.</p>
+<p><strong>Improvements and Fixes</strong>:
+No specific improvements or fixes are detailed in this summary. Users are
+advised to consult the README file for more details.</p>
+<p>See the full <a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.20181113">release notes</a> for details.</p>
 </div>
           </div>
         </div>
@@ -1393,7 +1776,7 @@ invalid network configurations and other minor cosmetic improvements.</div>
         <div class="card">
           <div class="card-body">
             <h4 class="card-title exp-title text-muted mt-0 mb-1">November 07, 2018</h4>
-            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.20191107" target="_blank" rel="noopener">Good &lsquo;nuf (0.3.20191107)</a></h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.3.20181107" target="_blank" rel="noopener">Good &rsquo;nuf (0.3.20191107)</a></h4>
             <div class="text-muted exp-meta">
               Nov 7, 2018 –
               
@@ -1401,9 +1784,8 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Notes:</strong></p>
-<ul>
-<li>this release should be &ldquo;good &lsquo;nuf&rdquo; for others to use</li>
+            <div class="card-text"><ul>
+<li>this release should be &ldquo;good &rsquo;nuf&rdquo; for others to use</li>
 </ul>
 </div>
           </div>
@@ -1439,8 +1821,7 @@ invalid network configurations and other minor cosmetic improvements.</div>
               
               
             </div>
-            <div class="card-text"><p><strong>Notes:</strong></p>
-<ul>
+            <div class="card-text"><ul>
 <li>alpha quality.</li>
 <li>no guarantees.</li>
 <li>basic proof of concept.</li>
@@ -1524,7 +1905,7 @@ invalid network configurations and other minor cosmetic improvements.</div>
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.23450efb3a44cb57aeb4b7ee382f39e8.js"></script>
 
     
 
@@ -1540,7 +1921,11 @@ invalid network configurations and other minor cosmetic improvements.</div>
   
 
   <p class="powered-by">
-    © 2018-2025 &middot; BastilleBSD 
+    © 2018-2025 &middot; 
+
+    BastilleBSD 
+
+    
     <span class="float-right" aria-hidden="true">
       <a href="#" class="back-to-top">
         <span class="button_icon">

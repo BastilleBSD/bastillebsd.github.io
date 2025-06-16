@@ -2,109 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bastillebsd.org/blog/posts/</loc>
+    <loc>http://localhost:1313/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</loc>
+    <lastmod>2025-06-15T12:52:13-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-15T16:54:07-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/press/</loc>
+    <lastmod>2025-06-15T16:54:07-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/getting-started/</loc>
+    <lastmod>2025-06-15T16:50:13-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/history/</loc>
+    <lastmod>2025-06-15T16:52:10-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022/01/03/bastille-template-examples-adguardhome/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/02/10/thin-vs-thick-whats-the-difference/</loc>
+    <lastmod>2025-06-15T16:48:43-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/06/bastille-default-templates-and-customization/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/04/14/bastille-on-xigmanas/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/04/07/bastille-on-dragonflybsd/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2021-01-09T19:51:25-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/press/</loc>
-    <lastmod>2023-12-01T12:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/2021/03/31/read-only-root-confining-the-root-user/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/history/</loc>
-    <lastmod>2021-01-03T20:22:00-07:00</lastmod>
+    <loc>http://localhost:1313/blog/2021/03/24/containers-are-lightweight-bastille-is-too/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/compare/</loc>
+    <loc>http://localhost:1313/blog/2021/03/10/how-to-track-latest-bastille-for-testing-and-development/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/03/03/what-highly-secure-by-default-means/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/02/24/container-snapshots-and-backups/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/02/17/limiting-container-resources/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/20/prometheus-and-automatic-container-discovery/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/02/03/unbound-dns-containers-with-optional-adblock/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/27/bastille-and-postgresql-containers/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/</loc>
+    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/templates/</loc>
     <lastmod>2021-01-10T10:46:21-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/getting-started/</loc>
+    <loc>http://localhost:1313/blog/2021/03/17/raspberry-pi-based-temperature-and-humidity-sensors-with-freebsd-and-bastille/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/</loc>
+    <loc>http://localhost:1313/blog/2020/02/17/bastille-networking-in-depth/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</loc>
+    <loc>http://localhost:1313/blog/2020/02/02/bastille-groundhog-day-release/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</loc>
+    <loc>http://localhost:1313/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</loc>
+    <loc>http://localhost:1313/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</loc>
+    <loc>http://localhost:1313/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</loc>
+    <loc>http://localhost:1313/contact/</loc>
+    <lastmod>2021-01-03T20:22:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</loc>
+    <loc>http://localhost:1313/blog/2019/11/30/getting-started-video/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</loc>
+    <loc>http://localhost:1313/blog/2019/11/28/thanksgiving-2019/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/</loc>
+    <loc>http://localhost:1313/blog/2019/11/26/getting-started-video/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2021/01/06/bastille-default-templates-and-customization/</loc>
+    <loc>http://localhost:1313/blog/2019/11/25/captain-jack/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/</loc>
-    <lastmod>2021-01-09T19:51:25-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/</loc>
+    <loc>http://localhost:1313/blog/2019/11/24/regarding-updating/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/templates/</loc>
+    <loc>http://localhost:1313/authors/admin/</loc>
+    <lastmod>2025-06-15T16:48:17-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/authors/authors/</loc>
+  </url><url>
+    <loc>http://localhost:1313/authors/</loc>
+    <lastmod>2025-06-15T16:48:17-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/celebrate/</loc>
     <lastmod>2021-01-10T10:46:21-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2020/02/17/bastille-networking-in-depth/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <loc>http://localhost:1313/publication_types/</loc>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2020/02/02/bastille-groundhog-day-release/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/contact/</loc>
-    <lastmod>2021-01-03T20:22:00-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/11/30/getting-started-video/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/11/28/thanksgiving-2019/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/11/25/captain-jack/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/blog/2019/11/24/regarding-updating/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/authors/admin/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/authors/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/categories/</loc>
-  </url><url>
-    <loc>https://bastillebsd.org/celebrate/</loc>
-    <lastmod>2021-01-03T20:22:00-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/publication_types/</loc>
-  </url><url>
-    <loc>https://bastillebsd.org/talk/</loc>
+    <loc>http://localhost:1313/talk/</loc>
     <lastmod>2019-11-24T08:53:22-07:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
   <meta name="description" content="I figured we should start out 2021 with a brand new Bastille release. Happy New Year!">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/">
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/">
 
   
 
@@ -85,47 +85,6 @@
   
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-493849-18"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           document.location = url;
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target);  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-493849-18', { 'anonymize_ip': true });
-
-  
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
-  
-
-
   
 
   <link rel="manifest" href="/index.webmanifest">
@@ -133,7 +92,7 @@
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
   <link rel="me" href="https://fosstodon.org/@BastilleBSD">
 
-  <link rel="canonical" href="https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/">
+  <link rel="canonical" href="http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/">
 
   
   
@@ -146,10 +105,10 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="BastilleBSD">
-  <meta property="og:url" content="https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/">
+  <meta property="og:url" content="http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/">
   <meta property="og:title" content="Bastille New Year 2021 Release Notes | BastilleBSD">
-  <meta property="og:description" content="I figured we should start out 2021 with a brand new Bastille release. Happy New Year!"><meta property="og:image" content="https://bastillebsd.org/img/icon-192.png">
-  <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="I figured we should start out 2021 with a brand new Bastille release. Happy New Year!"><meta property="og:image" content="http://localhost:1313/img/icon-192.png">
+  <meta property="twitter:image" content="http://localhost:1313/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2021-01-01T17:47:56-07:00">
@@ -385,28 +344,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/compare/"><span>Compare</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/contact/"><span>Contact</span></a>
         </li>
 
@@ -541,11 +478,11 @@ will automatically have one of the default templates applied when created.
 Default templates include: <code>base</code>, <code>empty</code>, <code>thick</code>, <code>thin</code>, and <code>vnet</code>.</p>
 <p><strong>bastille.conf changes</strong></p>
 <pre tabindex="0"><code>## Default Templates
-bastille_template_base=&quot;default/base&quot;      ## default: &quot;default/base&quot;
-bastille_template_empty=&quot;default/empty&quot;    ## default: &quot;default/empty&quot;
-bastille_template_thick=&quot;default/thick&quot;    ## default: &quot;default/thick&quot;
-bastille_template_thin=&quot;default/thin&quot;      ## default: &quot;default/thin&quot;
-bastille_template_vnet=&quot;default/vnet&quot;      ## default: &quot;default/vnet&quot;
+bastille_template_base=&#34;default/base&#34;      ## default: &#34;default/base&#34;
+bastille_template_empty=&#34;default/empty&#34;    ## default: &#34;default/empty&#34;
+bastille_template_thick=&#34;default/thick&#34;    ## default: &#34;default/thick&#34;
+bastille_template_thin=&#34;default/thin&#34;      ## default: &#34;default/thin&#34;
+bastille_template_vnet=&#34;default/vnet&#34;      ## default: &#34;default/vnet&#34;
 </code></pre><h3 id="development-release">Development RELEASE</h3>
 <p>Bastille now supports bootstrapping 13-CURRENT releases for testing and
 development. Note: container version(s) must be <code>&lt;=</code> host version. ie;
@@ -564,7 +501,7 @@ ARG user=root
 # Without a default:
 ARG domain
 # Then used in subsequent values:
-CMD echo &quot;${username}@${domain}&quot;
+CMD echo &#34;${username}@${domain}&#34;
 </code></pre><p>Values can also be applied dynamically at the time of applying the
 template:</p>
 <pre tabindex="0"><code>bastille template webjail bastillebsd-templates/nginx --arg username=admin --arg domain=example.com
@@ -582,7 +519,7 @@ bastille config TARGET set interface lagg0
 RESTART
 PKG postgres...
 SYSRC ...
-</code></pre><h3 id="bastille-template---convert">bastille template &ndash;convert</h3>
+</code></pre><h3 id="bastille-template-convert">bastille template &ndash;convert</h3>
 <p>With this release we are deprecating the previous hook syntax in favor of the Bastillefile format. For this reason we have included a simple conversion tool that will generate a <code>Bastillefile</code> within an existing template directory based on the legacy hook files.</p>
 <pre tabindex="0"><code>bastille template --convert template/foo
 </code></pre><h3 id="bug-fixes">Bug-fixes</h3>
@@ -632,7 +569,7 @@ SYSRC ...
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;text=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;text=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -645,7 +582,7 @@ SYSRC ...
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;t=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;t=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -658,7 +595,7 @@ SYSRC ...
       
       
       <li>
-        <a href="mailto:?subject=Bastille%20New%20Year%202021%20Release%20Notes&amp;body=https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Bastille%20New%20Year%202021%20Release%20Notes&amp;body=http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -671,7 +608,7 @@ SYSRC ...
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;title=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;title=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -684,7 +621,7 @@ SYSRC ...
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Bastille%20New%20Year%202021%20Release%20Notes%20https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Bastille%20New%20Year%202021%20Release%20Notes%20http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -697,7 +634,7 @@ SYSRC ...
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;title=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/&amp;title=Bastille%20New%20Year%202021%20Release%20Notes" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -733,7 +670,7 @@ SYSRC ...
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="/authors/admin/">Christer Edwards</a></h5>
+      <h5 class="card-title"><a href="/authors/authors/">Christer Edwards</a></h5>
       <h6 class="card-subtitle">Code Custodian</h6>
       <p class="card-text">FreeBSD die-hard, software developer, author, educator, man behind BastilleBSD.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -941,7 +878,7 @@ SYSRC ...
     
     
     
-    <script src="/js/academic.min.97a09d5f4a4db841d4e43045bd339c16.js"></script>
+    <script src="/js/academic.min.23450efb3a44cb57aeb4b7ee382f39e8.js"></script>
 
     
 
@@ -957,7 +894,7 @@ SYSRC ...
   
 
   <p class="powered-by">
-    © 2018-2023 &middot; 
+    © 2018-2025 &middot; 
 
     BastilleBSD 
 
