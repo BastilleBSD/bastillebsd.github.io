@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bastille Blog | BastilleBSD</title>
-    <link>http://localhost:1313/blog/</link>
-      <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://bastillebsd.org/blog/</link>
+      <atom:link href="https://bastillebsd.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Bastille Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Sat, 09 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/img/icon-192.png</url>
+      <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>Bastille Blog</title>
-      <link>http://localhost:1313/blog/</link>
+      <link>https://bastillebsd.org/blog/</link>
     </image>
     
     <item>
       <title>Automating Ten Things To Do After Installing FreeBSD With Rocinante</title>
-      <link>http://localhost:1313/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</link>
+      <link>https://bastillebsd.org/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</link>
       <pubDate>Sun, 15 Jun 2025 12:52:13 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</guid>
+      <guid>https://bastillebsd.org/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</guid>
       <description>
 
 
@@ -34,7 +34,7 @@
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/rocinante.jpeg&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/rocinante.jpeg&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -93,9 +93,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Ten Things To Do After Installing FreeBSD</title>
-      <link>http://localhost:1313/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</link>
+      <link>https://bastillebsd.org/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</link>
       <pubDate>Wed, 16 Feb 2022 21:21:25 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</guid>
+      <guid>https://bastillebsd.org/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</guid>
       <description>
 
 
@@ -113,7 +113,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/freebsd-new-logo.png&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/freebsd-new-logo.png&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -243,9 +243,9 @@ service ntpd restart
     
     <item>
       <title>Bastille Template: AdGuard Home Exporter</title>
-      <link>http://localhost:1313/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</link>
+      <link>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</link>
       <pubDate>Thu, 13 Jan 2022 12:00:10 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</guid>
+      <guid>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</guid>
       <description>
 
 
@@ -263,7 +263,7 @@ service ntpd restart
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/adguardhome-exporter-template.png&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/adguardhome-exporter-template.png&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -384,9 +384,9 @@ Dashboard&lt;/a&gt; too.&lt;/p&gt;
     
     <item>
       <title>Bastille 0.9.20211225 Demo Livestream</title>
-      <link>http://localhost:1313/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</link>
+      <link>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</link>
       <pubDate>Fri, 07 Jan 2022 12:00:10 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</guid>
+      <guid>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -408,9 +408,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Closing Out 2021 With New Bastille Release</title>
-      <link>http://localhost:1313/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</link>
+      <link>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</link>
       <pubDate>Thu, 23 Dec 2021 15:52:01 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</guid>
+      <guid>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</guid>
       <description>
 
 
@@ -428,7 +428,7 @@ containerized applications on FreeBSD.&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/debian-ubuntu.jpg&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/debian-ubuntu.jpg&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -577,9 +577,9 @@ supports multiple options as described here:&lt;/p&gt;
     
     <item>
       <title>Bastille Template: AdGuard Home</title>
-      <link>http://localhost:1313/blog/2022/01/03/bastille-template-examples-adguardhome/</link>
+      <link>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</link>
       <pubDate>Tue, 14 Dec 2021 12:00:10 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2022/01/03/bastille-template-examples-adguardhome/</guid>
+      <guid>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</guid>
       <description>
 
 
@@ -597,7 +597,7 @@ supports multiple options as described here:&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/adguardhome-template.png&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/adguardhome-template.png&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -804,9 +804,9 @@ making changes to the configuration.&lt;/p&gt;
     
     <item>
       <title>Experimenting With Ubuntu and Debian Linux Containers</title>
-      <link>http://localhost:1313/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</link>
+      <link>https://bastillebsd.org/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</link>
       <pubDate>Fri, 30 Jul 2021 16:15:41 -0600</pubDate>
-      <guid>http://localhost:1313/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</guid>
+      <guid>https://bastillebsd.org/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</guid>
       <description>
 
 
@@ -824,7 +824,7 @@ making changes to the configuration.&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/debian-ubuntu.jpg&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/debian-ubuntu.jpg&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -1080,37 +1080,10 @@ templates to automate Linux containers. This means by default the
     </item>
     
     <item>
-      <title>Thin vs Thick Whats the Difference</title>
-      <link>http://localhost:1313/blog/2021/02/10/thin-vs-thick-whats-the-difference/</link>
-      <pubDate>Wed, 10 Feb 2021 12:44:35 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/02/10/thin-vs-thick-whats-the-difference/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;Include note(s) about container lifecycle.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;thin is default and meant for short-lived containers&lt;/li&gt;
-&lt;li&gt;thick is available for longer lived containers&lt;/li&gt;
-&lt;li&gt;thick should be used (or converted to) before version upgrades&lt;/li&gt;
-&lt;li&gt;again, see container lifescycle.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;if container is expected to be longer lived than a single FreeBSD release it should be thick&lt;/strong&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Bastille New Year 2021 Bug Fix Release Notes</title>
-      <link>http://localhost:1313/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</link>
+      <link>https://bastillebsd.org/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</link>
       <pubDate>Fri, 15 Jan 2021 22:16:57 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</guid>
+      <guid>https://bastillebsd.org/blog/2021/01/15/bastille-new-year-2021-bug-fix-release-notes/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -1138,9 +1111,9 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
     
     <item>
       <title>Bastille Port Redirection and Persistence</title>
-      <link>http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/</link>
+      <link>https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/</link>
       <pubDate>Wed, 13 Jan 2021 12:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/13/bastille-port-redirection-and-persistence/</guid>
+      <guid>https://bastillebsd.org/blog/2021/01/13/bastille-port-redirection-and-persistence/</guid>
       <description>
 
 
@@ -1158,7 +1131,7 @@ addresses a few minor issues with the 0.8.20210101 release.&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/secure-networking.png&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/secure-networking.png&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -1251,9 +1224,9 @@ access services from outside.&lt;/p&gt;
     
     <item>
       <title>Bastille Default Templates and Customization</title>
-      <link>http://localhost:1313/blog/2021/01/06/bastille-default-templates-and-customization/</link>
+      <link>https://bastillebsd.org/blog/2021/01/06/bastille-default-templates-and-customization/</link>
       <pubDate>Sat, 09 Jan 2021 12:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/06/bastille-default-templates-and-customization/</guid>
+      <guid>https://bastillebsd.org/blog/2021/01/06/bastille-default-templates-and-customization/</guid>
       <description>
 
 
@@ -1271,7 +1244,7 @@ access services from outside.&lt;/p&gt;
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://localhost:1313/img/stackable-templates.png&#34; alt=&#34;&#34; &gt;
+&lt;img src=&#34;https://bastillebsd.org/img/stackable-templates.png&#34; alt=&#34;&#34; &gt;
 
 
   
@@ -1466,352 +1439,10 @@ container type and can be extended using any Bastille sub-command.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Bastille on Xigmanas</title>
-      <link>http://localhost:1313/blog/2021/04/14/bastille-on-xigmanas/</link>
-      <pubDate>Sat, 09 Jan 2021 11:52:20 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/04/14/bastille-on-xigmanas/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bastille on DragonflyBSD</title>
-      <link>http://localhost:1313/blog/2021/04/07/bastille-on-dragonflybsd/</link>
-      <pubDate>Sat, 09 Jan 2021 11:50:13 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/04/07/bastille-on-dragonflybsd/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Read-Only Root: Confining the Root User</title>
-      <link>http://localhost:1313/blog/2021/03/31/read-only-root-confining-the-root-user/</link>
-      <pubDate>Mon, 04 Jan 2021 14:21:07 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/03/31/read-only-root-confining-the-root-user/</guid>
-      <description>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;http://localhost:1313/img/read-only-root.png&#34; alt=&#34;&#34; &gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    read-only root
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Containers Are Lightweight. Bastille Is Too</title>
-      <link>http://localhost:1313/blog/2021/03/24/containers-are-lightweight-bastille-is-too/</link>
-      <pubDate>Mon, 04 Jan 2021 14:18:58 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/03/24/containers-are-lightweight-bastille-is-too/</guid>
-      <description>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;http://localhost:1313/img/zero-dependencies.png&#34; alt=&#34;&#34; &gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    Containers are lightweight. Bastille is too.
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How to Track Latest Bastille for Testing and Development</title>
-      <link>http://localhost:1313/blog/2021/03/10/how-to-track-latest-bastille-for-testing-and-development/</link>
-      <pubDate>Mon, 04 Jan 2021 13:51:18 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/03/10/how-to-track-latest-bastille-for-testing-and-development/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>What Highly Secure by Default Means</title>
-      <link>http://localhost:1313/blog/2021/03/03/what-highly-secure-by-default-means/</link>
-      <pubDate>Mon, 04 Jan 2021 13:49:38 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/03/03/what-highly-secure-by-default-means/</guid>
-      <description>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;http://localhost:1313/img/highly-secure-by-default.png&#34; alt=&#34;&#34; &gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    Highly Secure By Default
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Container Snapshots and Backups</title>
-      <link>http://localhost:1313/blog/2021/02/24/container-snapshots-and-backups/</link>
-      <pubDate>Mon, 04 Jan 2021 13:47:49 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/02/24/container-snapshots-and-backups/</guid>
-      <description>
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;http://localhost:1313/img/snapshots.png&#34; alt=&#34;&#34; &gt;
-
-
-  
-  
-  &lt;figcaption&gt;
-    Container Snapshots and backups
-  &lt;/figcaption&gt;
-
-
-&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;snapshots-and-backups&#34;&gt;Snapshots and Backups&lt;/h2&gt;
-&lt;h2 id=&#34;bastille-zfs&#34;&gt;bastille zfs&lt;/h2&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Limiting Container Resources</title>
-      <link>http://localhost:1313/blog/2021/02/17/limiting-container-resources/</link>
-      <pubDate>Mon, 04 Jan 2021 13:46:41 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/02/17/limiting-container-resources/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;resource-controls&#34;&gt;Resource Controls&lt;/h2&gt;
-&lt;h2 id=&#34;bastille-limits&#34;&gt;bastille limits&lt;/h2&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Prometheus and Automatic Container Discovery</title>
-      <link>http://localhost:1313/blog/2021/01/20/prometheus-and-automatic-container-discovery/</link>
-      <pubDate>Sun, 03 Jan 2021 18:17:37 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/20/prometheus-and-automatic-container-discovery/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;prometheus-and-bastille&#34;&gt;Prometheus and Bastille&lt;/h2&gt;
-&lt;h2 id=&#34;bastille-template&#34;&gt;bastille template&lt;/h2&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Unbound DNS Containers With Optional Adblock</title>
-      <link>http://localhost:1313/blog/2021/02/03/unbound-dns-containers-with-optional-adblock/</link>
-      <pubDate>Sun, 03 Jan 2021 18:15:30 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/02/03/unbound-dns-containers-with-optional-adblock/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-is-unbound&#34;&gt;What is Unbound&lt;/h2&gt;
-&lt;h2 id=&#34;unbound-template&#34;&gt;Unbound Template&lt;/h2&gt;
-&lt;h2 id=&#34;adblock-optional&#34;&gt;Adblock (optional)&lt;/h2&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bastille and PostgreSQL Containers</title>
-      <link>http://localhost:1313/blog/2021/01/27/bastille-and-postgresql-containers/</link>
-      <pubDate>Sun, 03 Jan 2021 18:13:57 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/27/bastille-and-postgresql-containers/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-is-postgresql&#34;&gt;What is PostgreSQL?&lt;/h2&gt;
-&lt;h2 id=&#34;sys-v-ipc-primitives&#34;&gt;SYS V IPC Primitives&lt;/h2&gt;
-&lt;h2 id=&#34;bastille-config&#34;&gt;bastille config&lt;/h2&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Bastille New Year 2021 Release Notes</title>
-      <link>http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/</link>
+      <link>https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/</link>
       <pubDate>Fri, 01 Jan 2021 17:47:56 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2021/01/01/bastille-new-year-2021-release-notes/</guid>
+      <guid>https://bastillebsd.org/blog/2021/01/01/bastille-new-year-2021-release-notes/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -1910,29 +1541,10 @@ SYSRC ...
     </item>
     
     <item>
-      <title>Raspberry Pi Based Temperature and Humidity Sensors With FreeBSD and Bastille</title>
-      <link>http://localhost:1313/blog/2021/03/17/raspberry-pi-based-temperature-and-humidity-sensors-with-freebsd-and-bastille/</link>
-      <pubDate>Wed, 19 Aug 2020 18:00:04 -0600</pubDate>
-      <guid>http://localhost:1313/blog/2021/03/17/raspberry-pi-based-temperature-and-humidity-sensors-with-freebsd-and-bastille/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Bastille Networking in Depth</title>
-      <link>http://localhost:1313/blog/2020/02/17/bastille-networking-in-depth/</link>
+      <link>https://bastillebsd.org/blog/2020/02/17/bastille-networking-in-depth/</link>
       <pubDate>Mon, 17 Feb 2020 16:27:06 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2020/02/17/bastille-networking-in-depth/</guid>
+      <guid>https://bastillebsd.org/blog/2020/02/17/bastille-networking-in-depth/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2031,9 +1643,9 @@ provide the IP &lt;code&gt;0.0.0.0&lt;/code&gt; and the container will be config
     
     <item>
       <title>Bastille Groundhog Day Release</title>
-      <link>http://localhost:1313/blog/2020/02/02/bastille-groundhog-day-release/</link>
+      <link>https://bastillebsd.org/blog/2020/02/02/bastille-groundhog-day-release/</link>
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2020/02/02/bastille-groundhog-day-release/</guid>
+      <guid>https://bastillebsd.org/blog/2020/02/02/bastille-groundhog-day-release/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2143,9 +1755,9 @@ checkout. Use at your own risk; don&amp;rsquo;t use in production.&lt;/p&gt;
     
     <item>
       <title>Bastille pkg demo: Bastille in depth Series</title>
-      <link>http://localhost:1313/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</link>
+      <link>https://bastillebsd.org/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</link>
       <pubDate>Sun, 19 Jan 2020 10:17:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</guid>
+      <guid>https://bastillebsd.org/blog/2020/01/19/bastille-pkg-demo-bastille-in-depth/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2166,9 +1778,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Bastille cmd demo: Bastille in depth Series</title>
-      <link>http://localhost:1313/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</link>
+      <link>https://bastillebsd.org/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</link>
       <pubDate>Wed, 04 Dec 2019 10:17:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</guid>
+      <guid>https://bastillebsd.org/blog/2019/12/04/bastille-cmd-demo-bastille-in-depth/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2189,9 +1801,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Bastille create demo: Bastille in depth series</title>
-      <link>http://localhost:1313/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</link>
+      <link>https://bastillebsd.org/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</link>
       <pubDate>Wed, 04 Dec 2019 10:17:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</guid>
+      <guid>https://bastillebsd.org/blog/2019/12/04/bastille-create-demo-bastille-in-depth/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2212,9 +1824,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Bastille bootstrap demo: Bastille in depth Series</title>
-      <link>http://localhost:1313/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</link>
+      <link>https://bastillebsd.org/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</link>
       <pubDate>Sun, 01 Dec 2019 10:17:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</guid>
+      <guid>https://bastillebsd.org/blog/2019/12/01/bastille-bootstrap-demo-bastille-in-depth/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2235,9 +1847,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Getting Started Video</title>
-      <link>http://localhost:1313/blog/2019/11/30/getting-started-video/</link>
+      <link>https://bastillebsd.org/blog/2019/11/30/getting-started-video/</link>
       <pubDate>Sat, 30 Nov 2019 13:54:11 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/30/getting-started-video/</guid>
+      <guid>https://bastillebsd.org/blog/2019/11/30/getting-started-video/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2259,9 +1871,9 @@ containerized applications on FreeBSD.&lt;/p&gt;
     
     <item>
       <title>Thanksgiving 2019</title>
-      <link>http://localhost:1313/blog/2019/11/28/thanksgiving-2019/</link>
+      <link>https://bastillebsd.org/blog/2019/11/28/thanksgiving-2019/</link>
       <pubDate>Thu, 28 Nov 2019 09:29:45 -0700</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/28/thanksgiving-2019/</guid>
+      <guid>https://bastillebsd.org/blog/2019/11/28/thanksgiving-2019/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2298,33 +1910,10 @@ avoids a reported issue and ensures firewall state is retained.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Getting Started Video</title>
-      <link>http://localhost:1313/blog/2019/11/26/getting-started-video/</link>
-      <pubDate>Tue, 26 Nov 2019 15:26:23 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/26/getting-started-video/</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;Bastille is an open-source system for automating deployment and management
-containerized applications on FreeBSD.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Follow &lt;a href=&#34;https://fosstodon.org/@BastilleBSD&#34;&gt;@BastilleBSD on Mastodon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://discord.gg/FawhD6DUdm&#34;&gt;BastilleBSD on Discord&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Join the discussion &lt;a href=&#34;https://t.me/BastilleBSD&#34;&gt;BastilleBSD on Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Subscribe to &lt;a href=&#34;https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA&#34;&gt;BastilleBSD on YouTube&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Support &lt;a href=&#34;https://patreon.com/BastilleBSD&#34;&gt;BastilleBSD on Patreon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/akKZ-KblEAY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-</description>
-    </item>
-    
-    <item>
       <title>Release Notes - Captain Jack</title>
-      <link>http://localhost:1313/blog/2019/11/25/captain-jack/</link>
+      <link>https://bastillebsd.org/blog/2019/11/25/captain-jack/</link>
       <pubDate>Mon, 25 Nov 2019 04:36:59 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/25/captain-jack/</guid>
+      <guid>https://bastillebsd.org/blog/2019/11/25/captain-jack/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
@@ -2404,9 +1993,9 @@ will bind the ip to that interface on start.&lt;/p&gt;
     
     <item>
       <title>Regarding Updating</title>
-      <link>http://localhost:1313/blog/2019/11/24/regarding-updating/</link>
+      <link>https://bastillebsd.org/blog/2019/11/24/regarding-updating/</link>
       <pubDate>Sun, 24 Nov 2019 16:43:31 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2019/11/24/regarding-updating/</guid>
+      <guid>https://bastillebsd.org/blog/2019/11/24/regarding-updating/</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;Bastille is an open-source system for automating deployment and management
 containerized applications on FreeBSD.&lt;/p&gt;
