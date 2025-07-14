@@ -5,12 +5,237 @@
     <link>https://bastillebsd.org/</link>
       <atom:link href="https://bastillebsd.org/index.xml" rel="self" type="application/rss+xml" />
     <description>BastilleBSD</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Wed, 18 Jun 2025 12:52:13 -0700</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Tue, 01 Jul 2025 12:00:00 +0000</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>BastilleBSD</title>
       <link>https://bastillebsd.org/</link>
     </image>
+    
+    <item>
+      <title>Expert Security &amp; Infrastructure Consulting</title>
+      <link>https://bastillebsd.org/consulting/</link>
+      <pubDate>Tue, 01 Jul 2025 12:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/consulting/</guid>
+      <description>&lt;p&gt;&lt;em&gt;From the creator of BastilleBSD – FreeBSD Container Management Made Simple&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Secure infrastructure starts with trusted tools. Let BastilleBSD be your
+foundation.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-industry-expertise&#34;&gt;🌐 Industry Expertise&lt;/h2&gt;
+&lt;p&gt;We’ve helped teams in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cybersecurity&lt;/strong&gt;: Network segmentation and zero-trust architecture using jails.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Telecom&lt;/strong&gt;: IPv6 rollout, DNS filtering, and redundant edge design.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media &amp;amp; Hosting&lt;/strong&gt;: Lightweight, jail-based service isolation at scale.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Education &amp;amp; Research&lt;/strong&gt;: Custom FreeBSD lab environments with repeatable automation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whether you&amp;rsquo;re building something brand new or breathing life into legacy
+systems, we’re here to help—bringing decades of hands-on FreeBSD experience and
+proven, production-hardened design patterns to your project. We don’t just
+consult; we collaborate, troubleshoot, and build alongside you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-we-offer&#34;&gt;🛠️ What We Offer&lt;/h2&gt;
+&lt;p&gt;At the heart of our consulting services is a commitment to bringing
+BastilleBSD&amp;rsquo;s core philosophy&amp;ndash;security, simplicity and automation&amp;ndash;into your
+unique infrastructure and application environment. We work closely with you to
+tailor solutions that reflect both the power of BastilleBSD and the specific
+needs of your systems. &lt;strong&gt;Build with purpose&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;-security-consulting&#34;&gt;🔐 Security Consulting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Security-first infrastructure audits and hardening&lt;/li&gt;
+&lt;li&gt;Jail isolation and privilege reduction&lt;/li&gt;
+&lt;li&gt;Bastille-native firewall and PF integration&lt;/li&gt;
+&lt;li&gt;Minimal surface area deployment planning&lt;/li&gt;
+&lt;li&gt;Infrastructure, Email, Web, and DNS security best practices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-infrastructure-design--automation&#34;&gt;🧩 Infrastructure Design &amp;amp; Automation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Custom containerized deployments using BastilleBSD&lt;/li&gt;
+&lt;li&gt;Host and jail-level configuration management with Rocinante&lt;/li&gt;
+&lt;li&gt;ZFS storage architecture for performance and reliability&lt;/li&gt;
+&lt;li&gt;High-availability design for mission-critical workloads&lt;/li&gt;
+&lt;li&gt;Secure IPv6/dual-stack networking for modern systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-freebsd-porting--packaging&#34;&gt;📦 FreeBSD Porting &amp;amp; Packaging&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Tailored pkg-based delivery pipelines&lt;/li&gt;
+&lt;li&gt;Creation and maintenance of private FreeBSD package repos&lt;/li&gt;
+&lt;li&gt;FreeBSD ports tree contribution and patching support&lt;/li&gt;
+&lt;li&gt;Automated testing for jail-friendly application delivery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-software-development--automation&#34;&gt;🧪 Software Development &amp;amp; Automation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Custom Bastille templates for rapid app deployment&lt;/li&gt;
+&lt;li&gt;GitOps workflows for infrastructure as code&lt;/li&gt;
+&lt;li&gt;FreeBSD base system tuning and optimization&lt;/li&gt;
+&lt;li&gt;Automated service provisioning pipelines&lt;/li&gt;
+&lt;li&gt;RESTful API integrations and custom Bastille modules&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-why-choose-us&#34;&gt;🚀 Why Choose Us?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Proven Tools&lt;/strong&gt;: We created BastilleBSD and Rocinante to solve real-world operational challenges.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security at the Core&lt;/strong&gt;: Our solutions are designed to reduce human error, limit attack surface, and enforce best practices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No Vendor Lock-In&lt;/strong&gt;: 100% open-source and FreeBSD-native tooling.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sustainable Engineering&lt;/strong&gt;: Lightweight, fast, and maintainable infrastructure with minimal overhead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-lets-build-something-together&#34;&gt;🤝 Let&amp;rsquo;s Build Something Together&lt;/h2&gt;
+&lt;p&gt;Whether you&amp;rsquo;re looking for a trusted partner to help you modernize
+infrastructure, automate deployments, or lock down your security
+posture—&lt;strong&gt;we&amp;rsquo;re here to help you.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reach out for a &lt;strong&gt;free consultation&lt;/strong&gt; and let’s explore how BastilleBSD-powered
+solutions can work for you and your team.&lt;/p&gt;
+&lt;p&gt;📧 &lt;strong&gt;&lt;a href=&#34;mailto:consulting@bastillebsd.org&#34;&gt;consulting@bastillebsd.org&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-trusted-by-the-freebsd-community&#34;&gt;✅ Trusted by the FreeBSD Community&lt;/h2&gt;
+&lt;p&gt;BastilleBSD has become the de facto standard for secure container management on
+FreeBSD. Building on that trust, we now offer professional &lt;strong&gt;Security and
+Infrastructure Consulting&lt;/strong&gt; for teams and organizations seeking robust,
+lightweight, and automated infrastructure solutions grounded in open-source
+principles.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Secure infrastructure starts with trusted tools. Let BastilleBSD be your
+foundation.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Expert Training Services</title>
+      <link>https://bastillebsd.org/training/</link>
+      <pubDate>Tue, 01 Jul 2025 12:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/training/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Professional training for FreeBSD administrators, powered by BastilleBSD and Rocinante.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-build-skills-gain-confidence-get-certified&#34;&gt;🧠 Build Skills. Gain Confidence. Get Certified.&lt;/h2&gt;
+&lt;p&gt;Whether you&amp;rsquo;re managing a single server or scaling a secure platform across
+dozens of hosts, our professional training programs give your team the &lt;strong&gt;tools,
+knowledge, and confidence&lt;/strong&gt; to deploy secure FreeBSD-based infrastructure using
+BastilleBSD and Rocinante.&lt;/p&gt;
+&lt;p&gt;Taught by accomplished trainers with academic, industry, and certification-backed
+expertise, our courses are built to deliver &lt;strong&gt;hands-on, production-grade
+skills&lt;/strong&gt; for real-world systems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-course-offerings&#34;&gt;🛠️ Course Offerings&lt;/h2&gt;
+&lt;h3 id=&#34;-secure-freebsd-administration&#34;&gt;📦 Secure FreeBSD Administration&lt;/h3&gt;
+&lt;p&gt;Learn the essentials of building, hardening, and managing FreeBSD systems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;System installation, jails, and base system tuning&lt;/li&gt;
+&lt;li&gt;Secure service configuration (SSH, PF, DNS, Mail)&lt;/li&gt;
+&lt;li&gt;Filesystem and storage best practices with ZFS&lt;/li&gt;
+&lt;li&gt;Patching and OS lifecycle management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-bastillebsd-deep-dive&#34;&gt;🧱 BastilleBSD Deep Dive&lt;/h3&gt;
+&lt;p&gt;Master containerization on FreeBSD with the tool trusted by thousands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bastille architecture and security model&lt;/li&gt;
+&lt;li&gt;Jail provisioning and template automation&lt;/li&gt;
+&lt;li&gt;Networking, NAT, firewall, and virtual interface design&lt;/li&gt;
+&lt;li&gt;Jail-to-jail and jail-to-host communication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-rocinante-automation--host-configuration&#34;&gt;⚙️ Rocinante Automation &amp;amp; Host Configuration&lt;/h3&gt;
+&lt;p&gt;Go beyond containers—bring Bastillefile automation to your entire infrastructure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Host system bootstrapping with Rocinante&lt;/li&gt;
+&lt;li&gt;Bastillefile templating for system-wide config&lt;/li&gt;
+&lt;li&gt;Managing environments reproducibly across servers&lt;/li&gt;
+&lt;li&gt;Lightweight GitOps-style automation for FreeBSD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-secure-infrastructure-certification-prep&#34;&gt;🔐 Secure Infrastructure Certification Prep&lt;/h3&gt;
+&lt;p&gt;A capstone experience preparing students for formal certification:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-world threat modeling and infrastructure review&lt;/li&gt;
+&lt;li&gt;Simulated lab exercises on secure deployment&lt;/li&gt;
+&lt;li&gt;Practical exam covering BastilleBSD, Rocinante, and secure FreeBSD usage&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Certification issued upon successful evaluation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-instructor-credentials&#34;&gt;🎓 Instructor Credentials&lt;/h2&gt;
+&lt;p&gt;Our training team brings together academic instruction, enterprise
+cybersecurity experience, and a wealth of certifications:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Adjunct Instructor&lt;/strong&gt;, University of Utah&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cybersecurity Trainer&lt;/strong&gt; for programs at:
+&lt;ul&gt;
+&lt;li&gt;University of Nevada, Las Vegas (UNLV)&lt;/li&gt;
+&lt;li&gt;San Diego State University (SDSU)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Professional Certifications:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🛡️ ISC² &lt;strong&gt;SSCP&lt;/strong&gt; — Systems Security Certified Practitioner&lt;/li&gt;
+&lt;li&gt;🧪 CompTIA &lt;strong&gt;Pentest+&lt;/strong&gt; — Penetration Testing&lt;/li&gt;
+&lt;li&gt;🔍 CompTIA &lt;strong&gt;CySA+&lt;/strong&gt; — Cybersecurity Analyst&lt;/li&gt;
+&lt;li&gt;📊 CompTIA &lt;strong&gt;Project+&lt;/strong&gt; — Project Management&lt;/li&gt;
+&lt;li&gt;🌐 CompTIA &lt;strong&gt;Network+&lt;/strong&gt; — Network Security&lt;/li&gt;
+&lt;li&gt;📈 CompTIA &lt;strong&gt;CSAP&lt;/strong&gt; — Security Analytics Professional&lt;/li&gt;
+&lt;li&gt;🏗️ CompTIA &lt;strong&gt;CSIS&lt;/strong&gt; — Secure Infrastructure Specialist&lt;/li&gt;
+&lt;li&gt;🔓 CompTIA &lt;strong&gt;CNVP&lt;/strong&gt; — Network Vulnerability Professional&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With decades of hands-on experience building and securing FreeBSD-based
+infrastructure, our trainers are uniquely equipped to teach &lt;strong&gt;secure,
+repeatable, and reliable operations&lt;/strong&gt; in a way that all the education you
+recieve is effectively retained.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-who-should-attend&#34;&gt;🎯 Who Should Attend?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;System Administrators&lt;/strong&gt; deploying or managing FreeBSD servers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DevOps Engineers&lt;/strong&gt; looking to implement GitOps-style automation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security Professionals&lt;/strong&gt; seeking hardened container environments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infrastructure Teams&lt;/strong&gt; modernizing legacy systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Platform Engineers&lt;/strong&gt; designing repeatable and scalable server environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-what-youll-gain&#34;&gt;🧰 What You’ll Gain&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Practical, real-world skills for secure FreeBSD infrastructure&lt;/li&gt;
+&lt;li&gt;Mastery of BastilleBSD and Rocinante tooling&lt;/li&gt;
+&lt;li&gt;Hands-on labs and guided automation walkthroughs&lt;/li&gt;
+&lt;li&gt;Certification issued upon course completion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-training-formats&#34;&gt;📅 Training Formats&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Live Online Workshops&lt;/strong&gt; (2–4 day format)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Private Team Trainings&lt;/strong&gt; (customized for you or your organization)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In-Person Intensive Bootcamps&lt;/strong&gt; (customized for you or your organization)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;On-Demand Courses&lt;/strong&gt; &lt;em&gt;(Being developed)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-certification-benefits&#34;&gt;🏅 Certification Benefits&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Verifiable digital certificate&lt;/li&gt;
+&lt;li&gt;Optional directory listing in &lt;strong&gt;BastilleBSD Certified Professionals&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Early access to new tools, advanced courses, and beta features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-ready-to-train-with-the-best&#34;&gt;🚀 Ready to Train With the Best?&lt;/h2&gt;
+&lt;p&gt;Secure infrastructure isn’t just about the tools—it’s about the people who use
+them.  Empower your team with &lt;strong&gt;expert-led training&lt;/strong&gt; from the creator of
+BastilleBSD.&lt;/p&gt;
+&lt;p&gt;📧 &lt;strong&gt;&lt;a href=&#34;mailto:training@bastillebsd.org&#34;&gt;training@bastillebsd.org&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Secure. Repeatable. Reliable. Train with certified professionals you can
+trust.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>BastilleBSD Release History</title>
+      <link>https://bastillebsd.org/history/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Share Pkg Cache Between Jails</title>
+      <link>https://bastillebsd.org/blog/2025/07/01/share-pkg-cache-between-jails/</link>
+      <pubDate>Mon, 23 Jun 2025 15:38:35 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2025/07/01/share-pkg-cache-between-jails/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Automating Ten Things To Do After Installing FreeBSD With Rocinante</title>
@@ -163,8 +388,8 @@ the first time:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Do you want to fetch and install it now? &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;y/N&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;: y
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Verifying signature with trusted certificate pkg.freebsd.org.2013102301... &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-2.1.4...
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-2.1.4: 100%
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Installing pkg-2.2.1...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;freebsd&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; Extracting pkg-2.2.1: 100%
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;root@freebsd:~ &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tip: this bootstrapping step can be automated using the following command:
 &lt;code&gt;env ASSUME_ALWAYS_YES=YES pkg bootstrap&lt;/code&gt;&lt;/p&gt;
@@ -219,10 +444,7 @@ syntax of &lt;code&gt;name_enable=(YES|NO)&lt;/code&gt;. For example, to start c
 automatically at boot you can set &lt;code&gt;bastille_enable=YES&lt;/code&gt; using:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc bastille_enable&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;YES
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By default, Bastille will start all created containers at boot when enabled.&lt;/p&gt;
-&lt;p&gt;To specify a limited list of containers to start at boot, set the optional
-&lt;code&gt;bastille_list&lt;/code&gt; value to the name(s) of containers to start.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sysrc bastille_list&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;azkaban arkham alcatraz&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once services have been enabled in the &lt;code&gt;/etc/rc.conf&lt;/code&gt;, they can be managed
+&lt;p&gt;Once services have been enabled in the &lt;code&gt;/etc/rc.conf&lt;/code&gt;, they can be managed
 using the &lt;code&gt;service&lt;/code&gt; command.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;service foo &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;start|stop|restart&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bastille does not run as a service and does not need to be started as such.
@@ -590,14 +812,6 @@ Use &amp;#34;rocinante command -h|--help&amp;#34; for more information about a c
 the &lt;a href=&#34;https://docs.rocinante.sh&#34;&gt;Rocinante Documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>BastilleBSD Release History</title>
-      <link>https://bastillebsd.org/history/</link>
-      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://bastillebsd.org/history/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -2542,6 +2756,14 @@ and merge changes as necessary.&lt;/p&gt;
 &lt;p&gt;Configuration options that are of primary concern are the ZFS and Network
 related options.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://bastillebsd.org/platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://bastillebsd.org/platform/</guid>
+      <description></description>
     </item>
     
   </channel>

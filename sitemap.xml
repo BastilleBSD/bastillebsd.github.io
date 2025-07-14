@@ -3,40 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bastillebsd.org/</loc>
-    <lastmod>2025-06-18T12:52:13-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
-    <loc>https://bastillebsd.org/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</loc>
-    <lastmod>2025-06-15T12:52:13-07:00</lastmod>
+    <loc>https://bastillebsd.org/consulting/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
+  </url><url>
+    <loc>https://bastillebsd.org/training/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
+  </url><url>
+    <loc>https://bastillebsd.org/history/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
+  </url><url>
+    <loc>https://bastillebsd.org/blog/2025/07/01/share-pkg-cache-between-jails/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/</loc>
-    <lastmod>2021-01-09T19:51:25-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
+  </url><url>
+    <loc>https://bastillebsd.org/blog/2025/06/15/automating-new-freebsd-installations-with-rocinante/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/press/</loc>
     <lastmod>2025-06-15T16:54:07-07:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/getting-started/</loc>
-    <lastmod>2025-06-15T16:50:13-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/rocinante/</loc>
-    <lastmod>2025-06-14T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/history/</loc>
-    <lastmod>2025-06-15T16:52:10-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2022/01/15/ten-things-to-do-after-installing-freebsd/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2022/01/14/bastille-template-examples-adguardhome-exporter/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2022/01/07/bastille-0-9-20211225-demo-livestream/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2021/12/25/closing-out-2021-with-new-bastille-release/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2022/01/03/bastille-template-examples-adguardhome/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2021/08/01/bastille-experiments-with-ubuntu-and-debian-linux-containers/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
@@ -78,7 +87,7 @@
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2019/11/30/getting-started-video/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2019/11/28/thanksgiving-2019/</loc>
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
@@ -87,17 +96,20 @@
     <lastmod>2023-11-18T21:11:32-07:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/blog/2019/11/24/regarding-updating/</loc>
-    <lastmod>2023-11-18T21:11:32-07:00</lastmod>
-  </url><url>
-    <loc>https://bastillebsd.org/authors/admin/</loc>
-    <lastmod>2025-06-15T16:48:17-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/authors/authors/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
+  </url><url>
+    <loc>https://bastillebsd.org/platform/</loc>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/authors/</loc>
-    <lastmod>2025-06-15T16:48:17-07:00</lastmod>
+    <lastmod>2025-07-14T16:35:16-06:00</lastmod>
   </url><url>
     <loc>https://bastillebsd.org/categories/</loc>
+  </url><url>
+    <loc>https://bastillebsd.org/cedwards/</loc>
   </url><url>
     <loc>https://bastillebsd.org/celebrate/</loc>
     <lastmod>2021-01-10T10:46:21-07:00</lastmod>

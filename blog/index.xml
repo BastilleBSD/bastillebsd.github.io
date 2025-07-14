@@ -5,12 +5,20 @@
     <link>https://bastillebsd.org/blog/</link>
       <atom:link href="https://bastillebsd.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Bastille Blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright><lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://bastillebsd.org/img/icon-192.png</url>
       <title>Bastille Blog</title>
       <link>https://bastillebsd.org/blog/</link>
     </image>
+    
+    <item>
+      <title>Share Pkg Cache Between Jails</title>
+      <link>https://bastillebsd.org/blog/2025/07/01/share-pkg-cache-between-jails/</link>
+      <pubDate>Mon, 23 Jun 2025 15:38:35 -0700</pubDate>
+      <guid>https://bastillebsd.org/blog/2025/07/01/share-pkg-cache-between-jails/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Automating Ten Things To Do After Installing FreeBSD With Rocinante</title>

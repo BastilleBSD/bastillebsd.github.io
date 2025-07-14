@@ -48,7 +48,7 @@
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -114,7 +114,7 @@
     
       <meta property="article:published_time" content="2025-06-14T12:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2025-06-15T16:50:13-07:00">
+    <meta property="article:modified_time" content="2025-07-14T16:35:16-06:00">
   
 
   
@@ -226,6 +226,8 @@
         
         
         
+          
+        
 
         
         
@@ -235,7 +237,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/"><span>Home</span></a>
+          <a class="nav-link " href="/consulting/"><span>Consulting</span></a>
         </li>
 
         
@@ -257,7 +259,51 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+          <a class="nav-link " href="/training/"><span>Training</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/getting-started/"><span>Getting Started</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/platform/"><span>Platform</span></a>
         </li>
 
         
@@ -323,28 +369,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/getting-started/"><span>Getting Started</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link " href="/history/"><span>History</span></a>
         </li>
 
@@ -373,6 +397,28 @@
         
         
 
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
       
 
         
@@ -382,6 +428,10 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
 
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -523,8 +573,8 @@ the first time:</p>
 </span></span><span style="display:flex;"><span>Do you want to fetch and install it now? <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
 </span></span><span style="display:flex;"><span>Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
 </span></span><span style="display:flex;"><span>Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span style="color:#66d9ef">done</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-2.1.4...
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-2.1.4: 100%
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Installing pkg-2.2.1...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>freebsd<span style="color:#f92672">]</span> Extracting pkg-2.2.1: 100%
 </span></span><span style="display:flex;"><span>root@freebsd:~ <span style="color:#75715e">#</span>
 </span></span></code></pre></div><p>Tip: this bootstrapping step can be automated using the following command:
 <code>env ASSUME_ALWAYS_YES=YES pkg bootstrap</code></p>
@@ -579,10 +629,7 @@ syntax of <code>name_enable=(YES|NO)</code>. For example, to start containers
 automatically at boot you can set <code>bastille_enable=YES</code> using:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc bastille_enable<span style="color:#f92672">=</span>YES
 </span></span></code></pre></div><p>By default, Bastille will start all created containers at boot when enabled.</p>
-<p>To specify a limited list of containers to start at boot, set the optional
-<code>bastille_list</code> value to the name(s) of containers to start.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sysrc bastille_list<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;azkaban arkham alcatraz&#34;</span>
-</span></span></code></pre></div><p>Once services have been enabled in the <code>/etc/rc.conf</code>, they can be managed
+<p>Once services have been enabled in the <code>/etc/rc.conf</code>, they can be managed
 using the <code>service</code> command.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>service foo <span style="color:#f92672">[</span>start|stop|restart<span style="color:#f92672">]</span>
 </span></span></code></pre></div><p>Bastille does not run as a service and does not need to be started as such.

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cedwards | BastilleBSD</title>
+    <link>https://bastillebsd.org/cedwards/</link>
+      <atom:link href="https://bastillebsd.org/cedwards/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cedwards</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright>
+    <image>
+      <url>https://bastillebsd.org/img/icon-192.png</url>
+      <title>Cedwards</title>
+      <link>https://bastillebsd.org/cedwards/</link>
+    </image>
+    
+  </channel>
+</rss>

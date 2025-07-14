@@ -48,7 +48,7 @@
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
@@ -112,9 +112,9 @@
   <meta property="twitter:image" content="https://bastillebsd.org/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2025-06-14T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2025-06-24T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2025-06-15T16:52:10-07:00">
+    <meta property="article:modified_time" content="2025-07-14T16:35:16-06:00">
   
 
   
@@ -226,6 +226,8 @@
         
         
         
+          
+        
 
         
         
@@ -235,7 +237,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/" data-target="[]"><span>Home</span></a>
+          <a class="nav-link " href="/consulting/"><span>Consulting</span></a>
         </li>
 
         
@@ -257,7 +259,51 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+          <a class="nav-link " href="/training/"><span>Training</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/getting-started/"><span>Getting Started</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/platform/"><span>Platform</span></a>
         </li>
 
         
@@ -323,28 +369,6 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/getting-started/"><span>Getting Started</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-        
-        
-        
-        
-        
-
-        <li class="nav-item">
           <a class="nav-link  active" href="/history/" data-target="[]"><span>History</span></a>
         </li>
 
@@ -373,6 +397,28 @@
         
         
 
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blog/"><span>Blog</span></a>
+        </li>
+
+        
+        
+
       
 
         
@@ -382,6 +428,10 @@
     <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
       
 
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -606,12 +656,68 @@ self-reported):</p>
       <div class="col py-2">
         <div class="card">
           <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">July 14, 2025</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/1.0.20250714" target="_blank" rel="noopener">Bastille Day 2025 (1.0.20250714)</a></h4>
+            <div class="text-muted exp-meta">
+              Jul 14, 2025 –
+              
+                Present
+              
+              
+            </div>
+            <div class="card-text"><p>Bastille 1.0.20250714 marks a significant milestone, introducing numerous
+enhancements and bug fixes to improve stability, functionality, and user
+experience. A major highlight is the dynamic handling of epairs, allowing both
+-V and -B VNET jails to run simultaneously with a consistent naming scheme.
+Users upgrading to this version must restart all jails to convert
+configurations to the new epair naming syntax and update their bastille.conf
+file.</p>
+<p>Key features and improvements in this release include enhanced network
+management with dynamic epair handling, new live migration capabilities with
+backup options and sudo/doas support, and improved list command functionality.
+There&rsquo;s also enhanced IPv6 support across various operations with separate
+configurations. Template management has been refined with subdirectory
+support and improved bootstrapping. Performance is boosted by a new parallel
+mode for starting, stopping, and restarting jails. Resource management sees
+better package handling and improved limits (including cpuset). Storage now
+supports jailing datasets and ZFS mounting. CI/CD integration with Rocinante
+project scripts is included, alongside enhanced setup for network
+configuration, firewall, ZFS, and UFS. Additionally, MidnightBSD 3.x and 4.x
+releases are now supported.</p>
+<p>Bug fixes address issues with cloning single templates, variable name errors in
+the verify command, and various shellcheck issues, contributing to overall
+stability improvements.</p>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
             <h4 class="card-title exp-title text-muted mt-0 mb-1">April 20, 2025</h4>
             <h4 class="card-title exp-company text-muted my-0"><a href="https://github.com/BastilleBSD/bastille/releases/tag/0.14.20250420" target="_blank" rel="noopener">Easter Release (0.14.20250420)</a></h4>
             <div class="text-muted exp-meta">
               Apr 20, 2025 –
               
-                Present
+                Jul 14, 2025
               
               
             </div>
