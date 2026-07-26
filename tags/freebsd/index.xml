@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FreeBSD on BastilleBSD</title><link>https://bastillebsd.org/tags/freebsd/</link><description>Recent content in FreeBSD on BastilleBSD</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 26 Jul 2026 07:45:24 -0700</lastBuildDate><atom:link href="https://bastillebsd.org/tags/freebsd/index.xml" rel="self" type="application/rss+xml"/><item><title>Welcome to the BastilleBSD Community Library</title><link>https://bastillebsd.org/blog/2026/01/welcome-to-the-community-library/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://bastillebsd.org/blog/2026/01/welcome-to-the-community-library/</guid><description>&lt;p&gt;Welcome to the official launch of the BastilleBSD Community Library! This space is dedicated to becoming a premier resource for FreeBSD users, Linux users exploring FreeBSD, and anyone interested in secure, open-source computing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Our Mission&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our mission is simple: to build a comprehensive, community-driven library of high-quality articles, tutorials, and best practices. We aim to cover a wide range of topics, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;FreeBSD Fundamentals:&lt;/strong&gt; Getting started guides, system administration tips, and core concepts.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BastilleBSD Deep Dives:&lt;/strong&gt; Advanced tutorials on leveraging BastilleBSD for containerization and automation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Security &amp;amp; Networking:&lt;/strong&gt; Hardening guides, network configuration, and security best practices.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;From Linux to FreeBSD:&lt;/strong&gt; Practical advice for Linux users making the switch.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Open Source Spotlights:&lt;/strong&gt; Exploring other powerful open-source tools that pair well with FreeBSD.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;A Resource for All&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

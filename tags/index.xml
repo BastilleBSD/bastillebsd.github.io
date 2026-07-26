@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags | BastilleBSD</title>
-    <link>https://bastillebsd.org/tags/</link>
-      <atom:link href="https://bastillebsd.org/tags/index.xml" rel="self" type="application/rss+xml" />
-    <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2018-2025</copyright>
-    <image>
-      <url>https://bastillebsd.org/img/icon-192.png</url>
-      <title>Tags</title>
-      <link>https://bastillebsd.org/tags/</link>
-    </image>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on BastilleBSD</title><link>https://bastillebsd.org/tags/</link><description>Recent content in Tags on BastilleBSD</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 26 Jul 2026 07:45:24 -0700</lastBuildDate><atom:link href="https://bastillebsd.org/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Community</title><link>https://bastillebsd.org/tags/community/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://bastillebsd.org/tags/community/</guid><description/></item><item><title>FreeBSD</title><link>https://bastillebsd.org/tags/freebsd/</link><pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate><guid>https://bastillebsd.org/tags/freebsd/</guid><description/></item></channel></rss>

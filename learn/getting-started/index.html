@@ -1,0 +1,185 @@
+<!doctype html><html lang=en data-theme=dark><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Getting Started with Bastille — BastilleBSD</title><meta name=description content="It&rsquo;s dangerous to go alone! This guide takes you from a fresh FreeBSD install to running containers in under twenty minutes."><meta name=theme-color content="#100d0e"><link rel=canonical href=https://bastillebsd.org/learn/getting-started/><meta property="og:site_name" content="BastilleBSD"><meta property="og:title" content="Getting Started with Bastille"><meta property="og:description" content="It&rsquo;s dangerous to go alone! This guide takes you from a fresh FreeBSD install to running containers in under twenty minutes."><meta property="og:type" content="article"><meta property="og:url" content="https://bastillebsd.org/learn/getting-started/"><meta name=twitter:card content="summary"><link rel=icon href=/img/favicon.ico sizes=any><link rel=icon type=image/png href=/img/icon-192.png><link rel=apple-touch-icon href=/img/icon-512.png><link rel=stylesheet href=/css/main.min.ec6aa3cd25969af17f107311c91250dbd73e5029d00a9a29b86ec59ae864a740.css><script>(function(){try{var e=localStorage.getItem("theme");e||(e=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"),document.documentElement.setAttribute("data-theme",e)}catch{document.documentElement.setAttribute("data-theme","dark")}})()</script></head><body><a class=skip-link href=#main>Skip to content</a><header class=site-header><div class=container><nav class=nav aria-label=Primary><a class=brand href=/><img src=/img/bastille-icon.png alt width=28 height=28>
+<span>Bastille<b>BSD</b></span>
+</a><input type=checkbox id=nav-check aria-label="Toggle menu"><ul class=nav-menu><li class=nav-item><a class=nav-link href=# aria-haspopup=true>Projects <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><ul class=nav-dropdown><li><a href=/projects/bastille/>Bastille</a></li><li><a href=/projects/rocinante/>Rocinante</a></li><li><a href=/projects/bastillebsd/>BastilleBSD</a></li></ul></li><li class=nav-item><a class=nav-link href=# aria-haspopup=true>Services <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><ul class=nav-dropdown><li><a href=/services/consulting/>Consulting</a></li><li><a href=/services/training/>Training</a></li></ul></li><li class=nav-item><a class=nav-link href=# aria-haspopup=true>Learn <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><ul class=nav-dropdown><li><a href=/learn/getting-started/>Getting Started</a></li><li><a href=/learn/templates/>Templates</a></li><li><a href=https://docs.bastillebsd.org target=_blank rel=noopener>Documentation</a></li></ul></li><li class=nav-item><a class=nav-link href=/blog/>Blog</a></li><li class=nav-item><a class=nav-link href=/about/ aria-haspopup=true>About <svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg></a><ul class=nav-dropdown><li><a href=/about/history/>History</a></li><li><a href=/about/press/>Press</a></li><li><a href=/contact/>Contact</a></li></ul></li></ul><div class=nav-tools><a class="icon-btn desktop-only" href=https://github.com/BastilleBSD target=_blank rel=noopener aria-label=GitHub><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 2A10 10 0 008.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7.0.0.8-.3 2.7 1a9.4 9.4.0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7.0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>
+</a><a class="icon-btn desktop-only" href=https://discord.gg/FawhD6DUdm target=_blank rel=noopener aria-label=Discord><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M19.3 5.3A16 16 0 0015.4 4l-.2.4a12 12 0 013.5 1.7A11 11 0 005.3 6a12 12 0 013.5-1.7L8.6 4A16 16 0 004.7 5.3c-2.2 3.2-2.8 6.4-2.5 9.5a16 16 0 004.9 2.5l.6-1a10 10 0 01-1.6-.8l.4-.3a11.4 11.4.0 009.8.0l.4.3c-.5.3-1 .6-1.6.8l.6 1a16 16 0 004.9-2.5c.4-3.6-.6-6.8-2.8-9.5zM9 13.4c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6zm6 0c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6z"/></svg>
+</a><button class=icon-btn id=theme-toggle type=button aria-label="Toggle color theme">
+<span class=in-dark><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4 12H2m20 0h-2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19"/></svg>
+</span><span class=in-light hidden><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14A8 8 0 0110 4a8 8 0 1010 10z"/></svg>
+</span></button>
+<label class="icon-btn nav-toggle" for=nav-check aria-label="Toggle navigation"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label></div></nav></div></header><main id=main><article><div class=page-hero><div class=container><div class=breadcrumb><a href=/learn/>Learn</a> / Getting Started with Bastille</div><h1>Getting Started with Bastille</h1><p class=lead>It&rsquo;s dangerous to go alone! This guide takes you from a fresh FreeBSD install to running containers in under twenty minutes.</p></div></div><div class="section section--tight"><div class=container><div class=prose><figure class=fig><img src=/img/dangerous-to-go-alone.jpg alt="It's dangerous to go alone! Take this." loading=lazy><figcaption>It&rsquo;s dangerous to go alone! Take this.</figcaption></figure><h2 id=bastille-on-freebsd>Bastille on FreeBSD</h2><p>This document is designed to help you be successful in your use and adoption of
+Bastille and FreeBSD. This document begins with a brand-new FreeBSD 15.1 system
+deployed locally or in the cloud. Manual installation is not covered in this
+document.</p><h2 id=firstboot>Firstboot</h2><p>Upon logging into a system for the first time it is recommended to apply any
+security patches available:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>freebsd-update fetch install
+</span></span><span class=line><span class=cl>reboot
+</span></span></code></pre></div><p>After the <code>reboot</code> is complete, run <code>freebsd-update install</code> once again.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>freebsd-update install
+</span></span></code></pre></div><p>Verify your version and patch level with <code>freebsd-version</code>.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>freebsd-version
+</span></span></code></pre></div><blockquote><p>Tip: subscribe to <a href=https://lists.freebsd.org/mailman/listinfo/freebsd-security-notifications>this mailing
+list</a>
+for FreeBSD security notifications (low volume). Anytime you receive an email
+from this list, re-run <code>freebsd-update fetch install</code>.</p></blockquote><h2 id=packaging>Packaging</h2><p>FreeBSD provides binary packages, available in quarterly (default) and latest
+branches. These binary packages are built from the FreeBSD ports tree, which
+follows a rolling-release model. This means up-to-date packages are often
+available. To use the binary package manager, bootstrap it by running <code>pkg</code> for
+the first time:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>root@freebsd:~ <span class=c1># pkg bootstrap</span>
+</span></span><span class=line><span class=cl>The package management tool is not yet installed on your system.
+</span></span><span class=line><span class=cl>Do you want to fetch and install it now? <span class=o>[</span>y/N<span class=o>]</span>: y
+</span></span><span class=line><span class=cl>Bootstrapping pkg from pkg+http://pkg.FreeBSD.org/FreeBSD:15:amd64/quarterly, please wait...
+</span></span><span class=line><span class=cl>Verifying signature with trusted certificate pkg.freebsd.org.2013102301... <span class=k>done</span>
+</span></span><span class=line><span class=cl><span class=o>[</span>freebsd<span class=o>]</span> Installing pkg-2.2.1...
+</span></span><span class=line><span class=cl><span class=o>[</span>freebsd<span class=o>]</span> Extracting pkg-2.2.1: 100%
+</span></span><span class=line><span class=cl>root@freebsd:~ <span class=c1>#</span>
+</span></span></code></pre></div><p>Tip: this bootstrapping step can be automated using the following command:
+<code>env ASSUME_ALWAYS_YES=YES pkg bootstrap</code></p><p><strong>Quarterly</strong></p><p>If you take a closer look at the line of output after the bootstrap
+confirmation you&rsquo;ll notice that the last part of the URL says <code>quarterly</code>:</p><blockquote><p>Bootstrapping pkg &mldr; pkg.FreeBSD.org/FreeBSD:15:amd64/<code>quarterly</code>, please wait&mldr;</p></blockquote><p>This subscribes the host to a quarterly release cycle for binary packages. For
+most systems this is adequate. No changes are needed to subscribe to the
+quarterly repository.</p><p><strong>Latest</strong></p><p>To use the latest binary packages, update the pkg URL to use the latest suffix
+instead. A simple way to override the default settings is to create a new
+repository config with the updated path of <code>latest</code>.</p><p><strong>Migrate to latest:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>mkdir -p /usr/local/etc/pkg/repos
+</span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s1>&#39;FreeBSD: { url: &#39;</span>pkg+http://pkg.FreeBSD.org/<span class=se>\$\{</span>ABI<span class=se>\}</span>/latest<span class=s1>&#39;, enabled: yes }&#39;</span> &gt; /usr/local/etc/pkg/repos/FreeBSD.conf
+</span></span></code></pre></div><h2 id=package-basics>Package Basics</h2><p>In this section you&rsquo;ll learn the basics of using the package manager, and
+install a few creature comforts. FreeBSD&rsquo;s binary package manager works much
+like others you may have used.</p><p><strong>Example</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pkg install vim git-lite bash ca_root_nss
+</span></span></code></pre></div><p>The above pkg install command will add the <code>vim</code>, <code>git-lite</code>, <code>bash</code> and
+<code>ca_root_nss</code> (CA certificates) from the quarterly/latest repositories.
+Naturally you can replace <code>bash</code> with <code>zsh</code> (or another shell of your choice).</p><p>You may also search the pkg repository for named packages. <code>pkg search foo</code>
+will match packages including <code>foo</code>.</p><blockquote><p>Tip: Check out <a href=https://freshports.org>FreshPorts</a>.</p></blockquote><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pkg <span class=nb>help</span>
+</span></span></code></pre></div><p>You can always find help and a list of other options using <code>pkg help</code>.</p><h2 id=install-bastille>Install Bastille</h2><p>Now that you&rsquo;ve had a crash course in package basics, let&rsquo;s install <code>bastille</code>
+and start working with containers. Use one of the three options below. These
+are listed in order of preference / support.</p><p><strong>PKG</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>pkg install bastille
+</span></span></code></pre></div><blockquote><p>Note: as outlined above, the version of Bastille installed may differ depending on whether you&rsquo;re using <code>quarterly</code> or <code>latest</code>.</p></blockquote><p><strong>PORTS</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>portsnap fetch auto
+</span></span><span class=line><span class=cl>make -C /usr/ports/sysutils/bastille install clean
+</span></span></code></pre></div><p><strong>GIT(bleeding edge/unstable)</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>git clone https://github.com/BastilleBSD/bastille.git
+</span></span><span class=line><span class=cl><span class=nb>cd</span> bastille
+</span></span><span class=line><span class=cl>make install
+</span></span></code></pre></div><h2 id=service-management>Service Management</h2><p>Services in FreeBSD are managed centrally in the <code>/etc/rc.conf</code> and use a
+syntax of <code>name_enable=(YES|NO)</code>. For example, to start containers
+automatically at boot you can set <code>bastille_enable=YES</code> using:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>sysrc <span class=nv>bastille_enable</span><span class=o>=</span>YES
+</span></span></code></pre></div><p>By default, Bastille will start all created containers at boot when enabled.</p><p>Once services have been enabled in the <code>/etc/rc.conf</code>, they can be managed
+using the <code>service</code> command.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>service foo <span class=o>[</span>start<span class=p>|</span>stop<span class=p>|</span>restart<span class=o>]</span>
+</span></span></code></pre></div><p>Bastille does not run as a service and does not need to be started as such.
+Enabling Bastille primarily manages containers at startup and shutdown.</p><h2 id=host-setup>Host Setup</h2><p>Before you can create containers, the host needs three things configured: a
+network interface for containers to attach to, firewall rules, and storage.</p><p>Historically this meant manually cloning a loopback interface, hand-writing an
+<code>/etc/pf.conf</code>, and editing <code>bastille.conf</code> for ZFS. Bastille now does all of it
+for you with a single command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille setup
+</span></span></code></pre></div><p>Run with no options, <code>bastille setup</code> auto-configures:</p><ul><li><strong>Loopback networking</strong> — a <code>bastille0</code> interface that containers attach to by
+default. It isn&rsquo;t tied to any physical interface, which makes it equally at
+home in the cloud or on a local network. This is the simplest, most portable
+option, and it&rsquo;s the one this guide uses.</li><li><strong>Firewall</strong> — enables <code>pf</code> and writes a sane default <code>/etc/pf.conf</code>: outbound
+traffic is allowed, inbound is blocked (except SSH), and a NAT rule gives your
+containers external network access. This is also what makes the <code>bastille rdr</code>
+command work for forwarding host ports into a jail.</li><li><strong>Storage</strong> — configures a ZFS pool and dataset for Bastille if ZFS is
+available on the host; otherwise it falls back to UFS.</li></ul><p>That&rsquo;s the entire host preparation — no manual <code>pf.conf</code>, no <code>cloned_interfaces</code>
+juggling, no ZFS boilerplate.</p><blockquote><p>Tip: <code>bastille setup</code> enables and starts <code>pf</code>. If you&rsquo;re connected over SSH,
+the default ruleset allows SSH back in — if your session drops, simply
+reconnect.</p></blockquote><p>Need a different networking mode? <code>bastille setup</code> takes an option for each of
+the other host configurations, for example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille setup bridge      <span class=c1># bridged VNET (-B) jails</span>
+</span></span><span class=line><span class=cl>bastille setup vnet        <span class=c1># virtual network (-V) jails</span>
+</span></span><span class=line><span class=cl>bastille setup linux       <span class=c1># run Linux jails</span>
+</span></span><span class=line><span class=cl>bastille setup firewall    <span class=c1># (re)configure pf only</span>
+</span></span><span class=line><span class=cl>bastille setup storage     <span class=c1># configure ZFS/UFS storage only</span>
+</span></span></code></pre></div><p>See the <a href=https://docs.bastillebsd.org/en/latest/chapters/subcommands/setup.html>setup documentation</a>
+and <a href=https://docs.bastillebsd.org/en/latest/chapters/networking.html>networking documentation</a>
+for the full list of modes and options.</p><h2 id=configuration>Configuration</h2><p>Bastille&rsquo;s configuration lives in <code>/usr/local/etc/bastille/bastille.conf</code>.
+<code>bastille setup</code> populates the essentials, but one option is worth knowing about:</p><p><strong>Timezone</strong> — containers use the host&rsquo;s timezone by default. To pin a specific
+zone instead, set <code>bastille_tzdata</code> (format <code>"America/Denver"</code> or
+<code>"Europe/Paris"</code>; see <code>/usr/share/zoneinfo</code>):</p><pre tabindex=0><code>bastille_tzdata=&#34;America/Denver&#34;  ## default: empty = use host&#39;s time zone
+</code></pre><p>With the host configured, you&rsquo;re ready to bootstrap a release and begin creating
+containers!</p><h2 id=bootstrap>bootstrap</h2><p>To <code>bootstrap</code> a release for use with your container use the <code>bootstrap</code>
+sub-command.</p><blockquote><p>You can optionally append the keyword <code>update</code> to automagically apply <code>freebsd-update</code> to the downloaded release.</p></blockquote><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille bootstrap 15.1-RELEASE update
+</span></span></code></pre></div><p>You can now create a container using the newly bootstrapped release.</p><h2 id=create>create</h2><p>In order to create a container you will need to provide a unique container
+name, a bootstrapped release name and static IP address.</p><p>You can use any (<a href=https://tools.ietf.org/html/rfc1918>rfc1918</a>) private IP
+range for your containers. For example, unless your host IP also has a 10.x.x.x
+IP, it&rsquo;s safe to use any address within that range.</p><p>IP options include: <code>10.0.0.0/8</code>, <code>172.16.0.0/12</code> and <code>192.168.0.0/16</code>.</p><blockquote><p>Tip: container names cannot include the dot (".") character.</p></blockquote><p>Container creation should be very quick.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille create alcatraz 15.1-RELEASE 10.17.89.50/24
+</span></span></code></pre></div><h2 id=list>list</h2><p>You can list running containers.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille list
+</span></span></code></pre></div><h2 id=pkg>pkg</h2><p>Install packages inside the container.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille pkg alcatraz install -y htop
+</span></span></code></pre></div><h2 id=htop>htop</h2><p>htop is an interactive process viewer. When you view processes inside a
+container you only see that container&rsquo;s processes.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille htop alcatraz
+</span></span></code></pre></div><p>Notice that <code>syslogd</code> and <code>cron</code> are the only default processes.</p><figure class=fig><img src=/img/bastille-htop-alcatraz.png alt="Interactive Process Viewer" loading=lazy><figcaption>Interactive Process Viewer</figcaption></figure><p>Tip: Press &ldquo;q&rdquo; to quit.</p><h2 id=sysrc>sysrc</h2><p>Let&rsquo;s toggle a setting inside the container and enable the <code>sshd</code> service.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille sysrc alcatraz <span class=nv>sshd_enable</span><span class=o>=</span>YES
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=o>[</span>alcatraz<span class=o>]</span>:
+</span></span><span class=line><span class=cl>sshd_enable: NO -&gt; YES
+</span></span></code></pre></div><h2 id=service>service</h2><p>Start up the newly enabled service.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille service alcatraz sshd start
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=o>[</span>alcatraz<span class=o>]</span>:
+</span></span><span class=line><span class=cl>Generating RSA host key.
+</span></span><span class=line><span class=cl><span class=m>2048</span> SHA256:PsH1pAJbRC4hup+jyDxhFxhMHcGrYBWr5aL84y3Bjc0 root@alcatraz <span class=o>(</span>RSA<span class=o>)</span>
+</span></span><span class=line><span class=cl>Generating ECDSA host key.
+</span></span><span class=line><span class=cl><span class=m>256</span> SHA256:eqCAkH/tW2OnrV4B3BflK76ZV08jWGfoHF7AX/iPvM8 root@alcatraz <span class=o>(</span>ECDSA<span class=o>)</span>
+</span></span><span class=line><span class=cl>Generating ED25519 host key.
+</span></span><span class=line><span class=cl><span class=m>256</span> SHA256:1GFg1+agxbEZpernrtrcKEfLzWcih+2xRaOe97fmMcU root@alcatraz <span class=o>(</span>ED25519<span class=o>)</span>
+</span></span><span class=line><span class=cl>Performing sanity check on sshd configuration.
+</span></span><span class=line><span class=cl>Starting sshd.
+</span></span></code></pre></div><h2 id=cmd>cmd</h2><p>Execute arbitrary commands inside the container. In this case check to see that
+<code>sshd</code> is listening on port <code>:22</code> using the <code>sockstat -4</code> command.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille cmd alcatraz sockstat -4
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl><span class=o>[</span>alcatraz<span class=o>]</span>:
+</span></span><span class=line><span class=cl>USER     COMMAND    PID   FD PROTO  LOCAL ADDRESS         FOREIGN ADDRESS
+</span></span><span class=line><span class=cl>root     sshd       <span class=m>34994</span> <span class=m>4</span>  tcp4   10.17.89.50:22        *:*
+</span></span><span class=line><span class=cl><span class=o>[</span>alcatraz<span class=o>]</span>: <span class=m>0</span>
+</span></span></code></pre></div><h2 id=console>console</h2><p>Finally, use <code>console</code> for a password-less root login to the container and have
+a look around. You&rsquo;ll find yourself in a wholly contained FreeBSD system with
+the ability to build whatever you need to build.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille console alcatraz
+</span></span></code></pre></div><p>The <code>root</code> user is still (mostly) all powerful, but only within the confines of
+that container.</p><p>When you&rsquo;re finished, log out of the container as normal with <code>exit</code> or
+<code>ctrl-d</code>.</p><h2 id=stop>stop</h2><p>When you&rsquo;re done testing your container you can shut it off.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille stop alcatraz
+</span></span></code></pre></div><h2 id=destroy>destroy</h2><p>Lastly, destroy your lightweight container.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=line><span class=cl>bastille destroy alcatraz
+</span></span></code></pre></div><h2 id=usage>usage</h2><pre tabindex=0><code>Bastille is an open-source system for automating deployment and management of
+containerized applications on FreeBSD.
+
+Usage:
+  bastille command [option(s)] TARGET [option(s)] ARGS
+
+Available Commands:
+  bootstrap   Bootstrap a FreeBSD release for container base.
+  clone       Clone an existing container.
+  cmd         Execute arbitrary command on targeted container(s).
+  config      Get or set a config value for the targeted container(s).
+  console     Console into a running container.
+  convert     Convert a Thin container into a Thick container.
+  cp          cp(1) files from host to jail(s).
+  create      Create a new thin container or a thick container if -T|--thick option specified.
+  destroy     Destroy a stopped container or a FreeBSD release.
+  edit        Edit container configuration files (advanced).
+  etcupdate   Update /etc directory to specified release.
+  export      Exports a specified container.
+  help        Help about any command.
+  htop        Interactive process viewer (requires htop).
+  import      Import a specified container.
+  jcp         cp(1) files from a jail to jail(s).
+  limits      Apply resources limits to targeted container(s). See rctl(8).
+  list        List containers (running).
+  migrate     Migrate targetted jail(s) to a remote system.
+  mount       Mount a volume inside the targeted container(s).
+  network     Add/remove network interfaces from targeted container.
+  pkg         Manipulate binary packages within targeted container(s). See pkg(8).
+  rcp         cp(1) files from a jail to host.
+  rdr         Redirect host port to container port.
+  rename      Rename a container.
+  restart     Restart a running container.
+  service     Manage services within targeted container(s).
+  setup       Attempt to auto-configure network, firewall and storage on new installs.
+  start       Start a stopped container.
+  stop        Stop a running container.
+  sysrc       Safely edit rc files within targeted container(s).
+  tags        Add or remove tags to targeted container(s).
+  template    Apply file templates to targeted container(s).
+  top         Display and update information about the top(1) cpu processes.
+  umount      Unmount a volume from within the targeted container(s).
+  update      Update container base -pX release.
+  upgrade     Upgrade container release to X.Y-RELEASE.
+  verify      Compare release against a &#34;known good&#34; index.
+  zfs         Manage (get|set) ZFS attributes on targeted container(s).
+
+Use &#34;bastille -v|--version&#34; for version information.
+Use &#34;bastille command -h|--help&#34; for more information about a command.
+Use &#34;bastille -c|--config FILE command&#34; to specify a non-default config file.
+Use &#34;bastille -p|--parallel VALUE command&#34; to run bastille in parallel mode.
+</code></pre><hr><p>To learn more about automating containerized applications, see
+the <a href=https://docs.bastillebsd.org>Bastille Documentation</a>.</p><hr></div><div class=prose style=margin-top:2.5rem><div class=author-box><img src=/img/cedwards.jpg alt="Christer Edwards" width=72 height=72><div><h4>Christer Edwards</h4><p>Creator of BastilleBSD. FreeBSD systems engineer, software developer, author, and educator with 15+ years hardening and automating production FreeBSD infrastructure.</p><div class=author-social><a class=icon-btn href=https://github.com/BastilleBSD/bastille target=_blank rel=noopener aria-label=GitHub><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 2A10 10 0 008.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7.0.0.8-.3 2.7 1a9.4 9.4.0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7.0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>
+</a><a class=icon-btn href=https://fosstodon.org/@BastilleBSD target=_blank rel=noopener aria-label=Mastodon><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M21 8.2c0-3.6-2.4-4.7-2.4-4.7A16.8 16.8.0 0012.7 2.5h-.1a16.8 16.8.0 00-5.9 1S4.3 4.6 4.3 8.2c0 .8.0 1.8.1 2.8.2 3.4.7 6.7 3.9 7.6 1.5.4 2.8.5 3.8.4 1.7-.1 2.6-.6 2.6-.6l-.1-1.2s-1.2.4-2.5.3c-1.3.0-2.6-.1-2.9-1.7v-.4s1.3.3 2.9.4c1 0 1.9-.1 2.9-.2 1.9-.2 3.5-1.4 3.7-2.4.3-1.6.3-4 .3-4.9zM17.9 13H16V8.6c0-1.9-2.4-1.9-2.4.3v2.4h-1.9V9.2c0-2.2-2.4-2.2-2.4-.3V13H5.4c0-3.7-.2-4.5.5-5.4.8-.9 2.5-.9 3.2.0l.5.8.5-.8c.7-.9 2.4-.9 3.2.0.7.9.5 1.7.5 5.4z"/></svg>
+</a><a class=icon-btn href=https://discord.gg/FawhD6DUdm target=_blank rel=noopener aria-label=Discord><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M19.3 5.3A16 16 0 0015.4 4l-.2.4a12 12 0 013.5 1.7A11 11 0 005.3 6a12 12 0 013.5-1.7L8.6 4A16 16 0 004.7 5.3c-2.2 3.2-2.8 6.4-2.5 9.5a16 16 0 004.9 2.5l.6-1a10 10 0 01-1.6-.8l.4-.3a11.4 11.4.0 009.8.0l.4.3c-.5.3-1 .6-1.6.8l.6 1a16 16 0 004.9-2.5c.4-3.6-.6-6.8-2.8-9.5zM9 13.4c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6zm6 0c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6z"/></svg>
+</a><a class=icon-btn href=https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA target=_blank rel=noopener aria-label=YouTube><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="currentColor" stroke="none"/><path d="M10 9.2l5 2.8-5 2.8z" fill="var(--bg)" stroke="none"/></svg></a></div></div></div></div></div></div></article></main><footer class=site-footer><div class=container><div class=footer-grid><div class=footer-brand><a class=brand href=/><img src=/img/bastille-icon.png alt width=28 height=28>
+<span>Bastille<b>BSD</b></span></a><p>BastilleBSD builds open-source tools for hardened, automated containerization and configuration management on FreeBSD — plus expert consulting and training.</p><div class=footer-social><a class=icon-btn href=https://github.com/BastilleBSD target=_blank rel=noopener aria-label=GitHub><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M12 2A10 10 0 008.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7.0.0.8-.3 2.7 1a9.4 9.4.0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7.0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0012 2z"/></svg>
+</a><a class=icon-btn href=https://discord.gg/FawhD6DUdm target=_blank rel=noopener aria-label=Discord><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M19.3 5.3A16 16 0 0015.4 4l-.2.4a12 12 0 013.5 1.7A11 11 0 005.3 6a12 12 0 013.5-1.7L8.6 4A16 16 0 004.7 5.3c-2.2 3.2-2.8 6.4-2.5 9.5a16 16 0 004.9 2.5l.6-1a10 10 0 01-1.6-.8l.4-.3a11.4 11.4.0 009.8.0l.4.3c-.5.3-1 .6-1.6.8l.6 1a16 16 0 004.9-2.5c.4-3.6-.6-6.8-2.8-9.5zM9 13.4c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6zm6 0c-.8.0-1.4-.7-1.4-1.6s.6-1.6 1.4-1.6 1.4.7 1.4 1.6-.6 1.6-1.4 1.6z"/></svg>
+</a><a class=icon-btn href=https://fosstodon.org/@BastilleBSD target=_blank rel=noopener aria-label=Mastodon><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M21 8.2c0-3.6-2.4-4.7-2.4-4.7A16.8 16.8.0 0012.7 2.5h-.1a16.8 16.8.0 00-5.9 1S4.3 4.6 4.3 8.2c0 .8.0 1.8.1 2.8.2 3.4.7 6.7 3.9 7.6 1.5.4 2.8.5 3.8.4 1.7-.1 2.6-.6 2.6-.6l-.1-1.2s-1.2.4-2.5.3c-1.3.0-2.6-.1-2.9-1.7v-.4s1.3.3 2.9.4c1 0 1.9-.1 2.9-.2 1.9-.2 3.5-1.4 3.7-2.4.3-1.6.3-4 .3-4.9zM17.9 13H16V8.6c0-1.9-2.4-1.9-2.4.3v2.4h-1.9V9.2c0-2.2-2.4-2.2-2.4-.3V13H5.4c0-3.7-.2-4.5.5-5.4.8-.9 2.5-.9 3.2.0l.5.8.5-.8c.7-.9 2.4-.9 3.2.0.7.9.5 1.7.5 5.4z"/></svg>
+</a><a class=icon-btn href=https://www.youtube.com/channel/UCniTnQDKIZN9ZTLPiyMI5eA target=_blank rel=noopener aria-label=YouTube><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="currentColor" stroke="none"/><path d="M10 9.2l5 2.8-5 2.8z" fill="var(--bg)" stroke="none"/></svg>
+</a><a class=icon-btn href=/index.xml aria-label="RSS feed"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 11a8 8 0 018 8M5 5a14 14 0 0114 14"/><circle cx="5.5" cy="18.5" r="1.5" fill="currentColor" stroke="none"/></svg></a></div></div><div class=footer-col><h4>Projects</h4><ul><li><a href=/projects/bastille/>Bastille</a></li><li><a href=/projects/rocinante/>Rocinante</a></li><li><a href=/projects/bastillebsd/>BastilleBSD</a></li></ul></div><div class=footer-col><h4>Services</h4><ul><li><a href=/services/consulting/>Consulting</a></li><li><a href=/services/training/>Training</a></li></ul></div><div class=footer-col><h4>Learn</h4><ul><li><a href=/learn/getting-started/>Getting Started</a></li><li><a href=/learn/templates/>Templates</a></li><li><a href=https://docs.bastillebsd.org target=_blank rel=noopener>Documentation</a></li><li><a href=/blog/>Blog</a></li></ul></div></div><div class=footer-bottom><span>&copy; 2018&ndash;2026 BastilleBSD. Bastille & Rocinante are <a href=https://github.com/BastilleBSD/bastille/blob/master/LICENSE target=_blank rel=noopener>BSD&nbsp;3-Clause</a> licensed.</span>
+<span>Built with <a href=https://gohugo.io target=_blank rel=noopener>Hugo</a> on <a href=https://freebsd.org target=_blank rel=noopener>FreeBSD</a>.</span></div></div></footer><script src=/js/main.min.20c242089445ba14c1e7ff1a42a0ad4ff0eab323ee122ed84770d7e31fd53e11.js defer></script></body></html>
